@@ -1,1 +1,1 @@
-# phys-lab
+# Lab reports & analysis
