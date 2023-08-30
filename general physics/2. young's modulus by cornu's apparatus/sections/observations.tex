@@ -1,0 +1,99 @@
+\section{Observations and Calculations}
+
+    \subsection{Observational Data}
+    \begin{itemize}
+        \item Least count of the micrometer = 0.01mm
+        \item Breadth of the glass slab ($b$) = 49.4mm
+        \item Depth of the glass slab ($d$) = 2.07mm
+        \item Distance from the knife-edge to the load ($l$) = 115mm
+    \end{itemize}
+    
+    \subsubsection{For $\text{m}_1$ = 200g}
+        \input{tables/table3.tex}
+        \input{tables/table4.tex}
+
+        
+    \subsubsection{For $\text{m}_2$ = 250g}
+        \input{tables/table1.tex}
+        \input{tables/table2.tex}
+
+    \subsubsection{For $\text{m}_3$ = 300g}
+        \input{tables/table5.tex}
+        \input{tables/table6.tex}
+
+    \subsection{Calculations}
+    \subsubsection{Calculation of Young's Modulus (Y)}
+
+     We can rearrange equation (14) to form 
+
+    \begin{equation}
+        \left(\frac{1}{\rho_{x}^1(s)}-\frac{1}{\rho_{x}^2(s)}\right)^{-1} = \left(\frac{Ybd^3\lambda}{12gl(m_1-m_2)}\right)s
+    \end{equation}
+
+    which is of form $y=mx+c$, where $m=$ slope and $c=$ y-intercept of a straight line. Thus we can plot the LHS of this eqn. vs $s$ to find out $Y$ using,
+
+    \begin{equation}
+        Y = \frac{12gl(m_1-m_2)}{bd^3\lambda}\cdot m
+    \end{equation}
+    
+    \begin{figure}[H]
+        \centering
+        \label{graph:1}
+        \includegraphics[width=0.8\columnwidth]{images/1.png}
+        \caption{$(\frac{1}{\rho_{x}^1}-\frac{1}{\rho_{x}^2})^{-1}$ vs Order of fringe $(s)$}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \label{graph:2}
+        \includegraphics[width=0.8\columnwidth]{images/2.png}
+        \caption{$(\frac{1}{\rho_{x}^2}-\frac{1}{\rho_{x}^3})^{-1}$ vs Order of fringe $(s)$}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \label{graph:3}
+        \includegraphics[width=0.8\columnwidth]{images/3.png}
+        \caption{$(\frac{1}{\rho_{x}^1}-\frac{1}{\rho_{x}^3})^{-1}$ vs Order of fringe $(s)$}
+    \end{figure}
+
+    Using eq. (18),
+   \begin{itemize}
+       \item For $m_1$ and $m_2$, $Y_{12}$ = 65.48 GPa
+       \item For $m_2$ and $m_3$, $Y_{23}$ = 79.65 GPa
+       \item For $m_1$ and $m_3$, $Y_{13}$ = 66.88 GPa
+   \end{itemize}
+
+   Thus, average value of Y = 70.67 GPa
+
+   \subsubsection{Calculation of Poisson's Ratio ($\sigma$)}
+
+     We can rearrange equation (16) to form 
+     \begin{equation}
+         \rho_x(s) = \sigma \rho_y(s)
+     \end{equation}
+
+      which is of form $y=mx+c$, where $m=$slope and $c=$ y-intercept of a straight line. Thus we can plot this $rho_x(s)$ vs $\rho_y(s)$ to find out $\sigma$ which is equal to the slope ($m$).
+
+      \begin{figure}[H]
+        \centering
+        \label{graph:4}
+        \includegraphics[width=0.8\columnwidth]{images/4.png}
+        \caption{$\rho_x$ vs $\rho_y$ for m = 200g}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \label{graph:4}
+        \includegraphics[width=0.8\columnwidth]{images/5.png}
+        \caption{$\rho_x$ vs $\rho_y$ for m = 250g}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \label{graph:4}
+        \includegraphics[width=0.8\columnwidth]{images/6.png}
+        \caption{$\rho_x$ vs $\rho_y$ for m = 300g}
+    \end{figure}
+
+    Thus, the average value of $\sigma$ is observed to be 0.2549.
