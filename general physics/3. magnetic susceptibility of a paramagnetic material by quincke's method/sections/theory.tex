@@ -1,0 +1,120 @@
+\section{Theory}
+
+When a material is placed within a magnetic field, the magnetic forces of the material's electrons will be affected. This effect is known as Faraday's Law of Magnetic Induction. However, materials can react quite differently to the presence of an external magnetic field, depending on the atomic and molecular structure of the material, and the net magnetic field associated with the atoms. The magnetic moment associated with atoms has 3 origins --- the electron motion, the change in motion caused by an external magnetic field, and the spin of the electrons.
+
+Most materials can be classified as diamagnetic, paramagnetic or ferromagnetic. In most atoms, electrons occur in pairs with spins in opposite directions, which cause their magnetic fields to cancel each other. These materials are \textbf{diamagnetic}. Alternately, materials with some unpaired electrons will have a net magnetic field and will react more to an external field, these are \textbf{paramagnetic}. \textbf{Ferromagnetic} materials have some unpaired electrons so their atoms have a net magnetic moment. But they exhibit a strong attraction to magnetic fields due to the presence of magnetic domains, where large numbers of atom's moments are aligned parallel so that the magnetic force within the domain is strong.
+
+\paragraph{\textbf{Magnetic Susceptibility}} of a material tells us how susceptible it is to becoming temporarily magnetised by an applied magnetic field and defined as the magnetization, $M$ (magnetic moment per unit volume) produced per unit magnetic field ($H$).
+
+\begin{equation}
+    \chi = \frac{M}{H}
+\end{equation}
+
+In this experiment, we use mechanical phenomena to find the susceptibility of a paramagnetic liquid, in this case $\text{FeCl}_3$. Specifically, we use \textbf{Quincke's method}, which determines $\chi$ of the solution by observing how the liquid rises up between the two pole pieces of an electromagnet, when a direct current is passed through the electromagnet coil windings.
+
+\subsection{Experimental Principle}
+
+Consider a paramagnetic medium in the presence of a uniform applied flux density $B_o$.They will contain microscopic magnetic dipoles of dipole moment $m$ which are randomly oriented. However, in the presence of a uniform field $B$, each dipole possesses a magnetic potential energy 
+
+\begin{equation}
+    U = -m\cdot B
+\end{equation}
+
+So they all tend to align up parallel to $B$, which is the orientation in
+which their potential energy is minimum. Consequently, the liquid, containing many such dipoles, will tend to be drawn into the region of maximum field to  minimize its total magnetic potential energy. In other words, the liquid experiences an attractive magnetic force $F_m$ pulling it into the region of strongest field. The dipoles in the liquid, $\text{FeCl}_3$ solution for this experiment, are due to $\text{Fe}^{3+}$ ions which are paramagnetic in their ground-state. The spins of several outer electrons are aligned parallel to each other to gives rise to a net magnetic moment $m$ which is not compensated by other electrons. 
+
+A region of space permeated by a magnetic field $\vect{H}$ possesses an energy  density
+\begin{equation}
+    u = \frac{1}{2}\mu H^2
+\end{equation}
+
+where $\mu = \mu_o (1+\chi)$ is the magnetic permeability of the medium, and $\mu_o$ is the magnetic permeability of free space. $\mu$ can be considered constant for small enough magnetic fields. The tangential component of vector $\vect{H}$ is continuous across a boundary, so the value of $H$ in the air above the meniscus is equal to that in the liquid. This is in contrast to the flux density, where $B_o$ in air is different from the value $B$ in the liquid: 
+
+\begin{equation}
+    H = \frac{B_o}{\mu_o} = \frac{B}{\mu} = \frac{B}{\mu_o (1+\chi)}
+\end{equation}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\columnwidth]{images/f1.png}
+    \caption{Schematic of the experimental setup (Quincke's tube)}
+    \label{fig:1}
+\end{figure}
+
+Suppose that, when the field is turned on, the meniscus in the narrow tube rises by an amount $h$, relative to its zero-field position. A volume $\pi r^2h$ of air in the narrow tube is, therefore, replaced by liquid. Hence, the magnetic potential energy of this volume of space increases by
+
+\begin{equation}
+    \Delta U = \frac{1}{2}(\mu-\mu_\text{air})H^2\cdot\pi r^2h
+\end{equation}
+
+Which is equal to the work done by the magnetic force $\vect{F}_m$ in raising the liquid by an amount $h$.
+
+\begin{equation}
+    F_m = \frac{\Delta U}{h} = \frac{1}{2}(\mu-\mu_\text{air})H^2\pi r^2
+\end{equation}
+
+When the liquid in one arm of the tube rises by $h$, it falls on the other arm by $h$. It continues to rise till the upward magnetic force is balanced by the weight of the head of liquid. The downward gravitational force on the head of liquid, of mass $m$, is given by
+
+\begin{equation}
+    F_g = mg = 2\pi r^2 \rho h g
+\end{equation}
+
+where $\rho$ is the density of the liquid. There is also a very small additional upwards force on the liquid due to the buoyancy of the air, displaced by the liquid, given by
+
+\begin{equation}
+    F_b = 2\pi r^2 \rho_\text{air} h g
+\end{equation}
+
+When the forces are balanced, we have $F_m + F_b = F_g $, 
+
+\begin{equation}
+    \frac{1}{2}(\mu-\mu_\text{air})H^2\pi r^2 = 2\pi r^2 (\rho - \rho_\text{air}) h g
+\end{equation}
+
+Substituting $H$ from Eq.(4) in Eq.(9), we rearrange to get
+\begin{equation}
+    \chi = \frac{h}{B^2}[4g\mu_o(\rho - \rho_\text{air})] - \chi_\text{air}
+\end{equation}
+
+where $\chi$ is the total susceptibility of the solution $\chi = \chi_\text{Fe} + \chi_\text{water}$. From this, we can calculate certain other parameters like,
+
+\begin{itemize}
+    \item mass susceptibility, $\chi' = \chi/\rho$
+    \item molar susceptibility, $\chi'' = \chi'M$
+    \item Curie constant, $C = \chi''T$
+    \item Magnetic moment of dipole of the specimen, $\mu=2.8241\sqrt{C}$
+\end{itemize}
+
+where $M$ = Molecular Weight, $T$ = Temperature of the specimen.
+
+
+Everything here assumes that the magnetic field acting on each ion is just the applied field $B$, and field and contributions due to neighboring magnetic ions are neglected. For dilute paramagnetic materials these other contributions are very small and the approximation is valid. This is not so for concentrated magnetic materials and ferromagnets. 
+
+
+
+\section{Experimental Setup}
+Quincke’s tube is U-shaped glass tube (Fig.1).  One arm of the tube is placed
+between the pole-pieces of an electromagnet shown as N-S such that the meniscus of the liquid lies symmetrically between N-S. The length of the limb is sufficient as to keep the other lower extreme end of this limb well outside the field H of the magnet. The rise or fall $h$ is measured by means of a traveling microscope.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\columnwidth]{images/f2.png}
+    \caption{Experimental setup}
+    \label{fig:enter-label}
+\end{figure}
+
+\subsection{Apparatus}
+\begin{enumerate}
+    \item Adjustable electromagnet with pole pieces
+    \item Constant power supply (0-16 V, 5A DC)
+    \item Digital Gauss meter
+    \item Hall probe for magnetic strength measurement
+    \item Travelling Microscope
+    \item Quincke’s tube (an U tube)
+    \item Measuring cylinder (100ml), dropper, Wash bottle
+    \item Specific gravity bottle
+    \item FeCl$_3$ for making solutions
+    \item Electronic balance
+    \item Connecting cords 
+
+\end{enumerate}

@@ -1,0 +1,36 @@
+\section{Error Analysis}
+\begin{enumerate}
+    \item Error in $\rho$:
+        \begin{align*}
+            \Delta \rho = \sqrt{\left(\frac{\partial \rho}{\partial w_1}\Delta w_1\right)^2 + \left(\frac{\partial \rho}{\partial w_2}\Delta w_2\right)^2 + \left(\frac{\partial \rho}{\partial w_3}\Delta w_3\right)^2}\\          
+            \frac{\Delta \rho}{\rho} = \sqrt{\frac{(\Delta w_1)^2(w_3-w_2)^2}{(w_2-w_1)^2(w_3-w_1)^2} + \left(\frac{\Delta w_2}{w_2-w_1}\right)^2 + \left(\frac{\Delta w_3}{w_3-w_1}\right)^2}
+        \end{align*}
+        \begin{align*}
+            \therefore \Delta \rho = 6.7\,kg/m^3
+        \end{align*}
+    \item Error in $\chi_\text{Fe}$:
+        \begin{align*}
+            \frac{\Delta \chi_\text{Fe}}{\chi_\text{Fe}} &= \sqrt{\left(\frac{\Delta \text{slope}}{\text{slope}}\right)^2 + \left(\frac{\Delta \rho}{\rho - \rho_\text{air}}\right)^2}\\
+            \Delta \chi_\text{Fe} &= 0.03 \times 10^{-5}
+        \end{align*}
+    \item Error in $\chi'_\text{Fe}$:
+        \begin{align*}
+            \frac{\Delta \chi'_\text{Fe}}{\chi'_\text{Fe}} &= \sqrt{\left(\frac{\Delta \chi_\text{Fe}}{\chi_\text{Fe}}\right)^2 + \left(\frac{\Delta \rho}{\rho}\right)^2}\\
+            \Delta \chi'_\text{Fe} &= 0.03 \times 10^{-8}\,m^3/kg 
+        \end{align*}
+    \item Error in $\chi''_\text{Fe}$:
+        \begin{align*}
+            \frac{\Delta \chi''_\text{Fe}}{\chi''_\text{Fe}} &= \sqrt{\left(\frac{\Delta \chi'_\text{Fe}}{\chi'_\text{Fe}}\right)^2}\\
+            \Delta \chi''_\text{Fe} &= 0.005 \times 10^{-8}\,m^3/mol 
+        \end{align*}
+    \item Error in $C$:
+        \begin{align*}
+            \frac{\Delta C}{C} &= \sqrt{\left(\frac{\Delta \chi''_\text{Fe}}{\chi''_\text{Fe}}\right)^2 + \left(\frac{\Delta T}{T}\right)^2}\\
+            \Delta C &= 0.02 \times 10^{-6}\,m^3\,K/mol
+        \end{align*}
+    \item Error in $\mu$:
+        \begin{align*}
+            \frac{\Delta \mu}{\mu} &= \sqrt{\left(\frac{\Delta C}{2C}\right)^2}\\
+            \Delta \mu &= 0.02 \times 10^{-3}\,A/m^2 
+        \end{align*}
+\end{enumerate}
