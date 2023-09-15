@@ -1,0 +1,50 @@
+\section{Theory}
+Zener diodes have a region of almost a constant voltage in its reverse bias characteristics, regardless of the current flowing through the diode. This voltage across the diode (zener Voltage, $V_z$) remains nearly constant even with large changes in current through the diode caused by variations in the supply voltage or load. This ability to control itself can be used to great effect to regulate or stabilize a voltage source against supply or load variations.
+
+The zener diode maintains a constant output voltage until the diode current falls below the minimum $I_z$ value in the reverse breakdown region, which means the supply voltage, $V_S$, must be much greater than $V_z$ for a successful breakdown operation. When no load resistance, $R_L$, is connected to the circuit, no load current ($I_L = 0$), is drawn and all the circuit current passes through the zener diode which dissipates its maximum power. So, a suitable current limiting resistor, ($R_S$) is always used in series to limit the zener current to less than its maximum rating under this "no-load" condition. 
+
+The D.C. output voltage from the half or full-wave rectifiers contains ripples superimposed on the d.c. voltage and that the average output voltage changes with load. A more stable reference voltage can be produced by connecting a simple zener regulator circuit across the output of the rectifier. The breakdown condition of the zener can be confirmed by calculating the \textbf{Thevenin voltage}, $V_{TH}$, facing the diode is given as: 
+
+\begin{equation}
+    V_{TH} = \frac{R_L}{R_S + R_L}V_S
+\end{equation}
+
+This is the voltage that exists when the zener is disconnected from the circuit. Thus, $V_{TH}$ has to be greater than the zener voltage to facilitate breakdown. Now, under this breakdown condition, irrespective of the load resistance value, the current through the current limiting resistor, $I_S$, is given by 
+
+\begin{equation}
+    I_{S} = \frac{V_S-V_Z}{R_S}
+\end{equation}
+
+The output voltage across the load resistor, $V_L$, is ideally equal to the zener voltage and the load current, $I_L$, can be calculated using Ohm’s law:
+
+\begin{align}
+    V_L = V_Z\\
+    I_L = \frac{V_L}{R_L}
+\end{align}
+
+Thus the zener current, $I_Z$, is
+
+\begin{equation}
+    I_Z = I_S - I_L
+\end{equation}
+
+A basic power supply has now been constructed. Its quality now depends on its load and line regulation characteristics as  defined below.\\
+
+\paragraph*{\textbf{Load Regulation:}} It is the capability to maintain a constant voltage (or current) level on the output channel of a power supply despite changes in the supply's load. It indicates how much the load voltage varies when the load current changes. Quantitatively,
+
+\begin{equation}
+    \text{Load Regulation} = \frac{V_{NL}-V_{FL}}{V_{FL}}\times 100\%
+\end{equation}
+
+where $V_{NL}=$ load voltage with no current ($I_L = 0$) and $V_{FL}=$  load voltage with full load current. The smaller the regulation, the better is the power supply.\\
+
+\paragraph*{\textbf{Line Regulation:}} It is the ability of a power supply to maintain a constant output voltage despite changes to the input voltage, with the output current drawn from the power supply remaining constant. It indicates how much the load voltage varies when the input line voltage changes. Quantitatively,
+
+\begin{equation}
+    \text{Line Regulation} = \frac{V_{HL}-V_{LL}}{V_{LL}}\times 100\%
+\end{equation}
+
+where $V_{HL} =$ load voltage with high input line voltage, and $V_{LL} =$ load voltage with low input line voltage. As with load regulation, the smaller the regulation, the better is the power supply.
+
+\subsection*{Applications}
+Every power supply uses a voltage regulator to provide the desired output voltage and to prevent any damage to the components. It is used in electrical power transmission and distribution systems as well as in computers and other sensitive electronic devices. They are also used in motor controller circuits, driver circuits etc.
