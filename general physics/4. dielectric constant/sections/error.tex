@@ -1,0 +1,62 @@
+\section{Error Analysis}
+For a general case,
+
+\begin{align*}
+    \varepsilon_r = \frac{d}{\varepsilon_oA} \cdot \text{slope}
+\end{align*}
+
+There error in $\varepsilon_r$, $\Delta \varepsilon_r$ would be,
+
+\begin{align}
+    \frac{\Delta \varepsilon_r}{\varepsilon_r} = \sqrt{\left(\frac{\Delta d}{d}\right)^2 + \left(\frac{\Delta \text{slope}}{\text{slope}}\right)^2}
+\end{align}
+
+where $\Delta d = 0.1$ mm. Similarly for
+
+\begin{align}
+    &\varepsilon_\text{r} = \frac{\text{slope}}{\varepsilon_oAU_c} , \nonumber\\
+    \frac{\Delta \varepsilon_r}{\varepsilon_r} &= \sqrt{\left(\frac{\Delta U_c}{U_c}\right)^2 + \left(\frac{\Delta \text{slope}}{\text{slope}}\right)^2}
+\end{align}
+
+where $\Delta U_c = 0.1$ kV.\\
+
+
+\begin{enumerate}
+  
+
+    \item \textbf{For $\Delta \varepsilon_\text{air}^a$}\\
+        From Fig. (\ref{g1}), $\Delta$ slope $=0.078\cross10^{-10}$ As/V. Using eq. (13), we get,
+            
+        \begin{align*}
+            \Delta \varepsilon_\text{air}^{a} &= \varepsilon_\text{air}^{a}\sqrt{\left(\frac{0.1}{2}\right)^2 + \left(\frac{0.078}{\text{2.426}}\right)^2}=0.061
+        \end{align*}
+
+    \item \textbf{For $\Delta \varepsilon_\text{air}^b$}\\
+        From Fig. (\ref{g2}), $\Delta$ slope $=0.151\cross10^{-11}$ As/V. Using eq. (14), we get,
+                
+        \begin{align*}
+            \Delta \varepsilon_\text{air}^{b} &= \varepsilon_\text{air}^{b}\sqrt{\left(\frac{0.1}{1.5}\right)^2 + \left(\frac{0.078}{\text{2.426}}\right)^2}=0.082
+        \end{align*}
+
+    \item \textbf{For $\Delta \varepsilon_\text{air}$},
+        the error in the mean of $\varepsilon_\text{air}^a$ and $\varepsilon_\text{air}^b$ can be calculated as,
+
+        \begin{align*}
+            \Delta \varepsilon_\text{air} &= \frac{1}{2}\sqrt{(\Delta \varepsilon_\text{air}^a)^2 + \Delta \varepsilon_\text{air}^b)^2}=0.051
+        \end{align*}
+
+    \item \textbf{For $\Delta \varepsilon_\text{styrofoam}$}\\
+        From Fig. (\ref{g3}), $\Delta$ slope $=0.065\cross10^{-10}$ As/V. Using eq. (13), we get,
+                
+        \begin{align*}
+            \Delta \varepsilon_\text{styrofoam} &= \varepsilon_\text{styrofoam}\sqrt{\left(\frac{0.1}{19.2}\right)^2 + \left(\frac{0.065}{\text{5.348}}\right)^2}=0.011
+        \end{align*}
+
+    \item \textbf{For $\Delta \varepsilon_\text{wood}$}\\
+        From Fig. (\ref{g1}), $\Delta$ slope $=0.078\cross10^{-10}$ As/V. Using eq. (13), we get,
+                
+        \begin{align*}
+            \Delta \varepsilon_\text{wood} &= \varepsilon_\text{wood}\sqrt{\left(\frac{0.1}{8.2}\right)^2 + \left(\frac{0.078}{\text{2.057}}\right)^2}=0.044
+        \end{align*}
+
+\end{enumerate}

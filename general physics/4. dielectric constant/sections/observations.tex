@@ -1,31 +1,94 @@
-\section{Observations and Calculations}
+\section{Observations}
 
 \subsection*{Observational Data}
 
-    \subsubsection{For Air}
+    % \subsubsection{For Air}
 
-        \paragraph*{Measurement of charge $Q$ for different supply voltage $U_c$}
+        % \paragraph*{Measurement of charge $Q$ for different supply voltage $U_c$}
 
-            % \input{tables/air1.tex}
+            \input{tables/air1.tex}
 
-        \paragraph*{Measurement of charge $Q$ for different distances $d$}
+        % \paragraph*{Measurement of charge $Q$ for different distances $d$}
 
-    \subsubsection{For Styrofoam}
+        \input{tables/air2.tex}
 
-    \subsubsection{For Wood}
+    % \subsubsection{For Styrofoam}
+        \input{tables/sty.tex}
+
+    % \subsubsection{For Wood}
+        \input{tables/wood.tex}
 
 
 \subsection*{Calculations}
+    For all the calculations, we take $\varepsilon_o = 8.854\cross10^{-12}$ F/m and $A = \pi(13)^2 \text{cm}^2 = 5.31\cross10^{-2}$ m$^2$\\
 
-    \subsubsection{For Air}
+    \begin{enumerate}
+        \item \textbf{Measurement of $\varepsilon_\text{air}$ from $Q \sim U_c$ data}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.8\columnwidth]{images/g1.png}
+                \caption{$Q$ vs $U_C$ plot with air as the dielectric medium}
+                \label{g1}
+            \end{figure}
 
-        \paragraph*{Measurement of charge $Q$ for different supply voltage $U_c$}
+            From Fig. \ref{g1}, slope $=2.426 \cross 10^{-10}$ As/V. From eq. (12), we get,
+                
+            \begin{align*}
+                \varepsilon_\text{air}^{a} &= \frac{d}{\varepsilon_oA} \cdot \text{slope}=1.032
+            \end{align*}
+            
+            where $d=2$ mm.\\
 
-            From the plot, we can see that
+        \item \textbf{Measurement of $\varepsilon_\text{air}$ from $Q \sim d^{-1}$ data}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.8\columnwidth]{images/g2.png}
+                \caption{$Q$ vs $d$ data with air as the dielectric medium}
+                \label{g2}
+            \end{figure}
 
-        \paragraph*{Measurement of charge $Q$ for different distances $d$}
+            From Fig. \ref{g2}, slope $=8.33 \cross 10^{-10}$ As/V. Rearranging eq. (12) to keep $U_c$ constant and vary $d$, we get,
+                
+            \begin{align*}
+                \varepsilon_\text{air}^{b} &= \frac{\text{slope}}{\varepsilon_oAU_c} \cdot =1.181
+            \end{align*}
+            
+            where $U_c=1.5$ kV.
 
-    \subsubsection{For Styrofoam}
+            From $\varepsilon_\text{air}^a$ and $\varepsilon_\text{air}^b$, we can calculate the mean value of $\varepsilon_\text{air}=1.106$.\\
 
-    \subsubsection{For Wood}
-        
+        \item \textbf{Measurement of $\varepsilon_\text{styrofoam}$ from $Q \sim U_c$ data}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.8\columnwidth]{images/g3.png}
+                \caption{$Q$ vs $U_c$ data with styrofoam as the dielectric medium}
+                \label{g3}
+            \end{figure}
+
+            From Fig. \ref{g3}, slope $=5.348 \cross 10^{-11}$ As/V. From eq. (12), we get,
+                
+            \begin{align*}
+                \varepsilon_\text{styrofoam} &= \frac{d}{\varepsilon_oA} \cdot \text{slope}=2.184
+            \end{align*}
+            
+            where $d=19.2$ mm.\\
+
+        \item \textbf{Measurement of $\varepsilon_\text{wood}$ from $Q \sim U_c$ data}
+            \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.8\columnwidth]{images/g4.png}
+                \caption{$Q$ vs $U_c$ data with wood as the dielectric medium}
+                \label{g4}
+            \end{figure}
+
+            From Fig. \ref{g4}, $=2.057 \cross 10^{-10}$ As/V. From eq. (12), we get,
+                
+            \begin{align*}
+                \varepsilon_\text{wood} &= \frac{d}{\varepsilon_oA} \cdot \text{slope}=3.588
+            \end{align*}
+            
+            where $d=8.2$ mm.
+
+    \end{enumerate}
+
+
