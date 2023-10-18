@@ -1,8 +1,41 @@
+\section{Error Analysis}
+From Eqn. (6), uncertainity in $f_o$ would be,
+
+\begin{align*}
+    \Delta f_o &= f_o\sqrt{\left(\frac{\Delta L}{2L}\right)^2 + \left(\frac{\Delta C}{2C}\right)^2}\\
+    &=19.574\cdot\sqrt{\left(\frac{0.1}{2\cdot952.4}\right)^2 + \left(\frac{0.01}{2\cdot75.41}\right)^2}\\
+    &=0.001
+\end{align*}
+
+And, from Eqn. (8), uncertainity in $Q$ will be,
+
+\begin{align*}
+    \Delta Q = Q&\sqrt{\left(\frac{\Delta f_o}{f_o}\right)^2 + \left(\frac{\Delta L}{L}\right)^2 + \left(\frac{\Delta R_{dc}}{R_{dc}}\right)^2}\\
+    \implies \Delta Q_1&=0.0005\text{ and }\Delta Q_1=0.003
+\end{align*}
+
+where $R_{dc}$ is the sum of resistance of the resistor, inductor and the output impedance of the function generator.
+
 \section{Results and Discussion}
+We have studied the properties of a series LCR circuit by measuring voltage across different junctions against various input frequencies. The calculated values of resonance frequency of the circuit is (19.574 $\pm$ 0.001) kHz.\\
+
+At resonance, we have found out that,
+
+\begin{itemize}
+    \item $V_R/V_i$ is maximum, i.e. the circuit is purely resistive. And therefore $\phi_R=0^{\circ}$. (Hence, $f_o=19.78$ kHz).
+    \item $V_{LC}$ is minimum and $\phi_{LC}$ is close to $90^{\circ}$. (Hence, $f_o=20.00$ kHz).
+    \item since the capacitor attenuates high frequency signal and the inductor attenuates low frequency signal, at resonance $V_L = V_C$. (Hence, $f_o=20.30$ kHz).\\
+\end{itemize}
+
+The observed values of the resonance frequency from the plots obtained closely match the calculated value, and the average observed value of the resonance frequency is $f_o=20.03$.
+
+We have also found out the Quality factor of the circuit, which comes out to be $Q=(0.773\pm0.0005)$ when $R=98.4\,\Omega$ and $Q=(1.098\pm0.003)$ when $R=46.2\,\Omega$. Graphically, the corresponding values of Q-factor are 0.881 and 1.547 respectively.
+
+So, one can conclude that resistive energy loss will be lower in the second cicuit, and it will have better selectivity (narrow bandwidth or a sharper resonance).
 
 \section{Precautions}
 \begin{enumerate}
-    \item The transformer must be handled carefully.
-    \item Switch on the circuit only after verifying the connections to be proper.
-    \item Do not change the resistor or the capacitor while the circuit is switched on.
+    \item Make the ground connections carefully.
+    \item Take readings only when the values on the oscilloscope stabilize.
+    \item Do not change any component of the circuit while it is switched on.
 \end{enumerate}
