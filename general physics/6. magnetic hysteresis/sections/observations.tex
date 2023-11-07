@@ -1,0 +1,43 @@
+\section{observations}
+In the experiment, the number of turns of the coil was $n=600$, average field line length for the sample $L=232$ mm, and $n/L= 2586.2$ m$^{-1}$. From the, we are able to calculate applied magnetic field intensity as,
+
+\begin{align}
+    H=(n/L)I
+\end{align}
+
+A observational values for the hysteresis curve and degaussing are given in tables I and II.
+\input{tables/hysteresis.tex}
+\input{tables/degaussing.tex}
+
+\section{Data Analysis and Calculations}
+
+\subsection*{Hysteresis Curve}
+
+From table I, we can plot the hysteresis curve for the iron core.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/g1.png}
+    \caption{Induced Magnetic field intensity ($B$) vs Applied Magnetic field intensity ($H$) curve}
+    \label{graph:1}
+\end{figure}
+
+From Fig. \ref{graph:1}, we can find the the following parameters:
+
+\begin{itemize}
+    \item Saturation magnetization, by finding the saturation value of B, which is $B_S \approx 3650$ Gauss.
+    \item Remanence or Retentivity, by finding $B|_{H=0} = B_r = 570$ Gauss.
+    \item Coercivity, by finding $H|_{B=0} = H_C = 516$ A/m (in magnitude).
+\end{itemize} 
+
+\subsection*{Degaussing the Iron Core}
+From table II, B vs $|$B$_r|$ plot was generated as follows.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/g2.png}
+    \caption{Induced Magnetic field intensity ($B$) vs Magnitude of Remnant magnetic field at $I=0$ ($|B_r|$)}
+    \label{graph:2}
+\end{figure}
+
+Here, we can see that the remnant magnetic field decreases and eventually reaches 0 as we continue degaussing the iron core.
