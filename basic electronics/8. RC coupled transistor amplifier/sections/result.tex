@@ -1,8 +1,22 @@
+\section{Error Analysis}
+From Eq. (9), we can find the error in the theoretical value of $A_V$ from,
+
+\begin{align*}
+    \Delta A_V &= \sqrt{\left( \frac{\partial A_V}{\partial R_C} \Delta R_C \right)^2 + \left( \frac{\partial A_V}{\partial R_{E1}} \Delta R_{E1} \right)^2 + \left( \frac{\partial A_V}{\partial r_e} \Delta r_e \right)^2} \\ 
+    & = 0.004
+\end{align*}
+
+Using $\Delta R_C = 0.001$ k$\Omega$, $\Delta R_{E1} = 0.1$ $\Omega$ and $\Delta I_E = 0.01$ mA, where $r_e=26$ mV$/I_E$.
+
 \section{Results and Discussion}
+We have successfully constructed a RC coupled common emitter transistor amplifier circuit, and anaysed its frequency response curve. We found that the gain is maximum and stable in the mid-frequency range. The bandwidth of the frequency response came out to be from 25.58 Hz to 784.16 kHz.
+
+Using data from the D.C. analysis of the circuit, the input and output impedance of the circuit was calculated as $Z_i=$ 1.941 k$\Omega$ and $Z_o=$ 3.849 k$\Omega$.
+
+Similarly, the theoretical value of the mid-frequency gain was calculated as 7.861 $\pm$ 0.004 (or 17.91 dB). The observed value of mid-frequency gain is 7.8 (or 17.84 dB).
 
 \section{Precautions}
 \begin{enumerate}
-    \item The transformer must be handled carefully.
-    \item Switch on the circuit only after verifying the connections to be proper.
-    \item Do not change the resistor or the capacitor while the circuit is switched on.
+    \item Vary the input signal frequency slowly.
+    \item Connect electrolytic capacitors carefully.
 \end{enumerate}

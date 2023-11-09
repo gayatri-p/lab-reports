@@ -16,14 +16,14 @@ The single stage common emitter amplifier circuit shown below uses what is commo
 called "Voltage Divider Biasing". The Base voltage ($V_B$) can be easily calculated using
 the simple voltage divider formula below:
 \begin{align}
-    V+B = \frac{V_{CC}R_2}{R_1+R_2}
+    V_B = \frac{V_{CC}R_2}{R_1+R_2}
 \end{align}
 Thus the base voltage is fixed by biasing and it is independent of base current as long as
 the current in the divider circuit is large compared to the base current. Thus assuming $I_B \approx 0$, one can do the approximate analysis of the voltage divider network without using the
 transistor gain, $\beta$, in the calculation. Note that the approximate approach can be applied
 with a high degree of accuracy when the following condition is satisfied:
 \begin{align}
-    \beta R_E = \ge 10R_2
+    \beta R_E \ge 10R_2
 \end{align}
 
 \subsection*{Load line and Q-point}
@@ -33,13 +33,14 @@ transistor to show all the possible operating points of the transistor from full
 $V_{CC}$/($R_C$ + $R_E$)) to fully "OFF" ($I_C$ = 0). The quiescent operating point or Q-point is a
 point on this load line which represents the values of $I_C$ and $V_{CE}$ that exist in the circuit
 when no input signal is applied. Knowing $V_B$, $I_C$ and $V_{CE}$ can be calculated to locate the
-operating point of the circuit as follows:
+operating point of the circuit as follows,
 \begin{align}
-
+V_E = V_B - V_{BE}
 \end{align}
 So, the emitter current,
 \begin{align}
-
+I_E &\approx I_C = \frac{V_E}{R_E}\\
+\text{and, } V_{CE} &= V_{CC} - I_C(R_C+R_E)
 \end{align}
 It can be noted here that the sequence of calculation does not need the knowledge of $\beta$
 and $I_B$ is not calculated. So the Q-point is stable against any replacement of the transistor.
@@ -71,75 +72,76 @@ increased $I_B$. Therefore $I_C$ increases by $\beta$ times leading to decrease 
 voltage Gain of the common emitter amplifier is equal to the ratio of the change in the
 output voltage to the change in the input voltage. Thus,
 \begin{align}
-
+A_V = \frac{V_{out}}{V_{in}} = \frac{\Delta V_{CE}}{\Delta V_{BE}}
 \end{align}
-The input (Zi) and output (Zo) impedances of the circuit can be computed for the case
-when the emitter resistor $R_E$ is completely bypassed by the capacitor, CE:
-Zi = R1 ║R2║$\beta$re and Zo = $R_C$║ro
-where re (26mV/IE) and ro are the emitter diode resistance and output dynamic resistance
-(can be determined from output characteristics of transistor). Usually ro≥10 $R_C$, thus the
+The input ($Z_i$) and output ($Z_o$) impedances of the circuit can be computed for the case
+when the emitter resistor $R_E$ is completely bypassed by the capacitor, $C_E$:
+\begin{align}
+    Z_i = R_1 \parallel R2 \parallel \beta r_e \text{ and } Z_o = R_C \parallel r_o
+\end{align}
+    
+where $r_e$ (26 mV/I$_E$) and $r_o$ are the emitter diode resistance and output dynamic resistance
+(can be determined from output characteristics of transistor). Usually $r_o \ge 10 R_C$, thus the
 gain can be approximated as
 \begin{align}
-
+    A_V &= \frac{V_{out}}{V_{in}} \nonumber\\
+    &= \frac{-\beta I_B (R_C \parallel r_o)}{I_B \beta r_e} \approx -\frac{R_C}{r_e}
 \end{align}
 The negative sign accounts for the phase reversal at the output.
-Note: In the circuit diagram provided below, the emitter resistor is split into two in order
-to reduce the gain to avoid distortion. So the expression for gain is modified as
-\begin{align}
 
+\textbf{Note:} In the circuit diagram provided below, the emitter resistor is split into two in order
+to reduce the gain to avoid distortion. So the expression for gain is modified as,
+\begin{align}
+    A_V = -\frac{R_C}{(R_{E1}+r_e)}
 \end{align}
-Frequency Response Curve
+
+\subsection*{Frequency Response Curve}
 The performance of an amplifier is characterized by its frequency response curve that
 shows output amplitude (or, more often, voltage gain) plotted versus frequency (often in
 log scale). Typical plot of the voltage gain of an amplifier versus frequency is shown in
 the figure below. The frequency response of an amplifier can be divided into three
 frequency ranges.
-4
 The frequency response begins with the lower frequency range designated between 0 Hz
-and lower cutoff frequency. At lower cutoff frequency, fL , the gain is equal to 0.707 Amid.
-Amid is a constant mid-band gain obtained from the mid-frequency range. The third, the
+and lower cutoff frequency. At lower cutoff frequency, $f_L$ , the gain is equal to 0.707 A$_{mid}$.
+A$_{mid}$ is a constant mid-band gain obtained from the mid-frequency range. The third, the
 higher frequency range covers frequency between upper cutoff frequency and above.
-Similarly, at higher cutoff frequency, fH, the gain is equal to 0.707 Amid. Beyond this the
-gain decreases with frequency increases and dies off eventually.
-The Lower Frequency Range
+Similarly, at higher cutoff frequency, $f_H$, the gain is equal to 0.707 A$_{mid}$. Beyond this the
+gain decreases with frequency increases and dies off eventually.\\
+
+\paragraph{\textbf{The Lower Frequency Range: }}
 Since the impedance of coupling capacitors increases as frequency decreases, the voltage
 gain of a BJT amplifier decreases as frequency decreases. At very low frequencies, the
 capacitive reactance of the coupling capacitors may become large enough to drop some
 of the input voltage or output voltage. Also, the emitter-bypass capacitor may become
 large enough so that it no longer shorts the emitter resistor to ground.
-The Higher Frequency Range
+\paragraph{\textbf{The Higher Frequency Range: }}
 The capacitive reactance of a capacitor decreases as frequency increases. This can lead to
 problems for amplifiers used for high-frequency amplification. The ultimate high cutoff
 frequency of an amplifier is determined by the physical capacitances associated with
 every component and of the physical wiring. Transistors have internal capacitances that
 shunt signal paths thus reducing the gain. The high cutoff frequency is related to a shunt
 time constant formed by resistances and capacitances associated with a node.
-Design:
+
+\subsection*{Design}
 Before designing the circuit, one needs to know the circuit requirement or specifications.
 The circuit is normally biased for $V_{CE}$ at the mid-point of load line with a specified
 collector current. Also, one needs to know the value of supply voltage $V_{CC}$ and the range
 of $\beta$ for the transistor being used (available in the datasheet of the transistor).
-Here the following specifications are used to design the amplifier:
-$V_{CC}$ = 12V and $I_C$ = 1 mA
-Start by making VE= 0.1 $V_{CC}$. Then $R_E$ = VE/IE (Use IE≈$I_C$).
-Since $V_{CE}$ = 0.5 $V_{CC}$, Voltage across $R_C$ = 0.4$V_{CC}$, i.e. $R_C$ = 4.$R_E$
-In order that the approximation analysis can be applied,
-\begin{align*}
 
+Here the following specifications are used to design the amplifier,
+\begin{align*}
+    V_{CC} = 12 \text{ V and } I_C = 1 \text{ mA}
 \end{align*}
-. Here  is the
+Start by making $V_E= 0.1 V_{CC}$. Then $R_E = V_E/I_E$ (Use $I_E \approx I_C$).
+Since $V_{CE} = 0.5 V_{CC}$, Voltage across $R_C = 0.4V_{CC}$, i.e. $R_C = 4R_E$.
+
+In order that the approximation analysis can be applied, $R_2 \le 0.1 \beta R_E$. Here $\beta$ is the
 minimum rated value in the specified range provided by the datasheet (in this
-case  =50).
+case $\beta=50$).
 Finally,
-2
-2
-1
-1
-R
-V
-V
-R 
-, V1 (= $V_{CC}$-V2)and V2 (= VE+$V_B$E) are voltages across R1 and R2,
-respectively.
+$R_1 = (V_1/V_2) R_2$, $V_1$ (= $V_{CC}-V_2$)and $V_2$ ($= V_E+V_{BE}$) are voltages across $R_1$ and $R_2$ respectively.
 Based on these guidelines the components are estimated and the nearest commercially
 available values are used.
+
+\subsection*{Applications}
+The application of RC coupled amplifiers in music systems, has excellent audio fidelity over a wide range of frequencies. Therefore, they are widely used as voltage amplifiers (preamplifiers) Ex: in public address systems. They are also used in radio or TV Receivers as small signal amplifiers.
