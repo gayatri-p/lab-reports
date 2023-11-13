@@ -1,0 +1,30 @@
+\section{Error Analysis}
+
+\begin{enumerate}
+    \item \textbf{Error in $Z_{i1}$}
+        \begin{align*}
+            \scriptstyle \Delta Z_{i1} &= \scriptstyle \sqrt{\left( \frac{\partial Z_{i1}}{\partial R_1} \Delta R_1 \right)^2 + \left( \frac{\partial Z_{i1}}{\partial R_2} \Delta R_2 \right)^2 + \left( \frac{\partial Z_{i1}}{\partial\beta} \Delta\beta \right)^2 + \left( \frac{\partial Z_{i1}}{\partial I_{E1}} \Delta I_{E1} \right)^2} \\
+             &= 1.041\,\Omega
+        \end{align*}
+    \item \textbf{Error in $Z_{o1}$}\\
+        Since $Z_{o1} \approx R_{C1}$, $\Delta Z_{o1} = 0.001\,k\Omega$
+    \item \textbf{Error in $Z_{i2}$}\\
+        Similarly as $Z_{i1}$, $\Delta Z_{i2} = 1.054\,\Omega$
+    \item \textbf{Error in $Z_{o2}$}\\
+        Similarly as $Z_{o1}$, $\Delta Z_{o2} = 0.001\,k\Omega$
+    \item \textbf{Error in $A_{V_1}$}
+        \begin{align*}
+            \scriptstyle\Delta A_{V_1} &= \scriptstyle \sqrt{\left( \frac{\partial A_{V_1}}{\partial c} \Delta c \right)^2 + \left( \frac{\partial A_{V_1}}{\partial Z_{i2}} \Delta Z_{i2} \right)^2 + \left( \frac{\partial A_{V_1}}{\partial R_{E1}} \Delta R_{E1} \right)^2 + \left( \frac{\partial A_{V_1}}{\partial I_{E1}} \Delta I_{E1} \right)^2} \\
+            &= 0.004
+        \end{align*}
+    \item \textbf{Error in $A'_{V_1}$}
+        \begin{align*}
+            \scriptstyle\Delta A'_{V_1} &= \scriptstyle \sqrt{\left( \frac{\partial A'_{V_1}}{\partial c} \Delta c \right)^2 + \left( \frac{\partial A'_{V_1}}{\partial R_{E1}} \Delta R_{E1} \right)^2 + \left( \frac{\partial A'_{V_1}}{\partial I_{E1}} \Delta I_{E1} \right)^2} \\
+            &= 0.001
+        \end{align*}
+    \item \textbf{Error in $A_{V_2}$}\\
+        Similarly to $A'_{V_1}$, $\Delta A_{V_2} = 0.01$
+    \item \textbf{Error in $A_{V_\text{comp}}$}\\
+        Since to $A_{V_\text{comp}} = A_{V_1} \times A_{V_2}$, $\Delta A_{V_\text{comp}} = 0.07$
+
+\end{enumerate}

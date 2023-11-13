@@ -1,8 +1,33 @@
 \section{Results and Discussion}
+We have successfully constructed a two stage RC coupled transistor amplifier circuit, and anaysed its frequency response curve. We found that the gain is maximum and stable in the mid-frequency range. The bandwidth of the frequency response came out to be from 48.46 Hz to 712.89 kHz.
+
+Using data from the D.C. analysis of the circuit, the following values were calculated:
+
+\begin{itemize}
+    \item Input Impedance of Stage 1
+        \begin{align*}
+            Z_{i1} = (2.083 \pm 0.001)\,\text{k}\Omega
+        \end{align*}
+    \item Output Impedance of Stage 1
+        \begin{align*}
+            Z_{i1} = (3.835 \pm 0.001)\,\text{k}\Omega
+        \end{align*}
+    \item Input Impedance of Stage 2
+        \begin{align*}
+            Z_{i2} = (2.062 \pm 0.001)\,\text{k}\Omega
+        \end{align*}
+    \item Output Impedance of Stage 2
+        \begin{align*}
+            Z_{o2} = (3.843 \pm 0.001)\,\text{k}\Omega
+        \end{align*}
+\end{itemize}
+
+The theoretical value of the overall mid-frequency gain voltage gain was calculated as (14.48 $\pm$ 0.07) (or 23.21 $\pm$ 0.04 dB). The observed value of mid-frequency gain is 19.75 (or 25.91 dB). We can see that overall gain is close to the product of the voltage gain of both the individual stages. 
+
+The deviation in the values could be due to error in measurement of the resistance/capacitance values, or the extra resistance offered by the connecting wires.
 
 \section{Precautions}
 \begin{enumerate}
-    \item The transformer must be handled carefully.
-    \item Switch on the circuit only after verifying the connections to be proper.
-    \item Do not change the resistor or the capacitor while the circuit is switched on.
+    \item Vary the input signal frequency slowly.
+    \item Connect electrolytic capacitors carefully.
 \end{enumerate}

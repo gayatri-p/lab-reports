@@ -1,1 +1,67 @@
+\section{Objective}
+To design a two stage RC coupled common emitter transistor (NPN) amplifier circuit
+and to study its frequency response curve.
+
 \section{Theory}
+A single stage of amplification is often not enough for a particular application. The
+overall gain can be increased by using more than one stage, so when two amplifiers are
+connected in such a way that the output signal of the first serves as the input signal to the
+second, the amplifiers are said to be connected in cascade. The most common
+arrangement is the common-emitter configuration.
+
+Resistance-capacitance (RC) coupling is most widely used to connect the output of first stage
+to the input (base) of the second stage and so on. It is the most popular type of coupling
+because it is cheap and provides a constant amplification over a wide range of frequencies.
+These R-C coupled amplifier circuits are commonly used as voltage amplifiers in the
+audio systems.
+
+\subsection*{Circuit Design}
+
+The circuit diagram (Fig.\ref{fig:1}) shows the 2-stages of an RC coupled amplifier in CE
+configuration using NPN transistors. Capacitors $C_1$ and $C_3$ couple the input signal to
+transistors $Q_1$ and $Q_2$, respectively. $C_5$ is used for coupling the signal from $Q_2$ to its load.
+$R_1$, $R_2$, $R_{E1}$ and $R_3$, $R_4$, $R_{E2}$ are used for biasing and stabilization of stage 1 and 2 of theamplifier. $C_2$ and $C_4$ provide low reactance paths to the signal through the emitter.
+
+\subsection*{Gain}
+The total gain of a 2-stage amplifier is equal to the product of individual gain of each
+stage. Once the second stage is added, its input impedance acts as an additional load on the first stage thereby reducing the gain as compared to its no load
+gain. Thus the overall gain characteristics is affected due to this loading effect.
+
+The loading of the second stage i.e. input impedance of second stage is given by,
+
+\begin{align}
+    Z_{i2} = R_3 \parallel R_4 \parallel \beta r_{e2}
+\end{align}
+
+Hence, the loaded gain of the first stage is depends on the input impedance of the first stage, i.e.,
+
+\begin{align}
+    A_{V1} = -\frac{R_{C1} \parallel Z_{i2}}{r_{e1}}
+\end{align}
+
+And the unloaded gain of the second stage,
+
+\begin{align}
+    A_{V2} = -\frac{R_{C2}}{r_{e2}}
+\end{align}
+
+In the experimental circuit, the emitter resistor is split into two in order to
+reduce the gain to avoid distortion. So the expression for gain each stage is modified as,
+
+\begin{align}
+    A_{V1} = -\frac{R_{C1} \parallel Z_{i2}}{R_{E1} + r_{e1}}\\
+    A_{V2} = -\frac{R_{C2}}{R_{E2} + r_{e2}}
+\end{align}
+
+\subsection*{Frequency Response Curve}
+The performance of an amplifier is characterized by its frequency response curve that
+shows voltage gain plotted versus frequency. The frequency
+response begins with the lower frequency region designated between 0 Hz and lower
+cutoff frequency. At lower cutoff frequency, $f_L$ , the gain is equal to 0.707 A$_\text{mid}$. A$_\text{mid}$ is a
+constant mid-band gain obtained from the mid-band frequency region. The third, the
+upper frequency region covers frequency between upper cutoff frequency and above.
+Similarly, at upper cutoff frequency, $f_H$, the gain is equal to 0.707 A$_\text{mid}$. Beyond the upper
+cutoff frequency, the gain decreases as the frequency increases and dies off eventually.
+
+\subsection*{Applications}
+The application of RC coupled amplifiers in music systems, has excellent audio fidelity over a wide range of frequencies. Therefore, they are widely used as voltage amplifiers (preamplifiers). For example, in public address systems. They are also used in radio or TV Receivers as small signal amplifiers.
