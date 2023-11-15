@@ -78,7 +78,7 @@ The mid-frequency voltage gain ($V_o/V_i$) (at $f \approx 20$ kHz) was measured 
     Parameter & Computed  & Observed  & Computed  & Observed\\
      &  Value &  Value &  Value &  Value\\ \hline
     Unloaded  & \multirow{1}{*}{6.26}  &  \multirow{1}{*}{5.95} & \multirow{1}{*}{6.61}  &  \multirow{1}{*}{6.40} \\
-    Voltage Gain        & (16.12 dB)   & (15.49 dB)             & (15.94 dB)          &  (16.12 dB) \\ \hline
+    Voltage Gain        & (15.93 dB)   & (15.49 dB)             & (15.94 dB)          &  (16.12 dB) \\ \hline
     Loaded & \multirow{1}{*}{2.19} & \multirow{1}{*}{3.50} & \multirow{2}{*}{-}  &  \multirow{2}{*}{-} \\
     Voltage Gain& (6.81 dB) & (10.88 dB)  & &   \\
     \hline
@@ -124,24 +124,23 @@ And output impedance,
 Using Eqs. (4) and (5), loaded gain of the first stage
 
 \begin{align*}
-    A_{V1} &= \frac{R_{C1} \parallel Z_{i2}}{R_{E1} + r_{e1}}\\
+    A_{V_1} &= \frac{R_{C1} \parallel Z_{i2}}{R_{E1} + r_{e1}}\\
     &=\frac{\left( \frac{1}{3835} + \frac{1}{2062}\right)^{-1}}{590+22.22}\\
     &= 2.19\,\,(\text{or 6.81 dB})
 \end{align*}
 
 unloaded gain of first stage,
 \begin{align*}
-    A'_{V1} &= \frac{R_{C1}}{R_{E1} + r_{e1}}\\
+    A'_{V_1} &= \frac{R_{C1}}{R_{E1} + r_{e1}}\\
     &=\frac{3835}{590+22.22}\\
     &= 6.26\,\,(\text{or 15.94 dB})
 \end{align*}
 
 unloaded gain of second stage,
 \begin{align*}
-    A_{V2} &= \frac{R_{C2}}{R_{E1} + r_{e1}}\\
+    A_{V_2} &= \frac{R_{C2}}{R_{E1} + r_{e1}}\\
     &=\frac{3843}{559.3+22.22}\\
     &= 6.61\,\,(\text{or 16.40 dB})
-    % A_{V2} = -\frac{R_{C2}}{R_{E2} + r_{e2}}
 \end{align*}
 
 The overall computed gain of the 2 stage amplifier,
