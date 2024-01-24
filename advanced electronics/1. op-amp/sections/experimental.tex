@@ -1,0 +1,65 @@
+\section{Observation and Calculations}
+
+\subsection{Inverting Amplifier Setup}
+    \begin{itemize}
+        \item $R_{1}=9.90$ \kohm
+        \item $R_{2}=55.66$ \kohm
+        \item $R_{3}=0.986$ \kohm
+    \end{itemize}
+    \input{tables/inverting.tex}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\columnwidth]{images/ga.png}
+        \caption{$V_\text{out}$ vs $V_\text{in}$ for the inverting amplifier. Notice $V_\text{out}$ saturates as it reaches around the value of $\pm V_{CC}$}
+        \label{g1}
+    \end{figure}
+    
+
+\subsection{Non-Inverting Amplifier Setup}
+    \begin{itemize}
+        \item $R_{1}=9.73$ \kohm, $R_{2}=0.986$ \kohm
+        \item $R_{3}=55.66$ \kohm, $R_{4}=9.90$ \kohm
+    \end{itemize}
+    \input{tables/noninverting.tex}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\columnwidth]{images/gb.png}
+        \caption{$V_\text{out}$ vs $V_\text{in}$ for the non-inverting amplifier. Notice $V_\text{out}$ saturates as it reaches around the value of $\pm V_{CC}$}
+        \label{g2}
+    \end{figure}
+
+\subsection{Summing Amplifier Setup}
+    \input{tables/summing.tex}
+
+\subsection{Difference Amplifier Setup}
+    \input{tables/difference.tex}
+
+\subsection{Voltage Comparator Setup}
+    \input{tables/comparator.tex}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\columnwidth]{images/ge.png}
+        \caption{$V_\text{out}$ vs $V_\text{in}$ for the voltage comparator circuit}
+        \label{g3}
+    \end{figure}
+
+\subsection{Schmitt Trigger Setup}
+    \begin{itemize}
+        \item $R_1=9.90$ \kohm
+        \item $R_{2}=55.66$ \kohm
+    \end{itemize}
+    \input{tables/schmitt.tex}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\columnwidth]{images/st5.png}
+        \caption{$(R_1/R_2) V_\text{out} = 5.92$ V}
+        \caption{$V_\text{out}$ vs $V_\text{in}$ for Schmitt trigger setup 1}
+        \label{g4}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\columnwidth]{images/st12.png}
+        \caption{$V_\text{out}$ vs $V_\text{in}$ for Schmitt trigger setup 2}
+        \label{g5}
+    \end{figure}
