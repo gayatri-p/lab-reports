@@ -24,15 +24,15 @@
 
 \subsection*{Introduction}
 
-One of the most versatile and widely used electronic devices in linear applications is the operational amplifier, most often referred to as the op-amp. Op amps are popular because they are low in cost and easy to use. Op amps have five basic terminals: two for supply power, two for input signals, and one for output. Inverting input marked with a negative sign, and the other a non-inverting input marked with a positive plus sign.
+One of the most versatile and widely used electronic devices in linear applications is the operational amplifier, most often referred to as the op-amp. Op amps are popular because they are low in cost and easy to use. Op amps have five basic terminals: two for supply power, two for input signals, and one for output. Inverting input marked with a negative sign, and the other a non-inverting input marked with a positive plus sign.\\
 
 The ideal op amp (Fig. \ref{fig:0}) has infinite gain which is frequency independent. The input terminals draw no current and exhibit infinite input resistance. Output impedance is 0 $\Omega$, so that maximum voltage can be drawn by the load.
-The amplified output signal of an Operational Amplifier is the difference between the two signals being applied to the two inputs. Since an op-amp is an active device,  power supply is provided to the op-amp using a bipolar supply and has typical values of $\pm$ 15 V.
+The amplified output signal of an Operational Amplifier is the difference between the two signals being applied to the two inputs. Since an op-amp is an active device,  power supply is provided to the op-amp using a bipolar supply and has typical values of $\pm$ 15 V.\\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.9\columnwidth]{images/ideal.png}
-    \caption{Schematic of an ideal op-amp}
+    \includegraphics[width=0.90\columnwidth]{images/ideal.png}
+    \caption{Schematic of an ideal op-amp\\}
     \label{fig:0}
 \end{figure}
 
@@ -40,12 +40,12 @@ The most commonly available and used of all operational amplifiers is the indust
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\columnwidth]{images/pinout.jpeg}
+    \includegraphics[width=0.95\columnwidth]{images/pinout.jpeg}
     \caption{IC 741 Pinout}
     \label{fig:1}
 \end{figure}
 
-The output voltage $V_\text{out}$ is determined by the open loop gain (without any possible feedback connections), given by 
+The output voltage $V_\text{out}$ is determined by the open loop gain (without any possible feedback connections), is given by 
 
 \begin{align}V_\text{out}=A_{OL}(V_1-V_2)\end{align} 
 
@@ -235,7 +235,15 @@ if $R_1 = R_2$ and $ R_3 = R_4$.
 
 Without negative feedback, the op-amp goes into positive or negative saturation according to the difference of the input voltages, which can be used to design switching or non-linear circuits.
 
-In the circuit diagram (Fig. \ref{comp1}), if $V_\text{in} > 0, V_o \approx V_{++}$ and $V_\text{in} < 0, V_o \approx V_{--}$. Hence, the circuit can be used as a comparator.
+From the circuit diagram (Fig. \ref{comp1}) we can see that, 
+% if $V_\text{in} > 0, V_o \approx V_{++}$ and $V_\text{in} < 0, V_o \approx V_{--}$. 
+\begin{align}
+    V_\text{out} \approx \begin{cases}
+        V_{++} \text{ if } V_+ > 0\\
+        V_{--} \text{ if } V_+ < 0\\
+    \end{cases}
+\end{align}
+Hence, the circuit can be used as a comparator.
 
 If we modify the circuit a bit by connecting the non-inverting terminal to a any voltage source, $V_{th}$ (Fig. \ref{comp2}), the circuit now switches when $V_\text{in}$ crosses a the threshold value $V_\text{th}$.
 
@@ -246,7 +254,7 @@ If we modify the circuit a bit by connecting the non-inverting terminal to a any
     \label{comp2}
 \end{figure}
 
-This simple comparator circuit is not ideal for practical use, i.e. if the input is noisy, the output may make several transitions as the input passes through the threshold point (Fig. \ref{comp3}). Also, for very slowly varying input, the output transitions can be rather slow. These can be remedied by using the Schmitt trigger.
+This simple comparator circuit is \textit{not ideal} for practical use, i.e. if the input is noisy, the output may make several transitions as the input passes through the threshold point (Fig. \ref{comp3}). Also, for very slowly varying input, the output transitions can be rather slow. These can be remedied by using the \textit{Schmitt trigger}.
 
 \begin{figure}[H]
     \centering
@@ -272,15 +280,7 @@ This simple comparator circuit is not ideal for practical use, i.e. if the input
 The Schmitt Trigger is a modification on the comparator circuit with positive feedback. This causes the circuit to to have two threshold points --- when the output is high, it makes the switching level higher than it is when the output is low. This causes the circuit to have hysteresis or toggle action.
 Thus, noisy inputs are less likely to output multiple triggering.
 
-Let $V_+$ and $V_-$ be the voltages at the non-inverting and inverting terminals respectively. If $V_-$ is 0, then
-
-\begin{align}
-    V_\text{out} \approx \begin{cases}
-        V_{++} \text{ if } V_+ > 0\\
-        V_{--} \text{ if } V_+ < 0\\
-    \end{cases}
-\end{align}
-
+Let $V_+$ and $V_-$ be the voltages at the non-inverting and inverting terminals respectively.
 Since $V_\text{out}$ changes its state whenever $V_+$ crosses 0V, we need to find what value of $V_\text{in}$ results in $V_+ = 0$. The two values of $V_\text{in}$ for which the output switches are called the \textit{trip points}. $V_+ = 0$ acts as a voltage divider formed by $R_1$ and $R_2$ between $V_\text{in}$ and $V_\text{out}$. Thus the trip points of a non-inverting Schmitt trigger are: 
 
 \begin{align}
