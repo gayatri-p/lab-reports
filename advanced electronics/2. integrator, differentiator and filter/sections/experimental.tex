@@ -1,0 +1,114 @@
+\section{Observation and Calculations}
+
+\subsection{Op-amp as an integrator}
+    
+Refer Fig. \ref{intexp}.
+
+    \begin{itemize}
+        \item $R_1 = 9.85$ \kohm, $R_2 = 9.90$ \kohm, $R_f = 99.10$ \kohm
+        \item $C_f = 102.2$ nF\\
+    \end{itemize}
+
+    The following waveforms were obtained on the oscilloscope.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\columnwidth]{images/int5.png}
+        \caption{Sinusoidal input waveform (above) and its corresponding phase shifted output waveform (below) by an Integrator Circuit}
+        \label{int1}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\columnwidth]{images/int2.png}
+        \caption{Square wave input signal (above) and its corresponding output waveform (below) by an Integrator Circuit.}
+        \label{int2}
+    \end{figure}
+
+    In Fig. \ref{int2}, the input may be treated as $\pm V$ for short periods of time. With time, the area swept out from underneath the input signal increases, and then decreases due to the polarity changes. It follows that the output will grow (or shrink) in a linear fashion, as the input is constant. In other words, straight ramps are produced, hence this type of circuit is also known as the \textit{Ramp Generator}.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\columnwidth]{images/int3.png}
+        \caption{Triangle waveform input (above) and its corresponding output waveform (below) by an Integrator Circuit}
+        \label{int3}
+    \end{figure}
+
+    In Fig. \ref{int3}, the triangular wave is composed of linearly raising and linearly falling parts, the integral of which will result in a quadratic term along with some constants arising due to the components of the circuit. So the output will be parabolic in nature. The output observed is a composition of +ve and -ve halves of \textit{parabolas}, and \textit{not a sinusoidal curve}.
+
+% ======================================================================================
+
+\subsection{Op-amp as a differentiator}
+    Refer Fig. \ref{diffexp}.
+    \begin{itemize}
+        \item $R_1 = 1.006$ \kohm, $R_2 = 1.002$ \kohm, $R_f = 9.90$ \kohm
+        \item $C_f = 10.40$ nF, $C_\text{in} = 102.2$ nF\\
+    \end{itemize}
+    The following waveforms were obtained on the oscilloscope.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\columnwidth]{images/diff01.png}
+        \caption{Sinusoidal input waveform with its corresponding output waveform (shown here with lower amplitude), phase shifted by $\pi$, by a differentiator circuit}
+        \label{diff1}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\columnwidth]{images/diff3.png}
+        \caption{Square wave input signal (above) with its corresponding output signal. The positive and negative spikes coincide with the rising/falling edge of the input square wave, which indicate increasing/decreasing slope.}
+        \label{diff2}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\columnwidth]{images/diff23.png}
+        \caption{Triangular wave input signal (above) with its corresponding output signal. Since the input consists of steady increase/decrease in voltage, the corresponding slopes are constant, resulting in a square wave.}
+        \label{diff3}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.75\columnwidth]{images/diff4.png}
+        \caption{Pulsating input signal (above) with the corresponding output signal by a differentiator circuit. The same explanation as Fig. \ref{diff2} applies here.}
+        \label{diff4}
+    \end{figure}
+
+% ======================================================================================
+\subsection{Op-amp as an active low pass filter}
+    Using the circuit in Fig \ref{lowpasscircuit}, the following values voltages were obtained as a function of frequency.
+
+    \begin{itemize}
+        \item $R_1 = 9.85$ \kohm, $R_f = 99.10$ \kohm, $C = 102.2$ nF
+        \item $f_c=1/2 \pi RC=158$ Hz\\
+    \end{itemize}
+    
+    \input{tables/low.tex}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.81\columnwidth]{images/low_pass_output.png}
+        \caption{Bode plot (Gain vs frequency) for Table \ref{tab:1}}
+        \label{lowoutput}
+    \end{figure}
+
+From the graph, the observed value of the cutoff frequency is 225 Hz. There is some deviation in the expected value from the experimental value, which could be due to various reasons like offset voltage or error in measurement.
+
+% ======================================================================================
+\subsection{Op-amp as an active high pass filter}
+By constructing a high pass filter (Fig. \ref{highpasscircuit}), the following values voltages were obtained as a function of frequency. Note: $C_f$ was not connected in parallel to $R_f$ in the practical circuit used as it attenuated higher frequencies. 
+
+    \begin{itemize}
+        \item $R_\text{in} = 1.002$ \kohm, $R_f = 9.90$ \kohm, $C_\text{in} = 102.2$ nF
+        \item $f_c=1/2 \pi RC=1554$ Hz\\
+    \end{itemize}
+
+    \input{tables/high.tex}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\columnwidth]{images/high_pass_output.png}
+        \caption{Bode plot (Gain vs frequency) for Table \ref{tab:2}}
+        \label{highoutput}
+    \end{figure}
+
+From the graph, the observed value of the cutoff frequency is around 980 Hz. There is some deviation in the expected value from the experimental value, which could be due to various reasons as mentioned previously. 

@@ -1,0 +1,47 @@
+\section{Discussion}
+
+A practical integrator circuit (Fig. \ref{intexp}) consists of two additional components, to that of an ideal integrator circuit.\\
+
+\begin{itemize}
+    \item $R_f$: Since the integrator circuit acts as a low pass filter, at low frequencies the gain of the circuit is very high. Hence, to avoid the op-amp going into open loop configuration at low frequencies, $R_f$ is added in parallel to $C_f$. When $R_f$ was removed, the circuit was observed to be very unstable at low frequencies.\\
+    \item $R_2$: Real op-amps have some bias current that exhibits some voltage imbalance. While these imperfections are not large, they can cause problems with circuits like integrators, in which the effect of a small error grows with time. To fix this, the non-inverting terminal of the op-amp is connected to an offset-minimizing resistor before being grounded. Removing this resistor was observed to make the output signal less clean.\\
+\end{itemize}
+
+Similarly, a practical Differentiator circuit (Fig. \ref{diffexp}) consists of 3 additional components.\\
+
+\begin{itemize}
+    \item \textbf{$R_1$:} Broadly there are two reasons to use $R_1$ in series with \Xin{C}:
+        \begin{itemize}
+            \item At higher frequencies, \Xin{C} gets shorted, which means the gain goes to infinity. It means that it can amplify high-frequency noise signals. Also, the gain of the circuit increases continuously with the increase in frequency (roll-off). Connecting $R_1$ will thus limit the gain of the amplifier.
+            \item The input impedance of the circuit will be zero at high frequencies. Due to this, the input source gets loaded and the circuit draws more current from the source. Connecting $R_1$ will make sure that $X_C+R_1\ne 0$
+        \end{itemize}
+    
+    When $R_1$ was removed, the output signal was observed to be very unstable.\\
+    
+    \item $C_f$: It is a small valued capacitor. It provides additional attenuation at high frequencies such that the circuit won't run into oscillations. It also reduces bandwidth, so high-frequency noise gets bypassed and will not appear at output. When removed, the gain was observed to decrease after a certain frequency.\\
+    \item $R_2$: The non-inverting terminal is connected to an offset-minimizing resistor before being grounded. This is to make sure there is no offset voltage - since the differentiator circuit is very sensitive to any change in the input voltage. Removing this resistor was observed to make the output signal less clean.
+\end{itemize}
+
+\section{Precautions and Sources of Error}
+
+    \begin{enumerate}
+        \item Connections should be verified before switching on the circuit
+        \item The resistance to be chosen should be in \kohm\,range
+        \item Outputs should be observed within a suitable frequency range, about 50Hz to 100kHz
+    \end{enumerate}
+
+\section{Conclusion}
+
+We have successfully constructed differentiator and integrator circuits using op-amps and studied their property. We also discussed their faults and ways to rectify them using additional circuit components.
+Furthermore, we also built and studied active high-pass and low-pass filters using op-amps and studied their frequency response curves.
+
+\section{Applications}
+
+Integrator circuits are most commonly used in analog to digital converters, various signal wave-shaping circuits and in ramp generators.
+
+Differentiator circuits are most commonly used in wave shaping circuits to detect the high-frequency components in the input signal and as a rate-of-change detector in the FM demodulators.
+
+Early analog computers used vacuum tube op-amps to build summing
+amplifiers and integrators to solve linear, ordinary differential equations. Differentiators were avoided because of their inherent noise problems. One can say that a differentiator is a high-pass filter that also passes broadband noise while an integrator is a quieter, low-pass filter.\\
+
+Active filters are used in communication systems for suppressing noise, in audio systems, in sensitive biomedical instruments and in various other places where we have to amplify weak signals with desired frequencies. 

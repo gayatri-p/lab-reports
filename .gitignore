@@ -2,6 +2,8 @@
 mainNOtes.bib
 
 .vscode/
+boilerplate/
+*.bmp
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
