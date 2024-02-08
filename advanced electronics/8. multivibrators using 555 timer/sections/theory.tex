@@ -1,12 +1,12 @@
 \section{Theory}
 
-Sequential Logic circuits can be used to build more complex circuits like counters, shift registers, latches or memories, but for these types of circuits to operate in a sequential manner, they require some kind of a clock pulse or timing signal which can cause them to change their state. Clock pulses are generally square shaped waves that
+Sequential Logic circuits can be used to build more complex circuits like counters, shift registers, latches or memories, but for these types of circuits to operate in a sequential manner, they require some kind of a clock pulse or timing signal which can cause them to change their state. Clock pulses are generally square-shaped waves that
 are produced by a single pulse generator circuit such as a Multivibrator which oscillates
 between a \verb|HIGH| and a \verb|LOW| state. Sequential logic circuits that use the
 clock signal for synchronization change their state on either the rising or falling
 edge, or both of the clock signal.
 
-A duty cycle or power cycle is the fraction of one period in which a signal or system is active. Generally these signals has an even 50\% duty cycle, i.e.
+A duty cycle or power cycle is the fraction of one period in which a signal or system is active. Generally, these signals have an even 50\% duty cycle, i.e.
 it has a 50\% \verb|ON| time and a 50\% \verb|OFF| time.  There are basically three types of pulse
 generation circuits depending on the number of stable states,
 
@@ -166,9 +166,9 @@ cycle can be derived as follows.
 
 Monostable multivibrator or a one shot multivibrator is a pulse generating
 circuit where the duration of this pulse is determined by the RC network connected
-externally. When a negative pulse is applied to the trigger input (pin 2) of the Monostable oscillator, the internal comparator, detects this input and “sets” the state of the flip-flop, changing the output from a \verb|LOW| state to a \verb|HIGH| state. This action  turns “OFF” the discharge transistor connected to pin 7, removing the short circuit across the external timing capacitor, C.
+externally. When a negative pulse is applied to the trigger input (pin 2) of the Monostable oscillator, the internal comparator, detects this input and “sets” the state of the flip-flop, changing the output from a \verb|LOW| state to a \verb|HIGH| state. This action turns “OFF” the discharge transistor connected to pin 7, removing the short circuit across the external timing capacitor, C.
 
-This allows the timing capacitor to start to charge up through resistor, R until the voltage across the capacitor reaches the threshold (pin 6) voltage of $2/3$ $V_{CC}$ set up by the internal voltage divider network. At this point the comparators output goes \verb|HIGH| and “resets” the flip-flop back to its original state which in turn turns “ON” the transistor and discharges the capacitor to ground through pin 7. This causes the output to change its state back to the original stable \verb|LOW| value awaiting another trigger pulse to start the timing process over again. Then as before, the Monostable Multivibrator has only 1 stable state.
+This allows the timing capacitor to start to charge up through resistor, R until the voltage across the capacitor reaches the threshold (pin 6) voltage of $2/3$ $V_{CC}$ set up by the internal voltage divider network. At this point the comparator's output goes \verb|HIGH| and “resets” the flip-flop back to its original state which in turn turns “ON” the transistor and discharges the capacitor to ground through pin 7. This causes the output to change its state back to the original stable \verb|LOW| value awaiting another trigger pulse to start the timing process over again. Then as before, the Monostable Multivibrator has only 1 stable state.
 
 \begin{figure}[H]
     \centering
@@ -186,15 +186,15 @@ The Monostable 555 Timer circuit triggers on a negative-going pulse applied to p
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.65\columnwidth]{images/mono2.png}
-    \caption{Circuit diagram of an monostable multivibrator}
+    \caption{Circuit diagram of a monostable multivibrator}
     \label{mono2}
 \end{figure}
 
 \subsection{Bistable Multivibrator}
-In these circuits, the output is stable in both the states. The states are switched using an
+In these circuits, the output is stable in both states. The states are switched using an
 external trigger but unlike the monostable multivibrator, it does not return back to its
 original state. Another trigger is needed for this to happen. This operation is similar to a
-flip-flop. There are no RC timing network and hence no design parameters. The
+flip-flop. There are no RC timing networks and hence no design parameters. The
 following circuit can be used to design a bistable multivibrator. The trigger and reset
 inputs (pins 2 and 4 respectively on a 555) are held high via pull-up resistors while the
 threshold input (pin 6) is simply grounded. Thus configured, pulling the trigger
@@ -212,7 +212,7 @@ to ground (low state).
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\columnwidth]{images/bis2.png}
-    \caption{Circuit diagram of an bistable multivibrator}
+    \caption{Circuit diagram of a bistable multivibrator}
     \label{bis2}
 \end{figure}
 

@@ -13,6 +13,6 @@ Moreover, the measured values for the rise and fall times of the clock signal ar
 
 Note that these parameters are measured from a single measurement and more accurate values could be measured by averaging out many samples.\\
 
-A typical JK flip-flop on an IC has propagation delay of around 4 ns. This is comparitively smaller than what we observed since in our case the circuit was built using NAND gates on a breadboard and the (relatively) longer connections will create bigger delays.\\
+A typical JK flip-flop on an IC has a propagation delay of around 4 ns. This is comparatively smaller than what we observed since in our case the circuit was built using NAND gates on a breadboard and the (relatively) longer connections will create bigger delays.\\
 
-Although small, these values are significant in designing any bigger circuit. For example, consider the case where there are two flip-flops with a 10 ns delay between them. If you use a clock that runs at 50 MHz (20 ns period) you will be safe. However if you use a 200 MHz clock (5 ns period) the design will fail to work properly. The longer the propagation delay, the slower the clock is able to run. Hence the speed of the system is ultimately dependent on these values.
+Although small, these values are significant in designing any bigger circuit. For example, consider the case where there are two flip-flops with a 10 ns delay between them. If you use a clock that runs at 50 MHz (20 ns period) you will be safe. However, if you use a 200 MHz clock (5 ns period) the design will fail to work properly. The longer the propagation delay, the slower the clock is able to run. Hence the speed of the system is ultimately dependent on these values.

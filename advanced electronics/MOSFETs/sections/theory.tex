@@ -1,5 +1,5 @@
 \section*{Introduction}
-A field-effect transistor (FET) is a type of transistor that uses an electric field to control the flow of current in a semiconductor. It gas two types -- junction FET (JFET) and metal-oxide-semiconductor FET (MOSFET). \\
+A field-effect transistor (FET) is a type of transistor that uses an electric field to control the flow of current in a semiconductor. It has two types -- junction FET (JFET) and metal-oxide-semiconductor FET (MOSFET). \\
 
 A Metal Oxide Semiconductor Field-effect Transistor (MOSFET) is a FET with an insulated gate. It has 4 terminals -- source (S), gate (G), drain (D) and body (B). In general, the body of the MOSFET is in connection with the source terminal thus forming a three-terminal FET. The charge carriers enter into the channel through the source terminal and exit via the drain through a channel whose width is controlled by the voltage on an electrode which is called the gate and it is located in between the source and the drain. It is insulated from the channel by an extremely thin layer of metal oxide.
 
@@ -22,29 +22,28 @@ Fig. \ref{str} shows the internal structure of a MOSFET. The source (S) and drai
 
 If we connect a voltage source between D and S, $V_{ds}$, it increases the potential at the drain terminal, thus increasing the depletion region between the drain and the body. Due to this, there will be no current flow from the drain to the source and the MOSFET is off. This is also called the \textbf{cutoff region}.\\
 
-To flow current from drain to source, we need to create a channel between them. We can connect a voltage source $V_{gs}$ between the gate and the source. Since the body is a p-type semiconductor, the electrons being the minority charge carriers accumulate near the gate. This acts as a capacitive layer. As we keep on increasing $V_{gs}$, the electrons start filling the holes near the gate and holes start moving away from the gate.\\
+To flow current from the drain to the source, we need to create a channel between them. We can connect a voltage source $V_{gs}$ between the gate and the source. Since the body is a p-type semiconductor, the electrons being the minority charge carriers accumulate near the gate. This acts as a capacitive layer. As we keep on increasing $V_{gs}$, the electrons start filling the holes near the gate and holes start moving away from the gate.\\
 
-Hence due to this electrons, the region near the gate acts as a channel between the source and the drain such that electrons can move from the source to the drain. The voltage at which the channel is formed is called the \textbf{threshold voltage}. As the conventional current flows from drain to the source, it is called \textbf{drain current}. This region is also called the \textbf{ohmic region}. The width of the channel is controlled by $V_{gs}$.\\
+Hence due to these electrons, the region near the gate acts as a channel between the source and the drain such that electrons can move from the source to the drain. The voltage at which the channel is formed is called the \textbf{threshold voltage}. As the conventional current flows from drain to the source, it is called \textbf{drain current}. This region is also called the \textbf{ohmic region}. The width of the channel is controlled by $V_{gs}$.\\
 
-However, as the voltage $V_{ds}$ increases, the depletion layer between the drain and the body will increase as they are reverse biased. Also the channel begins to deplete towards the drain end since the drain is at a positive potential and negative charges from the channel closest to the drain are being pulled into the drain. This reduces the width of the channel, also known as the \textbf{pinch-off effect}.\\ 
+However, as the voltage $V_{ds}$ increases, the depletion layer between the drain and the body will increase as they are reverse-biased. Also, the channel begins to deplete towards the drain end since the drain is at a positive potential and negative charges from the channel closest to the drain are being pulled into the drain. This reduces the width of the channel, also known as the \textbf{pinch-off effect}.\\ 
 
 However, the flow is not completely pinched off due to the large flow of electrons in the channel, and instead there is a constant saturated current. The voltage at which the current saturates is called the \textbf{saturation voltage} and this region is called the \textbf{saturation region}.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.65\columnwidth]{images/stages1.png}
-    \caption{Operating stages of an N-channel enchancement MOSFET}
-    % \label{drain}
+    \includegraphics[width=0.74\columnwidth]{images/stages1.png}
+    \caption{Operating stages of an N-channel enhancement  MOSFET}
 \end{figure}
-
-To increase the saturation current, one can control the gate voltage $V_{gs}$, since it controls the width of the channel. Fig. \ref{drain} and \ref{trans} show the corresponding drain and transfer characterstics of this MOSFET.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.65\columnwidth]{images/drain.png}
-    \caption{Typical $i_d$ vs. $v_{ds}$ characterstic curve for different values of $v_{gs}$}
+    \caption{Typical $i_d$ vs. $v_{ds}$ characteristic curve for different values of $v_{gs}$}
     \label{drain}
 \end{figure}
+
+To increase the saturation current, one can control the gate voltage $V_{gs}$, since it controls the width of the channel. Fig. \ref{drain} and \ref{trans} show the corresponding drain and transfer characteristics of this MOSFET.
 
 \begin{figure}[H]
     \centering
@@ -53,7 +52,7 @@ To increase the saturation current, one can control the gate voltage $V_{gs}$, s
     \label{trans}
 \end{figure}
 
-With a fixed $v_{ds}$ drain-source voltage connected across the MOSFET we can plot the values of drain current, $i_ds$ with varying values of $v_{gs}$ to obtain a graph of the forward DC characteristics. The gain of the MOSFET can be written as,
+With a fixed $v_{ds}$ drain-source voltage connected across the MOSFET, we can plot the values of drain current, $i_ds$ with varying values of $v_{gs}$ to obtain a graph of the forward DC characteristics. The gain of the MOSFET can be written as,
 
 \begin{align*}
     \text{Gain } &= \frac{i_{ds}}{i_{gs}}\\
@@ -61,7 +60,7 @@ With a fixed $v_{ds}$ drain-source voltage connected across the MOSFET we can pl
     i_{ds} &= g_m\,v_{gs}
 \end{align*}
 
-Here $g_m$ is the \textbf{transconductance} of the transistor which is short for “transfer conductance” and has the unit of Siemens (S) (or A V$^{-1}$). Voltage gain of a mosfet amplifier is directly proportional to the transconductance and to the value of the drain resistor.
+Here $g_m$ is the \textbf{transconductance} of the transistor which is short for “transfer conductance” (since the current is not flowing across the applied voltage) and has the unit of Siemens (S) (or A V$^{-1}$). Voltage gain of a MOSFET amplifier is directly proportional to the transconductance and to the value of the drain resistor.
 
 \begin{align}
     \text{Gain } &= \frac{g_m}{2 \pi f C_{ox}} \label{gain}
@@ -69,14 +68,14 @@ Here $g_m$ is the \textbf{transconductance} of the transistor which is short for
 
 % ======================================================================================
 \subsection*{Frequency Response}
-One can see from Eq. \ref{gain} that $f \propto 1/C_{ox}$. 
+One can see from Eq. \ref{gain} that $f_\text{threshold}=g_m/(2\pi C_{ox})$ which means $f_t \propto 1/C_{ox}$. 
 The value of $C_{ox}$ comes from the capacitive layer formed by the overlap between the source-gate and drain-gate terminals.
 
 \begin{align*}
     C_{ox} = C_{gs} \cdot W \cdot (L+\Delta L)
 \end{align*}
 
-Here, $C_{gs}$ is the capacitance per unit area and and $W$ and $L$ refer to the width and length of the configuration. $\Delta L = 0$ can be achieved by not overlapping the gate with the source and drain terminals. $L$ is typically in the order of nanometers currently. Since $C_{gs}$ is proportional to the charge induced, it can only be minimized to an extent as it also determines the distinction between the ON and OFF state of the MOSFET.
+Here, $C_{gs}$ is the capacitance per unit area and and $W$ and $L$ refer to the width and length of the configuration. $\Delta L = 0$ can be achieved by not overlapping the gate with the source and drain terminals. $L$ is typically in the order of nanometers currently. Since $C_{gs}$ is proportional to the charge induced, it can only be minimized to an extent as it also determines the distinction between the ON and OFF state of the MOSFET. For proper saturation, the ratio $W/L$ is kept around 10.
 
 % ======================================================================================
 \section*{Advantage over BJTs}

@@ -1,7 +1,7 @@
 \section{Theory}
 
 \subsection*{Binary Addition}
-Addition of binary numbers follow the same logical rules as that of decimal numbers. 1 bit addition rules are shown below. To accomodate the carry bit, we use two bits of output.
+Addition of binary numbers follow the same logical rules as that of decimal numbers. 1-bit addition rules are shown below. To accommodate the carry bit, we use two bits of output.
 
 \[
 \begin{array}{@{}cr@{\,\,\,\,\,\,}rr@{\,\,\,\,\,\,}rr@{\,\,\,\,\,\,}rr}
@@ -13,7 +13,7 @@ Addition of binary numbers follow the same logical rules as that of decimal numb
 
 \subsubsection*{Half Adder Circuit}
 
-The logic table for the 1 bit addition can be formed as follows, (where C represents the carry bit)
+The logic table for the 1-bit addition can be formed as follows, (where C represents the carry bit)
 
 \begin{table}[H]
     \centering
@@ -38,7 +38,7 @@ One can observe that we can implement sum Q using an \verb|XOR| gate and carry b
 
 \subsubsection*{Full Adder Circuit}
 
-To add two or more bits together we need to account for the carry-in bit from the previous operation. A full adder circuit accepts a carry in bit C$_{N-1}$ along with inputs A and B. The truth table will be formed as follows.
+To add two or more bits together we need to account for the carry-in bit from the previous operation. A full adder circuit accepts a carry-in bit C$_{N-1}$ along with inputs A and B. The truth table will be formed as follows.
 
 \begin{table}[H]
     \centering
@@ -78,7 +78,7 @@ However in a real circuit, gates take time to switch states, so 32-bit or 64-bit
 % ========================================================================
 
 \subsection*{Binary Subtraction}
-Subtraction of binary numbers can be performed in a similar fashion. 1 bit subtraction rules are shown below. Here, to accomodate the borrow, we use two bits of output.
+Subtraction of binary numbers can be performed similarly. 1-bit subtraction rules are shown below. Here, to accommodate the borrow, we use two bits of output.
 
 \[
 \begin{array}{@{}cr@{\,\,\,\,\,\,}rr@{\,\,\,\,\,\,}rr@{\,\,\,\,\,\,}rr}
@@ -90,7 +90,7 @@ Subtraction of binary numbers can be performed in a similar fashion. 1 bit subtr
 
 \subsubsection*{Half Subtractor Circuit}
 
-The logic table for the 1 bit subtraction is shown below (where B$_N$ represents the borrow bit)
+The logic table for the 1-bit subtraction is shown below (where B$_N$ represents the borrow bit)
 
 \begin{table}[H]
     \centering
@@ -152,7 +152,7 @@ To use the same circuit to perform both addition and subtraction, one can replac
     \label{full-add-sub}
 \end{figure}
 
-N-bit subtractor circuits can also be built using ripple borrow subtractor technique, similar to the one described before.
+N-bit subtractor circuits can also be built using the ripple borrow subtractor technique, similar to the one described before.
 % ======================================================================================
 \section{Experimental Setup}
 \subsection*{Apparatus}
@@ -169,7 +169,7 @@ N-bit subtractor circuits can also be built using ripple borrow subtractor techn
 \subsection*{Circuit Diagrams}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.55\columnwidth]{images/c-half-add.png}
+    \includegraphics[width=0.65\columnwidth]{images/c-half-add.png}
     \caption{Half Adder Circuit Diagram}
     \label{half-add}
 \end{figure}
@@ -183,7 +183,7 @@ N-bit subtractor circuits can also be built using ripple borrow subtractor techn
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\columnwidth]{images/c-half-sub.png}
+    \includegraphics[width=0.7\columnwidth]{images/c-half-sub.png}
     \caption{Half Subtractor Circuit Diagram}
     \label{half-subt}
 \end{figure}
@@ -198,7 +198,7 @@ N-bit subtractor circuits can also be built using ripple borrow subtractor techn
 \subsection*{Pinout Diagrams}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1\columnwidth]{images/pinout.png}
+    \includegraphics[width=0.9\columnwidth]{images/pinout.png}
     \caption{Pin connections for different ICs used in this experiment}
     \label{pinout}
 \end{figure}

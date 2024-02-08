@@ -42,7 +42,7 @@ A 4-bit or MOD-16 ripple up counter can be constructed from 4 J-K flip-flops by 
     \label{up}
 \end{figure}
 
-The counting sequence corresponding to each input pulse is based on its binary representation in 4-bits (i.e. from 0000 to 1111). On supplying 15th pulse the counter reads 1111 (decimal 15). The next clock
+The counting sequence corresponding to each input pulse is based on its binary representation in 4-bits (i.e. from 0000 to 1111). On supplying the 15th pulse the counter reads 1111 (decimal 15). The next clock
 pulse after count 1111 will cause the counter to try to increment to 10000 (decimal 16).
 However, that 1 bit is not held by any flip-flop and is therefore lost. As a result, the
 counter actually reverts to 0000, and the count begins again.
@@ -58,8 +58,8 @@ counter actually reverts to 0000, and the count begins again.
 
 The binary ripple down-counter decreases the count by one each time a pulse
 occurs at the input. Here, the complement
-output of one flip-flop is   connected to the clock input of the subsequent flip-flop. This toggles at each negative edge of the clock pulse (1 $\rightarrow$ 0 transition),
-which is equivalent to a normal output toggling for positive edge of the clock pulse (0 to
+output of one flip-flop is connected to the clock input of the subsequent flip-flop. This toggles at each negative edge of the clock pulse (1 $\rightarrow$ 0 transition),
+which is equivalent to a normal output toggling for the positive edge of the clock pulse (0 to
 1 transition). Thus, the counter starts from 1111 with the first pulse after it is reset and reverts
 back to 0000 on the 16th pulse.
 
@@ -75,7 +75,7 @@ The modulus of a counter is the number of discrete states a counter can take up.
 counter with $n$ no. of flip flops will have $2^n$ number of possible states. So counters with
 modulus $2, 4, 8,\dots$ can be built up using $1, 2, 3, \dots$ flip flops. 
 
-If one has to design a counter with $N$ states where $N$ is not a power of 2, we can contruct a counter of the next higher power of 2, such that $2^n > N$ and then arrange the
+If one has to design a counter with $N$ states where $N$ is not a power of 2, we can construct a counter of the next higher power of 2, such that $2^n > N$ and then arrange the
 circuit in such a way that it skips some of its natural states restricting it to $N$.
 
 The simplest way of doing this is the \textit{direct clearing method}, where a gate circuit is used to
@@ -94,7 +94,7 @@ For example here is the circuit diagram for a MOD-12 counter. This will feed a r
 % 
 % ======================================================================================
 \subsection{Ring Counter}
-A \textit{shift register} is a type of digital circuit using a cascade of flip-flops where the output of one flip-flop is connected to the input of the next. They share a single clock signal, which causes the data stored in the system to shift from one location to the next. A ring counter is a special type of Shift register where the ouput of the last flip flop is passed to the first flip flop as an input. This configuration creates a cyclic shift of the data bits through the flip-flops.
+A \textit{shift register} is a type of digital circuit using a cascade of flip-flops where the output of one flip-flop is connected to the input of the next. They share a single clock signal, which causes the data stored in the system to shift from one location to the next. A ring counter is a special type of Shift register where the output of the last flip flop is passed to the first flip flop as an input. This configuration creates a cyclic shift of the data bits through the flip-flops.
 
 When a clock signal is applied to the ring counter, the data bits are shifted from one flip-flop to the next with each clock cycle. As a result, the ring counter generates a sequence of binary states that repeat after a specific number of clock cycles, depending on the number of flip-flops in the circuit. 
 

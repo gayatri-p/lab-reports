@@ -1,7 +1,7 @@
 \section{Theory}
 
 Previously, we have worked with \textbf{combinational circuits}, for which the output
-is determined completely by the existing state of the inputs. There is no “memory,” in these circuits. Circuits that store some history makes it possible to construct counters, arithmetic accumulators, and circuits that generally do one thing after another. Such circuits that remember their current output or state are often called \textbf{sequential logic circuits}.
+is determined completely by the existing state of the inputs. There is no “memory,” in these circuits. Circuits that store some history make it possible to construct counters, arithmetic accumulators, and circuits that generally do one thing after another. Such circuits that remember their current output or state are often called \textbf{sequential logic circuits}.
 
 The basic principle of memory is the concept of \textbf{feedback}.
 
@@ -12,17 +12,17 @@ The basic principle of memory is the concept of \textbf{feedback}.
     \label{feedback}
 \end{figure}
 
-In Fig. \ref{feedback}, if Q happens to be 1 (or 0), it will always be 1 (or 0). While this circuit is of not much use, we use this principle in realizing the the most basic form of a sequential circuit that is \textbf{flip-flop}. A flip-flop circuit has two outputs, one for the normal value and one for the complement value of the stored bit.
+In Fig. \ref{feedback}, if Q happens to be 1 (or 0), it will always be 1 (or 0). While this circuit is of not much use, we use this principle in realizing the most basic form of a sequential circuit which is the \textbf{flip-flop}. A flip-flop circuit has two outputs, one for the normal value and one for the complement value of the stored bit.
 
 \subsection*{RS Flip-Flop}
 The simplest form of a flip-flop circuit, it can be constructed using either \verb|NAND| or \verb|NOR| gates.
 
-An RS flip-flop circuit using \verb|NOR| gates is shown below. The inputs R and S refers to \verb|SET| and \verb|RESET| respectively.
+An RS flip-flop circuit using \verb|NOR| gates is shown below. The inputs R and S refer to \verb|SET| and \verb|RESET| respectively.
 
 \begin{itemize}
     \item Assume that $S=1$ and $R=0$. The output of the bottom \verb|NOR| gate is $Q'=0$. So, both inputs to the top NOR gate, $Q=1$. Hence, the input combination leads to the flip-flop being \textbf{set} to $Q=1$ and $Q'=0$.
     \item Similarly, if $S=0$ and $R=1$, $Q=0$ and $Q'=1$, i.e. the flip-flop is \textbf{reset}.
-    \item Assume the flip-flop is in the set state. Now if one changes S to 0, the output still remains the same ($Q=1$ and $Q'=0$). Similary, if the flip-flop is in the reset state and we change R to 0, the output still remains the same ($Q=0$ and $Q'=1$). This means in the state $S=0, R=0$, the ciruit retains its previous output, also knwon as the \textbf{hold} state.
+    \item Assume the flip-flop is in the set state. Now if one changes S to 0, the output still remains the same ($Q=1$ and $Q'=0$). Similarly, if the flip-flop is in the reset state and we change R to 0, the output still remains the same ($Q=0$ and $Q'=1$). This means in the state $S=0, R=0$, the circuit retains its previous output, also known as the \textbf{hold} state.
     \item When both $R=1$ and $S=1$, both outputs are no longer compliments of each other. Since it is impossible to predict which output will go to 1, this is an invalid state making it one of the main disadvantages of the RS flip-flop. 
 \end{itemize}
 
@@ -46,9 +46,9 @@ An RS flip-flop circuit using \verb|NOR| gates is shown below. The inputs R and 
 \end{table}
 
 \paragraph*{\textbf{Switch Debouncing:}}
-An useful example using this flip-flop is the debounce circuit. Suppose a
+A useful example of this flip-flop is the debounce circuit. Suppose a
 piece of electronics is to change state under the action of a mechanical switch. When this
-switch is moved from position S to R ($S=0, R=1$), When the switch is closed, the two contacts actually separate and reconnect, typically 100s of times over a period of about a millisecond. It is desirable that the electronics should respond to the first contact and then remain stable, rather than switching back and forth as the circuit makes and breaks. 
+switch is moved from position S to R ($S=0, R=1$). When the switch is closed, the two contacts actually separate and reconnect, typically 100s of times over a period of about a millisecond. It is desirable that the electronics should respond to the first contact and then remain stable, rather than switching back and forth as the circuit makes and breaks. 
 
 This is achieved by RS flip-flop which is reset to $Q=0$ by the first signal $R=1$ and remains in a fixed state until the switch is moved back to position S, when the signal $S=1$ sets the flip-flop to $Q=1$.
 
@@ -92,7 +92,7 @@ clock synchronisation to the flip-flop creating what is sometimes called a
 \end{table}
 % =====================================================================================
 \subsection{D Flip-flop}
-The D flip-flop has only a single data input D. This D input and its inverse are connected to S and R inputs respectively. Thus, this eliminates undefined state of $R=S=1$ seen in case of RS flip-flops.
+The D flip-flop has only a single data input D. This D input and its inverse are connected to S and R inputs respectively. Thus, this eliminates the undefined state of $R=S=1$ seen in case of RS flip-flops.
 A D-flip flop has a second input called Enable, EN, to allow the flip-flop to
 be in a holding state, as seen in the circuit diagram.
 
@@ -136,7 +136,7 @@ Note that in the following circuit diagram NAND gates are used instead of NOR ga
     \label{4}
 \end{figure}
 
-The two 2-input AND gates of the gated SR bistable have now been replaced by two 3-input NAND gates with the third input of each gate connected to the outputs at Q and Q. This cross coupling allows the previously invalid condition of $S=R=1$ state to be used to produce toggle action as the two inputs are now interlocked. We can summarize its operation as follows.
+The two 2-input AND gates of the gated SR bistable have now been replaced by two 3-input NAND gates with the third input of each gate connected to the outputs at Q and Q. This cross-coupling allows the previously invalid condition of $S=R=1$ state to be used to produce toggle action as the two inputs are now interlocked. We can summarize its operation as follows.
 
 \begin{itemize}
     \item Assume the clock signal is 1. If $J=1$ and $K=0$, it behaves as a typical SR latch, i.e. $Q=1$ and $Q'=0$. Similarly for $J=0$ and $K=1$, $Q=0$ and $Q'=1$.
@@ -170,7 +170,7 @@ The two 2-input AND gates of the gated SR bistable have now been replaced by two
 
 % =====================================================================================
 \subsection*{Master-Slave JK Flip-flop}
-To avoid racing in the JK flip-flop, the timing pulse period must be kept as short as possible, which is not very practical with modern TTL IC's. A Master-slave JK solves this problem by using two SR flip-flops connected in series -- the \textit{master circuit}, which triggers the leading edge of the clock pulse and the \textit{slave circuit}, which triggers the falling edge of the clock pulse. Hence the uncontrolled toggling is suppressed by as the transmission of the J value to the output is delayed by half a clock cycle and not immediately fed back to the input side.
+To avoid racing in the JK flip-flop, the timing pulse period must be kept as short as possible, which is not very practical with modern TTL IC's. A Master-slave JK solves this problem by using two SR flip-flops connected in series -- the \textit{master circuit}, which triggers the leading edge of the clock pulse and the \textit{slave circuit}, which triggers the falling edge of the clock pulse. Hence the uncontrolled toggling is suppressed as the transmission of the J value to the output is delayed by half a clock cycle and not immediately fed back to the input side.
 
 \begin{figure}[H]
     \centering
@@ -208,7 +208,7 @@ the input AND gates.
 \end{figure}
 % =====================================================================================
 \subsection*{T Flip-flop}
-T or Toggle flip-flop is a  modification on the master-slave JK flip-flop where it only performs toggling action. Here, we make $J=K=1$.
+T or Toggle flip-flop is a modification on the master-slave JK flip-flop where it only performs toggling action. Here, we make $J=K=1$.
 \begin{itemize}
     \item When Clk $=0$, the state will be stored (\verb|HOLD|) regardless of the value of T.
     \item When Clk $=1$ and $T=0$, the previous state is stored, i.e. \verb|HOLD| state.
