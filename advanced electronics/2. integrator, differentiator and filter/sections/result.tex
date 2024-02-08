@@ -4,7 +4,7 @@ A practical integrator circuit (Fig. \ref{intexp}) consists of two additional co
 
 \begin{itemize}
     \item $R_f$: Since the integrator circuit acts as a low pass filter, at low frequencies the gain of the circuit is very high. Hence, to avoid the op-amp going into open loop configuration at low frequencies, $R_f$ is added in parallel to $C_f$. When $R_f$ was removed, the circuit was observed to be very unstable at low frequencies.\\
-    \item $R_2$: Real op-amps have some bias current that exhibits some voltage imbalance. While these imperfections are not large, they can cause problems with circuits like integrators, in which the effect of a small error grows with time. To fix this, the non-inverting terminal of the op-amp is connected to an offset-minimizing resistor before being grounded. Removing this resistor was observed to make the output signal less clean.\\
+    \item $R_2$: Real op-amps have some bias current that exhibits some voltage imbalance. While these imperfections are not large, they can cause problems with circuits like integrators, in which the effect of a small error grows with time. To fix this, the non-inverting terminal of the op-amp is connected to an offset-minimizing resistor before being grounded. Removing this resistor was observed to make the output signal more noisy.\\
 \end{itemize}
 
 Similarly, a practical Differentiator circuit (Fig. \ref{diffexp}) consists of 3 additional components.\\
@@ -18,8 +18,8 @@ Similarly, a practical Differentiator circuit (Fig. \ref{diffexp}) consists of 3
     
     When $R_1$ was removed, the output signal was observed to be very unstable.\\
     
-    \item $C_f$: It is a small valued capacitor. It provides additional attenuation at high frequencies such that the circuit won't run into oscillations. It also reduces bandwidth, so high-frequency noise gets bypassed and will not appear at output. When removed, the gain was observed to decrease after a certain frequency.\\
-    \item $R_2$: The non-inverting terminal is connected to an offset-minimizing resistor before being grounded. This is to make sure there is no offset voltage - since the differentiator circuit is very sensitive to any change in the input voltage. Removing this resistor was observed to make the output signal less clean.
+    \item $C_f$: It is a small valued capacitor. It provides additional attenuation at high frequencies such that the circuit won't run into oscillations. It also reduces bandwidth, so high-frequency noise gets bypassed and will not appear at output. When removed, the circuit was showing oscillating behaviour at higher frequencies.\\
+    \item $R_2$: The non-inverting terminal is connected to an offset-minimizing resistor before being grounded. This is to make sure there is no offset voltage - since the differentiator circuit is very sensitive to any change in the input voltage. Removing this resistor was observed to make the output signal more noisy.
 \end{itemize}
 
 \section{Precautions and Sources of Error}
