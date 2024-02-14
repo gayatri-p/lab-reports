@@ -1,0 +1,133 @@
+\section{Observations}
+
+\subsection*{Verification of Boolean Logic Operations}
+
+\noindent As shown in Fig \ref{gen}, we connected the IC to the 5V power suppy from the DC power power supply source. The \verb|HIGH| or '1' inputs were provided from the 5V line while the \verb|LOW| or '0' inputs were provided from the ground line. The outputs were observed by connecting an LED across the output pin and ground (output '1' means the LED glows and vice-versa).\\
+
+\begin{enumerate}
+    \item \textbf{NOT Gate} (IC 7404LS)\\
+    Operation: $Q=\overline{A}$
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|c|c|}\hline
+            \multicolumn{2}{|c|}{\textbf{Gate 1: Pin 1 \& 2}} & \multicolumn{2}{c|}{\textbf{Gate 2: Pin 12 \& 13}} \\ \hline
+            I/P (A) & O/P (Q) & I/P (A) & O/P (Q) \\ \hline
+            1 & 0 & 1 & 0 \\ 
+            0 & 1 & 0 & 1 \\ \hline
+            \end{tabular}
+            \caption{I/P and O/P values observed for NOT gate}
+        \end{table}
+
+    \item \textbf{OR Gate} (IC 7432LS)\\
+    Operation: $Q=A+B$
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|c|c|c|c|}\hline
+            \multicolumn{3}{|c|}{\textbf{Gate 1: Pins 1, 2 \& 3}} & \multicolumn{3}{c|}{\textbf{Gate 2: Pins 11, 12 \& 13}} \\ \hline
+            I/P (A) & I/P (B) & O/P (Q) & I/P (A) & I/P (B) & O/P (Q) \\ \hline
+            0 & 0 & 0 & 0 & 0 & 0 \\ 
+            0 & 1 & 1 & 0 & 1 & 1 \\ 
+            1 & 0 & 1 & 1 & 0 & 1  \\ 
+            1 & 1 & 1 & 1 & 1 & 1 \\ \hline
+            \end{tabular}
+            \caption{I/P and O/P values observed for OR gate}
+        \end{table}
+
+    \item \textbf{AND Gate} (IC 7408LS)\\
+    Operation: $Q=A\cdot B$
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|c|c|c|c|}\hline
+            \multicolumn{3}{|c|}{\textbf{Gate 1: Pins 1, 2 \& 3}} & \multicolumn{3}{c|}{\textbf{Gate 2: Pins 11, 12 \& 13}} \\ \hline
+            I/P (A) & I/P (B) & O/P (Q) & I/P (A) & I/P (B) & O/P (Q) \\ \hline
+            0 & 0 & 0 & 0 & 0 & 0 \\ 
+            0 & 1 & 0 & 0 & 1 & 0 \\ 
+            1 & 0 & 0 & 1 & 0 & 0  \\ 
+            1 & 1 & 1 & 1 & 1 & 1 \\ \hline
+            \end{tabular}
+            \caption{I/P and O/P values observed for AND gate}
+        \end{table}
+
+    \item \textbf{NAND Gate} (IC 7400LS)\\
+    Operation: $Q=\overline{A\cdot B}$
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|c|c|c|c|}\hline
+            \multicolumn{3}{|c|}{\textbf{Gate 1: Pins 1, 2 \& 3}} & \multicolumn{3}{c|}{\textbf{Gate 2: Pins 11, 12 \& 13}} \\ \hline
+            I/P (A) & I/P (B) & O/P (Q) & I/P (A) & I/P (B) & O/P (Q) \\ \hline
+            0 & 0 & 1 & 0 & 0 & 1 \\ 
+            0 & 1 & 1 & 0 & 1 & 1 \\ 
+            1 & 0 & 1 & 1 & 0 & 1  \\ 
+            1 & 1 & 0 & 1 & 1 & 0 \\ \hline
+            \end{tabular}
+            \caption{I/P and O/P values observed for NAND gate}
+        \end{table}
+
+    \item \textbf{NOR Gate} (IC 7402LS)\\
+    Operation: $Q=\overline{A+B}$
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|c|c|c|c|}\hline
+            \multicolumn{3}{|c|}{\textbf{Gate 1: Pins 1, 2 \& 3}} & \multicolumn{3}{c|}{\textbf{Gate 2: Pins 11, 12 \& 13}} \\ \hline
+            I/P (A) & I/P (B) & O/P (Q) & I/P (A) & I/P (B) & O/P (Q) \\ \hline
+            0 & 0 & 1 & 0 & 0 & 1 \\ 
+            0 & 1 & 0 & 0 & 1 & 0 \\ 
+            1 & 0 & 0 & 1 & 0 & 0  \\ 
+            1 & 1 & 0 & 1 & 1 & 0 \\ \hline
+            \end{tabular}
+            \caption{I/P and O/P values observed for NOR gate}
+        \end{table}
+    
+    \item \textbf{XOR Gate} (IC 7486LS)\\
+    Operation: $Q=A \cdot \overline{B} + B \cdot \overline{A}$
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|c|c|c|c|}\hline
+            \multicolumn{3}{|c|}{\textbf{Gate 1: Pins 1, 2 \& 3}} & \multicolumn{3}{c|}{\textbf{Gate 2: Pins 11, 12 \& 13}} \\ \hline
+            I/P (A) & I/P (B) & O/P (Q) & I/P (A) & I/P (B) & O/P (Q) \\ \hline
+            0 & 0 & 0 & 0 & 0 & 0 \\ 
+            0 & 1 & 1 & 0 & 1 & 1 \\ 
+            1 & 0 & 1 & 1 & 0 & 1  \\ 
+            1 & 1 & 0 & 1 & 1 & 0 \\ \hline
+            \end{tabular}
+            \caption{I/P and O/P values observed for XOR gate}
+        \end{table}
+
+\end{enumerate}
+Here, all observations aligh with and thus verify  our predictions.
+
+\subsection*{Verification of De Morgan's laws}
+
+\begin{enumerate}
+    \item $\overline{A+B} = \overline{A} \cdot \overline {B}$\\
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
+            & & & & & & &  \\
+            I/P (A) & I/P (B) & $\overline{A+B}$ & Y (Obs) & $\overline{A}$ & $\overline{B}$ & $\overline{A} \cdot \overline {B}$ & Z (Obs)\\ \hline
+            1&1 &0 &0 &0 &0 &0 &0  \\
+            1&0 &0 &0 &0 &1 &0 &0  \\
+            0&1 &0 &0 &1 &0 &0 &0  \\
+            0&0 &1&1 &1 &1 &1 &1  \\\hline
+            \end{tabular}
+            \caption{Observation table for proving De Morgan's Law based on the circuit diagram given in Fig. \ref{or_neg}}
+        \end{table}
+    
+    \newpage
+
+    \item $\overline{A\cdot B} = \overline{A} \cdot \overline {B}$\\
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
+            & & & & & & &  \\
+            I/P (A) & I/P (B) & $\overline{A\cdot B}$ & Y (Obs) & $\overline{A}$ & $\overline{B}$ & $\overline{A} + \overline {B}$ & Z (Obs)\\ \hline
+            1&1 &0 &0 &0 &0 &0 &0  \\
+            1&0 &1 &1 &0 &1 &1 &1  \\
+            0&1 &1 &1 &1 &0 &1 &1  \\
+            0&0 &1 &1 &1 &1 &1 &1  \\\hline
+            \end{tabular}
+            \caption{Observation table for proving De Morgan's Law based on the circuit diagram given in Fig. \ref{and_neg}}
+        \end{table}
+
+\end{enumerate}
+Hence, the observed and predicted values match, thus verifying De Morgan's Laws.
