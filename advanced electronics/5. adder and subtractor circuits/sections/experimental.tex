@@ -1,0 +1,101 @@
+\section{Observations}
+
+The ICs were powered by 5V DC, \verb|HIGH| inputs from 5V line, \verb|LOW| inputs from ground. Outputs monitored with LEDs (LED on means 1, 0 otherwise).
+
+\subsection{Half Adder Circuit}
+
+\noindent Using the circuit given in Fig. \ref{half-add}.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}\hline
+    A & B & Q & B$_N$ \\ \hline
+    0 & 0 & 0 & 0 \\ 
+    0 & 1 & 1 & 1 \\ 
+    1 & 0 & 1 & 0 \\ 
+    1 & 1 & 0 & 0 \\ \hline
+    \end{tabular}
+    \caption{Observation table for the half adder circuit}
+\end{table}
+
+\subsection{Full Adder Circuit}
+
+\noindent Using the circuit given in Fig. \ref{full-add}.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}\hline
+        B$_{N-1}$ & A & B & Q & B$_N$ \\ \hline
+        0 & 0 & 0 & 0 & 0 \\ 
+        0 & 0 & 1 & 1 & 1 \\ 
+        0 & 1 & 0 & 1 & 0 \\ 
+        0 & 1 & 1 & 0 & 0 \\
+        1 & 0 & 0 & 1 & 1 \\ 
+        1 & 0 & 1 & 0 & 1 \\ 
+        1 & 1 & 0 & 0 & 0 \\ 
+        1 & 1 & 1 & 1 & 1 \\ \hline
+    \end{tabular}
+    \caption{Observation table for the full adder circuit}
+\end{table}
+
+\subsection{Half Subtractor Circuit}
+
+\noindent Using the circuit given in Fig. \ref{half-subt}.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}\hline
+        A & B & Q & B$_N$ \\ \hline
+        0 & 0 & 0 & 0 \\ 
+        0 & 1 & 1 & 1 \\ 
+        1 & 0 & 1 & 0 \\ 
+        1 & 1 & 0 & 0 \\ \hline
+    \end{tabular}
+    \caption{Observation table for the half subtractor circuit}
+\end{table}
+
+\subsection{Full Subtractor Circuit}
+
+\noindent Using the circuit given in Fig. \ref{full-subt}.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}\hline
+        B$_{N-1}$ & A & B & Q & B$_N$ \\ \hline
+        0 & 0 & 0 & 0 & 0 \\ 
+        0 & 0 & 1 & 1 & 1 \\ 
+        0 & 1 & 0 & 1 & 0 \\ 
+        0 & 1 & 1 & 0 & 0 \\
+        1 & 0 & 0 & 1 & 1 \\ 
+        1 & 0 & 1 & 0 & 1 \\ 
+        1 & 1 & 0 & 0 & 0 \\ 
+        1 & 1 & 1 & 1 & 1 \\ \hline
+    \end{tabular}
+    \caption{Observation table for the full subtractor circuit}
+\end{table}
+
+\subsection{Full Adder-Subtractor Circuit}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\noindent Using the circuit given in Fig. \ref{full-add-sub}.
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{0.55\columnwidth}{|Y|Y|Y|Y|Y|}\hline
+        % C$_{N-1}$ & A & B & Q & C$_N$ \\ \/hline
+        B$_{N-1}$ & A & B & Q & B$_N$ \\ \hline
+        \multicolumn{5}{|l|}{$X_1=X_2=1$ (Full Subtractor)}\\ \hline
+        0 & 0 & 0 & 0 & 0 \\ 
+        0 & 0 & 1 & 1 & 1 \\ 
+        0 & 1 & 0 & 1 & 0 \\ 
+        0 & 1 & 1 & 0 & 0 \\
+        1 & 0 & 0 & 1 & 1 \\ 
+        1 & 0 & 1 & 0 & 1 \\ 
+        1 & 1 & 0 & 0 & 0 \\ 
+        1 & 1 & 1 & 1 & 1 \\ \hline
+        \multicolumn{5}{|l|}{$X_1=X_2=0$ (Full Adder)}\\ \hline
+        0 & 0 & 0 & 0 & 0 \\ 
+        0 & 0 & 1 & 1 & 1 \\ 
+        0 & 1 & 0 & 1 & 0 \\ 
+        0 & 1 & 1 & 0 & 0 \\
+        1 & 0 & 0 & 1 & 1 \\ 
+        1 & 0 & 1 & 0 & 1 \\ 
+        1 & 1 & 0 & 0 & 0 \\ 
+        1 & 1 & 1 & 1 & 1 \\ \hline
+    \end{tabularx}
+    \caption{Observation table for the full adder-subtractor circuit\\}
+\end{table}
