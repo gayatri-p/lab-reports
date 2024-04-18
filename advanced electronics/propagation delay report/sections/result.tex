@@ -1,0 +1,22 @@
+\section{Discussion \& Conclusion}
+
+In this experiment, we have calculated the typical values for rise and fall times, propagation delay and the race-around frequency for a JK flip flop constructed using NAND gates. These are the parameters measured for the output Q:\\
+
+\begin{itemize}
+    \item Rise time: 10.15 ns
+    \item Fall time: 5.11 ns
+    \item Race-around frequency: 27.7 MHz
+    \item Propagation delay: 51.2 ns\\
+\end{itemize}
+
+Moreover, the measured values for the rise and fall times of the clock signal are 32.9 ns and 31.8 ns respectively.
+
+A typical JK flip-flop on an IC has propagation delay of around 4 ns. This is comparitively smaller than what we observed since in our case the circuit was built on a breadboard and the (relatively) longer wires create bigger delays.\\
+
+Although small, these values are significant in designing any bigger circuit. For example, consider the case where there are two flip-flops with a 10 ns delay between them. If you use a clock that runs at 50 MHz (20 ns period) you will be safe. However if you use a 200 MHz clock (5 ns period) the design will fail to work properly. The longer the propagation delay, the slower the clock is able to run. Hence the speed of the system is ultimately dependent on these values.
+
+% \section{Precautions \& Sources of Error}
+
+% \begin{enumerate}
+%     \item
+% \end{enumerate}

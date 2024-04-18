@@ -142,7 +142,7 @@ The two 2-input AND gates of the gated SR bistable have now been replaced by two
     \item Assume the clock signal is 1. If $J=1$ and $K=0$, it behaves as a typical SR latch, i.e. $Q=1$ and $Q'=0$. Similarly for $J=0$ and $K=1$, $Q=0$ and $Q'=1$.
     \item If both $J=K=0$, then it remains in the same state as it was before i.e. the \verb|HOLD| state.
     \item If both $J=K=1$, the flip-flop changes state whenever a clock
-    pulse occurs; i.e., the clock pulse toggles the flip-flop again and again until the Clk goes to 0. This is called is \textit{race-around condition} (Fig. \ref{race}) and is undesirable, which is eliminated by an improvised form of this flip-flop as discussed next.
+    pulse occurs; i.e., the clock pulse toggles the flip-flop again and again until the Clk goes to 0. This is called is \textit{race-around condition} (Fig. \ref{race0}) and is undesirable, which is eliminated by an improvised form of this flip-flop as discussed next.
 \end{itemize}
 
 \begin{table}[H]
@@ -165,7 +165,7 @@ The two 2-input AND gates of the gated SR bistable have now been replaced by two
     \centering
     \includegraphics[width=0.55\columnwidth]{images/jkrace1.png}
     \caption{Diagram depicting JK racing when the clock is high}
-    \label{race}
+    \label{race0}
 \end{figure}
 
 % =====================================================================================
