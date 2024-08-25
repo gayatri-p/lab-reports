@@ -8,8 +8,8 @@ Odd Sem 2024
 
 ## Classwork
 
-1. [**1st August**](classwork/1_August_2024.ipynb) Python Basics
-2. [**8th August**](classwork/8_August_2024.ipynb) Representation of Numbers and Errors
+1. [**1st August:**](classwork/1_August_2024.ipynb) Python Basics
+2. [**8th August:**](classwork/8_August_2024.ipynb) Representation of Numbers and Errors
 
 ## Resources
 

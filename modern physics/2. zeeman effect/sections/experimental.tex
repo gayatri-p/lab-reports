@@ -1,0 +1,123 @@
+\section{Observation and Calculations}
+
+For normal Zeeman effect with transverse magnetic field, for different values of pole separation (i.e. different values of magnetic field), we have measured the radii of the spectral rings upto 3rd order.
+\input{tables/radii.tex}
+
+Now, the average values of $\Delta$ and $\delta$ calculated from Table \ref{tab:1} using Eq. \ref{deltas} are outlined in Table \ref{tab:2}. These values are then used to measure the difference in wave number, $\Delta k$, using Eq. \ref{delk} (Table \ref{tab:3}).
+
+\input{tables/deltas.tex}
+\input{tables/final.tex}
+
+Rearranging Eq. \ref{straight}, we get 
+
+\begin{align} \label{slope}
+    \Delta k = \left(\frac{2\mu_B}{hc}\right)B
+\end{align}
+
+which is of the form $y=mx+b$. By performing a least square fit on the values of Table \ref{tab:3} shown in Fig. \ref{plot}, we get the slope, $m=52.503 \text{ m}^{-1} \text{ T}^{-1}$ which translates to $\mu_B=5.215 \times 10^{-24}$ J/T.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/plot.png}
+    \caption{Least-square fitting for the $\Delta k$ vs. $B$ plot}
+    \label{plot}
+\end{figure}
+
+\begin{figure*}
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/40.png}
+        \caption{$d=40$ mm}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/41.png}
+        \caption{$d=41$ mm}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/42.jpg}
+        \caption{$d=42$ mm}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/44.png}
+        \caption{$d=44$ mm}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/45.png}
+        \caption{$d=45$ mm}
+    \end{subfigure}
+    \hfill
+    \caption{Normal Zeeman effect observed for different values of magnetic field, i.e. pole separation ($d$)}\label{f1}
+\end{figure*}
+
+\begin{figure*}
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/longitudinal_no_polarizer.png}
+        \caption{Without any polarization filter}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/left.png}
+        \caption{Left circularly polarized light}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/right_correct.png}
+        \caption{Right circularly polarized light}
+    \end{subfigure}
+    \caption{Normal Zeeman Effect observed with longitudinal magnetic field}\label{f2}
+\end{figure*}
+
+\begin{figure*}
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/ano4.png}
+        \caption{Without any polarization filter}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/sigma.png}
+        \caption{$\sigma$ lines observed}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/pi.png}
+        \caption{$\pi$ lines observed}
+    \end{subfigure}\hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{images/anomalous_longitudinal.png}
+        \caption{Only sigma lines observed even without the polarization filter in case of longitudinal magnetic field}
+        \label{ano_long}
+    \end{subfigure}
+    \caption{Anomalous Zeeman Effect observed in (a) to (c) transverse and (d) longitudinal magnetic fields}\label{f3}
+\end{figure*}
+The rest of the observations for normal and anomalous Zeeman effect are provided at the end (Figs. \ref{f2}, \ref{f3})
+
+\subsection*{Error Analysis}
+Using Eq. \ref{slope}, we can write the uncertainity in $\mu_B$ as,
+
+\begin{align}
+    \frac{\Delta \mu_B}{\mu_B} =  \frac{\Delta m}{m}
+\end{align}
+
+where $m$ is the slope. Hence, we get
+
+\begin{align*}
+    \Delta \mu_B = \frac{5.215 \times 10^{-24} \times 2.948}{52.503} = 0.293 \times 10^{-24} \text{ J/T}
+\end{align*}
