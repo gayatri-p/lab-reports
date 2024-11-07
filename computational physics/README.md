@@ -5,6 +5,9 @@ Odd Sem 2024
 
 1. [**Assignment 1:**](assignments/assignment1.ipynb) Python Basics
 2. [**Assignment 2:**](assignments/assignment2.ipynb) Representation of Numbers and Errors
+3. [**Assignment 3:**](assignments/assignment3.ipynb) Derivatives - I
+4. [**Assignment 4:**](assignments/assignment4.ipynb) Derivatives - II and Matrices - I
+5. [**Assignment 5:**](assignments/assignment5.ipynb) Matrices-II
 
 ## Classwork
 

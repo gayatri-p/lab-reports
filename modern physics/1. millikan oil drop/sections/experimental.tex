@@ -1,0 +1,111 @@
+\section{Observation and Calculations}
+
+\begin{itemize}
+    \item Distance between parallel plates, d $=5\times 10^{-3}$ m
+    \item Distance where the velocity is measured, L $=1\times 10^{-3}$ m
+    \item Density of oil, $\rho=929\text{ kg m}^{-3}$
+    \item Density of air, $\rho_a=1\text{ kg m}^{-3}$
+    \item Room temperature, $T=25^{\circ}\text{ C}$
+    \item Atmospheric Pressure, $P=1\text{ atm}$
+    \item Coefficient of viscosity of air, $\eta=1.8480 \times 10^{-5}$ kg/m.sec 
+    \item For calculation purposes,
+        \begin{align}
+            C &= \frac{4}{3}\pi dg\,(\rho-\rho_a)=190.13\\
+            D &= \frac{9\eta}{2g}\pi dg\,(\rho-\rho_a) = 9.04 \times 10^{-9}\\
+            \zeta = c / 2P &= 4.06 \times 10^{-8}\\
+            \text{where } c &= 6.17 \times 10^{-8} \text{ m of Hg m} \nonumber
+        \end{align}
+\end{itemize}
+
+Tables \ref{obs1} and \ref{obs2} show the observational data and calculation of $ne$ for dynamic and balancing methods respectively using Eqns. 6 and 12. For simplification, we used
+\begin{align*}
+    \eta &= Dv_f\\
+    ne = \frac{CTr^3}{V} &\text{ or }ne=\frac{Cr^3}{V_b}
+\end{align*}
+
+\input{tables/dynamic.tex}
+\input{tables/balancing.tex}
+
+For tables III and IV, $ne$ divided was calculated by dividing the value of the charge $ne$ on all the droplets by minimum value, which was then rounded off to the nearest integer as
+$n_\text{eff}$. This is the number of electrons present on a particular droplet. Now, by dividing $ne$ by $n_\text{eff}$ for each droplet, we can measure the value of $e$.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|ccc|c|}
+    \hline
+    \multicolumn{1}{|c|}{ne} & \multicolumn{1}{c|}{$ne$} & \multirow{2}{*}{$n_\text{eff}$} & $ne/n_\text{eff}$ \\ 
+    \multicolumn{1}{|c|}{($\times   10^{-19}$ C)} & \multicolumn{1}{c|}{divided} &  & ($\times 10^{-19}$ C) \\ \hline
+    \multicolumn{1}{|c|}{51.51} & \multicolumn{1}{c|}{23.46} & 23 & 2.24 \\ \hline
+    \multicolumn{1}{|c|}{60.47} & \multicolumn{1}{c|}{27.54} & 28 & 2.16 \\ \hline
+    \multicolumn{1}{|c|}{8.33} & \multicolumn{1}{c|}{3.79} & 4 & 2.08 \\ \hline
+    \multicolumn{1}{|c|}{8.12} & \multicolumn{1}{c|}{3.70} & 4 & 2.03 \\ \hline
+    \multicolumn{1}{|c|}{9.94} & \multicolumn{1}{c|}{4.53} & 5 & 1.99 \\ \hline
+    \multicolumn{1}{|c|}{9.90} & \multicolumn{1}{c|}{4.51} & 5 & 1.98 \\ \hline
+    \multicolumn{1}{|c|}{9.33} & \multicolumn{1}{c|}{4.25} & 4 & 2.33 \\ \hline
+    \multicolumn{1}{|c|}{2.20} & \multicolumn{1}{c|}{1.00} & 1 & 2.20 \\ \hline
+    \multicolumn{3}{|c|}{Average $ne/n_\text{eff}$} & 2.13 \\ \hline
+    \end{tabular}
+    \caption{Calculation of $e$ for from dynamic method data}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|ccc|c|}
+    \hline
+    \multicolumn{1}{|c|}{ne} & \multicolumn{1}{c|}{$ne$} & \multirow{2}{*}{$n_\text{eff}$} & $ne/n_\text{eff}$ \\ 
+    \multicolumn{1}{|c|}{($\times   10^{-19}$ C)} & \multicolumn{1}{c|}{divided} &  & ($\times 10^{-19}$ C) \\ \hline
+    \multicolumn{1}{|c|}{5.40} & \multicolumn{1}{c|}{2.38} & 2 & 2.70 \\ \hline
+    \multicolumn{1}{|c|}{9.21} & \multicolumn{1}{c|}{4.07} & 4 & 2.30 \\ \hline
+    \multicolumn{1}{|c|}{5.61} & \multicolumn{1}{c|}{2.48} & 2 & 2.80 \\ \hline
+    \multicolumn{1}{|c|}{5.75} & \multicolumn{1}{c|}{2.54} & 3 & 1.92 \\ \hline
+    \multicolumn{1}{|c|}{49.43} & \multicolumn{1}{c|}{21.82} & 22 & 2.25 \\ \hline
+    \multicolumn{1}{|c|}{5.58} & \multicolumn{1}{c|}{2.46} & 2 & 2.79 \\ \hline
+    \multicolumn{1}{|c|}{2.27} & \multicolumn{1}{c|}{1.00} & 1 & 2.27 \\ \hline
+    \multicolumn{1}{|c|}{9.38} & \multicolumn{1}{c|}{4.14} & 4 & 2.35 \\ \hline
+    \multicolumn{3}{|c|}{Average $ne/n_\text{eff}$} & 2.42 \\ \hline
+    \end{tabular}
+    \caption{Calculation of $e$ for from balancing method data}
+\end{table}
+
+
+\section{Error Analysis \&\\ Sources of Error}
+
+We can calculate the error in our measurement of $e$ using the standard deviation method as follows,
+
+\begin{align}
+    \sigma_y = \sqrt{\frac{\sum (y_i - y_{avg})^2}{N-2}}
+\end{align}
+
+Using this for tables III and IV, the uncertainities in $e$ are,
+\begin{itemize}
+    \item For dynamic method, $\sigma_e=0.13\times 10^{-19}$ C
+    \item For balancing method, $\sigma_e=0.31\times 10^{-19}$ C
+\end{itemize}
+
+As we can see from our error analysis that our experiment
+was precise but not accurate. Measurements were consistent but systematically deviated from the true value
+of the elementary charge ($e$). This suggests the presence
+of systematic errors rather more than random errors. Possible
+sources of such errors include:\\
+
+\begin{itemize}
+    \item The experiment relies on an accurate value of the viscosity of air to calculate the charge on the droplets.
+    If the air temperature or humidity was not controlled
+    or the viscosity value was incorrect, this could lead
+    to systematic errors.
+    \item Errors in determining the radius of the droplets, perhaps due to optical issues or incorrect assumptions
+    about the droplet’s shape, could result in incorrect
+    calculations of the charge.
+    \item Changes in atmospheric pressure could affect the
+    buoyant force on the droplets, leading to errors in
+    the calculation of the charge.
+    \item If the voltage supply or the distance between the
+    plates is not accurately calibrated, the calculated
+    charge values will be systematically off, leading to
+    consistent but inaccurate results.
+    \item If the oil droplets were contaminated with dust or
+    other particles, this could alter their mass and the
+    calculated charge, leading to consistently skewed results.
+    \item An inaccurate voltmeter or fluctuating voltage supply could lead to an incorrect calculation of the electric field, affecting the determination of the charge
+    on the droplets.
+\end{itemize}

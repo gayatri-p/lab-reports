@@ -1,0 +1,91 @@
+\section{Results \& Discussion}
+In this experiment, we studied a Lock-in Amplifier and used it to measure quantities the Mutual Inductance and low resistance values. The results are detailed below.
+
+Firstly, we calibrated the Lock-in Amplifier for two values of gain at 50 and 100 to find the amplification factor, which comes out to be,
+
+\begin{align*}
+    \mu_{50} = 158.8 \pm 3.6\\
+    \mu_{100} = 308.6 \pm 5.5
+\end{align*}
+
+The mutual inductance measured for the given coils comes out to be,
+
+\begin{align*}
+    M = (168.3 \pm 9.5)\,\mu\text{H}
+\end{align*}
+
+The value of low resistance measured comes out to be,
+
+\begin{align*}
+    r = (0.380 \pm 0.018)\,\Omega
+\end{align*}
+
+
+Hence we have found out that a lock-in amplifier plays a critical
+role of phase-sensitive detection in improving
+the signal-to-noise ratio. We can summarise the pros and cons of a lock-in amplifier as follows.
+
+\subsection*{Advantages}
+The stability of the lockin amplifier’s output in noisy environments,
+thanks to the phase-locked loop, highlights the
+lock-in amplifier’s strength in rejecting noise
+and maintaining synchronization.
+This is especially useful in environments where external noise sources could otherwise interfere with measurements, ensuring reliable data acquisition.
+
+The clear linear relationship between the induced EMF and the current through the primary coil that you observed
+is consistent with the theoretical model of mutual inductance. The lock-in amplifier’s ability
+to measure this relationship accurately, even at
+low signal levels, demonstrates its effectiveness
+in detecting small signals in experiments with
+limited signal strength.
+
+\subsection*{Disadvantages}
+The observation that
+slight phase misalignments can significantly affect the output underlines the need for precise phase control when using lock-in amplifiers.
+This precision in phase alignment is crucial for
+accurate signal recovery, especially when dealing with weak signals.
+
+The finite bandwidth of the lock-in amplifier is indeed a potential limitation, especially for signals with broad
+frequency spectra. This restricts the range of
+frequencies that can be effectively analyzed and
+may require careful consideration when designing experiments or selecting equipment for a
+broader range of frequencies.\\
+
+Its also observed that the mutual inductance EMF
+is characterized by being 90 degrees out of phase
+with the current in the primary coil. It is directly
+proportional to both the current in the primary coil
+and the frequency of the applied signal.
+These observations underscore both the strengths
+and limitations of the lock-in amplifier, making it
+a valuable tool for experiments involving weak signals and phase-sensitive measurements.
+However,
+its effectiveness depends on the frequency range and
+phase alignment.
+
+
+\section{Precautions and Sources of Error}
+
+    \begin{enumerate}
+        \item External electrical noise, thermal noise, or elec        tromagnetic interference can affect the input
+        signal, adding unwanted components.
+        \item The lock-in amplifier relies on phase-sensitive
+        detection, so any misalignment between the ref        erence signal and the input signal’s phase will
+        cause inaccurate signal extraction
+        \item The low-pass filter in the lock-in amplifier, used
+        to smooth the output signal, can introduce er        rors if not correctly configured.
+        If the filter’s time constant is too short, it may pass noise; if
+        too long, it may attenuate the desired signal.
+        \item Fluctuations in the amplitude of the input sig        nal or reference signal can lead to variations in
+        the measured output.
+        \item The lock-in amplifier has a limited bandwidth,
+        meaning it can only effectively analyze signals
+        within a specific frequency range.
+        \item If the input signal contains harmonics (multiples
+        of the reference frequency), the lock-in amplifier
+        may detect signals at these harmonic frequen        cies.
+        \item A drift in the reference signal’s frequency or
+        phase can desynchronize the phase-locked loop
+        (PLL), which may lead to measurement errors
+        over time.
+    \end{enumerate}

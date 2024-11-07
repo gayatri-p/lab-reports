@@ -1,0 +1,328 @@
+\section{Observation and Calculations}
+
+\begin{itemize}
+    \item Least count for measurement of resistance = 0.001 k$\Omega$ or 0.1 $\Omega$
+    \item Least count for measurement of $V_{ac}$ (pp) = 0.01 V
+    \item Least count for measurement of $V_{dc}$ (RMS) = 0.001 V
+    \item Least count for measurement of frequency = 0.001 kHz
+\end{itemize}
+
+\subsection{Calibration of Lock-in Amplifier}
+
+\noindent Here $R_1 = 4.700$ k$\Omega$ and $R_2 = 13.5$ k$\Omega$, so 
+\begin{align*}
+    V_\text{sig, rms} = \frac{13.5}{4700}V_\text{ac, rms} = \frac{13.5}{4700\cdot 2\sqrt{2}} V_\text{ac, pp}
+\end{align*}
+
+\input{tables/cal50.tex}
+
+\begin{figure}[H]
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=0.9\textwidth]{images/a1.png}
+    \caption{300 Hz}
+    \end{subfigure}
+
+    \end{figure}
+    
+    \begin{figure}[H]
+    \ContinuedFloat
+     
+    \bigskip
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=0.95\textwidth]{images/a2.png}
+    \caption{600 Hz}
+    \end{subfigure}
+    
+    \bigskip
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=0.95\textwidth]{images/a3.png}
+    \caption{900 Hz}
+    \end{subfigure}
+
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=0.9\textwidth]{images/a4.png}
+    \caption{1200 Hz}
+    \end{subfigure}
+    \end{figure}
+        
+    \begin{figure}[H]
+    \ContinuedFloat
+    
+    % \bigskip
+    \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=0.80\textwidth]{images/a5.png}
+    \caption{1500 Hz}
+    \end{subfigure}
+    
+    \caption{Callibration curve for Gain 50 at different frequencies}
+    \label{g1}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|} \hline
+        $f$ (Hz) &   $\mu$ & Error $(\delta \mu)$ \\\hline
+      300 &   157.2 & 4.1 \\
+      600 &   153.9 & 1.9 \\
+      900 &   162.3 & 4.2 \\
+     1200 &   160.8 & 4.6 \\
+     1500 &   159.7 & 2.1 \\\hline    
+    \end{tabular}
+    \caption{$\mu$ and error in $\mu$ for gain 50 from Fig. \ref{g1}. Hence, the average value of $\mu$ for gain 50 is ${ \mu_{50} = 158.8}$.}
+\end{table}
+\input{tables/cal100.tex}
+
+\begin{figure}[H]
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=0.9\textwidth]{images/b1.png}
+    \caption{300 Hz}
+    \end{subfigure}
+    
+    \bigskip
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=0.9\textwidth]{images/b2.png}
+    \caption{600 Hz}
+    \end{subfigure}
+    
+    \bigskip
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=0.9\textwidth]{images/b3.png}
+    \caption{900 Hz}
+    \end{subfigure}
+    \end{figure}
+    
+    \begin{figure}[H]
+    \ContinuedFloat
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=1\textwidth]{images/b4.png}
+    \caption{1200 Hz}
+    \end{subfigure}
+    
+    \bigskip
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=1\textwidth]{images/b5.png}
+    \caption{1500 Hz}
+    \end{subfigure}
+    
+    \caption{Callibration curve for Gain 100 at different frequencies}
+    \label{g2}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|} \hline
+        $f$ (Hz) &   $\mu$ & Error $(\delta \mu)$ \\\hline
+        300 &   309.0   &              7.0   \\
+        600 &   311.8 &              2.4 \\
+        900 &   304.3 &              4.2 \\
+       1200 &   311.0   &              3.3 \\
+       1500 &   307.0   &              8.2 \\ \hline   
+    \end{tabular}
+    \caption{$\mu$ and error in $\mu$ for gain 100 from Fig. \ref{g2}. Hence, the average value of $\mu$ for gain 100 is ${ \mu_{100} = 308.6}$.}
+\end{table}
+
+\subsection{Calculation of Mutual Inductance}
+
+\input{tables/mutual.tex}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/e1.png}
+    \caption{$V_{dc}$ vs $V_{ac}$ at different frequencies for measurement of mutual induction at gain 100}
+    \label{g3}
+\end{figure}
+
+Now the slope of the graph in Fig. \ref{g4}, $\beta=6.8 \times 10^{-5}$ Hz$^{-1}$ is given by Eq. 10. Substituting the value with $R=4.8$ k$\Omega$,
+\begin{align*}
+    M = \frac{\beta R}{2 \pi \mu_{100}} = 168.3\,\mu\text{H}
+\end{align*}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{images/e2.png}
+    \caption{$\frac{dV_{dc}}{dV_{ac}}$ vs frequency plot to calculate Mutual Inductance}
+    \label{g4}
+\end{figure}
+
+\subsection{Measurement of Low Resistance}
+
+The value of Low resistance is given by
+
+\begin{align*}
+    \text{slope }&=\frac{dV_{dc}}{dV_{ac}}=\frac{\mu r}{R}\\
+    \text{where }\frac{1}{R} &= \frac{1}{0.995} + \frac{1}{0.995}
+\end{align*}
+
+Hence, $R=0.498$ kHz.
+
+\input{tables/res50.tex}
+
+\begin{figure}[H]
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=1\textwidth]{images/c1.png}
+    \caption{300 Hz}
+    \end{subfigure}
+    
+    % \bigskip
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=1\textwidth]{images/c2.png}
+    \caption{600 Hz}
+    \end{subfigure} 
+    \bigskip
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=\textwidth]{images/c3.png}
+    \caption{900 Hz}
+    \end{subfigure}
+   
+    \end{figure}
+    
+    \begin{figure}[H]
+    \ContinuedFloat
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=1\textwidth]{images/c4.png}
+    \caption{1200 Hz}
+    \end{subfigure}
+    
+    \bigskip
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=1\textwidth]{images/c5.png}
+    \caption{1500 Hz}
+    \end{subfigure}
+    
+    \caption{$V_{ac}$ vs $V_{dc}$ plots for Gain 50 at different frequencies for measurement of low resistance}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|} \hline
+        $f$ & slope & Error in  & $r$ & $\delta r$ \\
+        (Hz) & & slope & ($\Omega$) & ($\Omega$) \\\hline
+        300 & 0.110 & 0.007 & 0.344 &        0.023 \\
+        600 & 0.126 & 0.005 & 0.395 &        0.016 \\
+        900 & 0.125 & 0.005 & 0.392 &        0.015 \\
+        1200 & 0.125 & 0.004 & 0.392 &        0.012 \\
+        1500 & 0.118 & 0.006 & 0.370 &        0.020 \\\hline
+    \end{tabular}
+    \caption{The slopes of plots from Fig. 7 and the calculated $r$ values (using Eq. 14) and their corresponding error values (using Eqn. 17)}
+\end{table}
+
+Thus the average value of $r$ obtained here is $r_{50}=0.382\,\Omega$.
+
+\input{tables/res100.tex}
+
+\begin{figure}[H]
+    \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/d1.png}
+    \caption{300 Hz}
+    \end{subfigure}
+    
+    \begin{subfigure}{\linewidth}
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/d2.png}
+    \caption{600 Hz}
+    \end{subfigure} 
+     
+    \end{figure}
+    
+    \begin{figure}[H]
+    \ContinuedFloat
+     % \bigskip
+    % \begin{subfigure}{\linewidth}
+    % \includegraphics[width=0.95\textwidth]{images/d2.png}
+    % \caption{600 Hz}
+    % \end{subfigure} 
+    % \bigskip
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=0.9\textwidth]{images/d3.png}
+    \caption{900 Hz}
+    \end{subfigure}
+    % \bigskip
+
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=0.9\textwidth]{images/d4.png}
+    \caption{1200 Hz}
+    \end{subfigure}
+    
+    \end{figure}
+        
+    \begin{figure}[H]
+    \ContinuedFloat
+    % \bigskip
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=0.9\textwidth]{images/d5.png}
+    \caption{1500 Hz}
+    \end{subfigure}
+    
+    \caption{$V_{ac}$ vs $V_{dc}$ plots for Gain 100 at different frequencies for measurement of low resistance}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|} \hline
+        $f$ & slope & Error in  & $r$ & $\delta r$ \\
+        (Hz) & & slope & ($\Omega$) & ($\Omega$) \\\hline
+        300 & 0.238 & 0.008 & 0.384 &        0.015 \\
+        600 & 0.213 & 0.022 & 0.344 &        0.035 \\
+        900 & 0.250 & 0.005 & 0.403 &        0.010 \\
+        1200 & 0.239 & 0.003 & 0.385 &        0.009 \\
+        1500 & 0.244 & 0.005 & 0.394 &        0.010 \\\hline
+    \end{tabular}
+    \caption{The slopes of plots from Fig. 8 and the calculated $r$ values (using Eq. 14) and their corresponding error values (using Eqn. 17)}
+\end{table}
+
+Thus the average value of $r$ obtained here is $r_{100}=0.379\,\Omega$.
+Hence the final average value comes out to be,
+
+\begin{align*}
+    r = \frac{r_{50}+r_{100}}{2} = 0.380\,\Omega
+\end{align*}
+
+\section{Error Analysis}
+
+The calibration error is the error in the slope which
+is given in tables II and IV. The error in mutual inductance is given by,
+
+\begin{align}
+    \delta M = M\sqrt{\left(\frac{\delta\mu}{\mu}\right)^2 + \left(\frac{\delta\beta}{\beta}\right)^2 + \left(\frac{\delta R}{ R}\right)^2}
+\end{align}
+
+where
+
+\begin{align}
+    \delta \mu = \frac{1}{\sqrt{5}}\sqrt{\sum_{f_i}\left(\mu_{f_i}\right)^2}
+\end{align}
+
+for each of the 5 values of $f_i$ in tables II and IV. This comes out to be,
+
+\begin{itemize}
+    \item For gain 50, $\delta \mu_{50} = 3.6$
+    \item For gain 100, $\delta \mu_{100} = 5.5$\\
+\end{itemize}
+
+Now using $\delta \mu_{100} = 5.5$, $\delta \beta = 0.4 \times 10^{-5}$ Hz$^{-1}$ (from Fig. 6) and $\delta R = 0.01$ k$\Omega$, we get $\delta M = 9.5\,\mu$H.
+
+For the error in $r$, we get
+\begin{align}
+    \delta r_{f_i} = r_{f_i}\sqrt{\left(\frac{\delta\mu}{\mu}\right)^2 + \left(\frac{\delta\,\text{slope}}{\text{slope}}\right)^2 + \left(\frac{\delta R}{ R}\right)^2}
+\end{align}
+
+Tables VII and IX show the $\delta r$ for every value of $r$ calculated using Eq. 17.
+The average error in $r$ can be calculated as,
+
+\begin{align}
+    \delta r = \frac{1}{\sqrt{5}}\sqrt{\sum_{f_i}\left(r_{f_i}\right)^2}
+\end{align}
+for each of the 5 values of $f_i$ in. Using this the errors are $\delta r_{50} = 0.018\,\Omega$ and $\delta r_{100} = 0.019\,\Omega$ for both values of gain. Thus,
+
+% \begin{itemize}
+%     \item For gain 50, $\delta r_{50} = 0.018\,\Omega$
+%     \item For gain 100, $\delta r_{100} = 0.019\,\Omega$\\
+% \end{itemize}
+
+% We can also take the mean error from both the measurements as,
+
+\begin{align*}
+    \delta r &= \frac{1}{\sqrt{2}}\sqrt{\left(0.018\right)^2+\left(0.019\right)^2}= 0.018\,\Omega
+\end{align*}

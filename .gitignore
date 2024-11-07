@@ -1,8 +1,9 @@
 .ipynb_checkpoints/
 mainNOtes.bib
-computational physics/assignments/
+*_.*
 .vscode/
 boilerplate/
+computational physics/*
 test.py
 *.bmp
 *.mwi
