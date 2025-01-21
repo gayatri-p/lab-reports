@@ -1,0 +1,170 @@
+\section{Observation and Calculations}
+
+\subsection{Estimation of operating voltage of the Scintillation Detector}
+We have obtained the count vs. LLD voltage plots for different values of operating high voltage. The resolution for a particular operating voltage is defined as the ratio of the FWHM of the distribution and the peak count value. It can be observed that the resolution varies with the applied voltage and the voltage at which we get the best resolution is fixed as the operating voltage for the rest of the experiment.
+
+Table \ref{tab:ov} details the V versus count data at different operating voltages. Figs. \ref{450} to \ref{650} plot the V versus count data to a Gaussian fit and Table \ref{tab:resolution} summarises the estimation of ideal operating voltage from the resolutions. 
+
+\input{tables/ov.tex}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/450.eps}
+    \caption{Cs-137 photopeak spectrum at 450V}
+    \label{450}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{images/500.eps}
+    \caption{Cs-137 photopeak spectrum at 500V}
+    \label{500}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{images/550.eps}
+    \caption{Cs-137 photopeak spectrum at 550V}
+    \label{550}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{images/600.eps}
+    \caption{Cs-137 photopeak spectrum at 600V}
+    \label{600}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{images/650.eps}
+    \caption{Cs-137 photopeak spectrum at 650V}
+    \label{650}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/ov.eps}
+    \caption{Applied voltage vs. resolution characterstics}
+    \label{ov}
+\end{figure}
+
+\input{tables/res.tex}
+
+Hence from Fig. \ref{ov}, we have the best operating voltage for the setup as 500V with a resolution of 9.14\%.
+
+\subsection{Study of Cs-137 spectrum using SCA}
+
+Now, fixing the SCA setup at the operating voltage, we took V vs count data for Cs-137. The values are given in Table \ref{tab:cs137} and plotted in Fig. \ref{cs137}.
+
+\input{tables/cs137.tex}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/cs137.eps}
+    \caption{Energy Spectrum of Cs-137}
+    \label{cs137}
+\end{figure}
+
+In Fig. \ref{cs137}, using the photopeak at 662 keV, the resolution of the detector can be calculated from the FWHM and the $\mu$ value as, $\boxed{8.37\%}$.
+
+\subsection{Study of Co-60 and Cs-137 spectra using MCA}
+
+Fig. \ref{espec} shows the energy spectra of Cs-137 and Co-60 analysed my the MCA.
+
+\begin{figure}[H]
+    % \ContinuedFloat
+    % \bigskip
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=1\textwidth]{images/co60.png}
+    \caption{Co-60}
+    \end{subfigure}
+    
+    % \bigskip
+    \begin{subfigure}{\linewidth}
+    \includegraphics[width=1\textwidth]{images/cs137.png}
+    \caption{Cs-137}
+    \end{subfigure}
+    \caption{Plots showing the Energy Spectrum analysed using MCA}
+    \label{espec}
+\end{figure}
+
+The details of the analysis are presented in Tables \ref{tab:mca1} and \ref{tab:mca2}.
+
+\input{tables/mca.tex}
+
+From tables \ref{tab:mca1} and \ref{tab:mca2}, we can estimate the resolution of the detector as,
+
+\begin{itemize}
+    \item Cs-137: 9.21\%
+    \item Co-60 (Peak 1): 5.68\%
+    \item Co-60 (Peak 2): 7.02\%
+\end{itemize}
+
+\subsection{Energy Calibration of the spectrometer \& Estimation of Energy of an Sample Isotope}
+
+Now, using the multiple channel analyser, three different sources were placed in front of detector at once and spectrum was analysed to obtain the calibration curve. The energy spectrum used were of Cs-137, Co-60 and Ba-133, whose photopeaks are known to us.
+
+Fig. \ref{cal} shows the combined energy spectrum and table \ref{tab:cal} summarises the peaks shown in the figure.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/calibration.png}
+    \caption{The combined energy spectrum of Cs-137, Co-60 and Ba-133, with four known peaks highlighted}
+    \label{cal}
+\end{figure}
+
+\input{tables/cal.tex}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/cal.eps}
+    \caption{Calibration curve for the MCA}
+    \label{calline}
+\end{figure}
+
+Fig. \ref{calline} shows the calibrated curve for the detector. Now we can analyse the energy spectrum of an unknown sample using this curve.
+
+\subsubsection*{Analysis of an the energy spectrum of Na-22}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/na22.png}
+    \caption{The energy spectrum of Na-22}
+    \label{na22}
+\end{figure}
+
+Fig. \ref{na22} shows the energy spectrum of Na-22. Two peaks were detected at channels 238.1277 and 573.4547 respectively. Therefore, using the fit calibration curve obtained previously, the corresponding energy values are 511.80 keV and 1276.35 keV respectively.
+
+\subsection{Estimation of the Mass Absorbance Coefficient of Aluminium}
+
+For 662 keV gamma rays, the mass absorption coefficient of Al is measured by placing aluminum blocks of different thicknesses between the detector and the source. The net count (= total count $-$ background noise) as a function of thickness is presented in Table \ref{tab:al}.
+
+\input{tables/al.tex}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/al.eps}
+    \caption{Net count vs. thickness for aluminium. The dotted line highlights the half-value thickness at around 3.38cm}
+    \label{al}
+\end{figure}
+
+From the graph Observed value of Half value thickness (thickness at which counts are reduced to half) is 3.38cm. This means density thickness $= 3.38\times 2.7 =9.13$ gm/cm$^2$ (using the density of aluminium). Hence, the mass absorption coefficient comes out to be,
+
+\begin{align*}
+    m=\frac{\ln(2)}{9.13} =0.076 \text{ gm/cm}^2
+\end{align*}
+
+\section{Error Analysis}
+
+The error in a quantity $Q(a_1, a_2, ..., a_n)$ is calculated using,
+\begin{align} \Delta Q &= \sqrt{\left( \sum_i^n \frac{\partial Q}{\partial a_i} \Delta a_i \right)^2} \end{align}
+
+\subsubsection*{Resolution of the detector}
+The uncertainity in resolution of the detector at the operating voltage can be calculated as from FWHM and the voltage at peak height, which comes out to be 0.92\%.
+
+\subsubsection*{Peak energy values of Na-22}
+The uncertainity in energy is directly a function of the uncertainities in the calibration curve. These values come out to be $(511.80 \pm 3.95)$ keV and $(1276.35 \pm 6.54)$ keV.
+
+\subsubsection*{Mass Absorbance Coefficient of Al-22}
+The uncertainity in $m$ is directly a related to the uncertainity in the estimation of HVT which is $0.5$ cm. Hence $\Delta m$ comes out to be $0.01$ gm/cm$^2$.
