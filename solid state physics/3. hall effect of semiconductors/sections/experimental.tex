@@ -1,0 +1,136 @@
+\section{Observation and Calculations}
+
+\subsection{Calibration of Magnetic Field with Coil Current}
+By placing the probe inside the electromagnet of 500 turns, we obtain a linear relationship between the current supplied and the magnetic field $\vv{H}$ between the electromagnets (Table \ref{tab:cal}, Fig. \ref{calf}).
+
+\input{tables/cal.tex}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/cal.eps}
+    \caption{Calibration plot for Magnetic field vs. Coil Current}
+    \label{calf}
+\end{figure}
+
+\subsection{Estimation of Hall Coefficient}
+
+At constant room temperature, we measured the Hall voltage at different values of coil currents for three different semiconductors.
+
+\subsubsection{Ge p-type}
+The Hall voltage against different values of coil currents is shown in Table \ref{tab:geP}. The Hall voltage as a function of the magnetic field obtained through the calibration curve plot is shown in Fig. \ref{fig:geP}.
+
+\begin{itemize}
+    \item Probe current = 4.31 mA
+    \item Resistivity $\sigma = (7 \pm 1)\,\Omega$ cm 
+    \item Sample thickness $t= 0.5$ mm\\
+\end{itemize}
+\input{tables/gep.tex}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/ge-p.eps}
+    \caption{Hall voltage vs. Magnetic Field for Ge p-type semiconductor}
+    \label{fig:geP}
+\end{figure}
+
+We can rewrite Eq. \ref{eq:1} as,
+
+\begin{align}
+    R_H = \left(\frac{V}{H}\right)\frac{t}{I}
+\end{align}
+
+where the $V/H$ is the slope of the above plot, $I$ refers to the probe current and $t$ is the thickness of the sample. Plugging in the values, the Hall coefficient comes out to be $1.300 \times 10^4$ cm$^3$/C. 
+
+Using Eq. \ref{eq:6}, the charge carrier density comes out to be $4.81 \times 10^{14}$ cm$^{-3}$. Similarly using Eq. \ref{eq:7}, the carrier mobility $(\mu_e)$ comes out to be,
+$\mu_e = R_H\sigma=R_H / 7 = 1.86 \time 10^3\text{ cm}^2/\text{Vs}$
+
+% \begin{align*}
+% \end{align*}
+
+\subsubsection{Ge n-type}
+The Hall voltage against different values of coil currents is shown in Table \ref{tab:geN}. The Hall voltage as a function of the magnetic field obtained through the calibration curve plot is shown in Fig. \ref{fig:geN}. For this setup,
+
+\begin{itemize}
+    \item Probe current = 3.88 mA
+    \item Resistivity $\sigma = (7 \pm 1)\,\Omega$ cm 
+    \item Sample thickness $t= 0.5$ mm\\
+\end{itemize}
+
+\noindent Note that since this is an n-type semiconductor, the majority charge carriers are electrons. Hence, the Hall voltage increases in the negative direction as opposed to the previous case. Using the same methods used for Ge p-type semiconductor, the Hall coefficient of Ge n-type comes out to be $-2.154 \times 10^4$ cm$^3$/C.
+
+Using Eq. \ref{eq:6}, the charge carrier density comes out to be $2.90 \times 10^{14}$ cm$^{-3}$. Similarly using Eq. \ref{eq:7}, the carrier mobility $(\mu_e)$ comes out to be,
+$\mu_e = R_H/7 = 3.08 \times 10^3 \text{ cm}^2/\text{Vs}$
+
+% \begin{align*}
+% \end{align*}
+\input{tables/gen.tex}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/ge-n.eps}
+    \caption{Hall voltage vs. Magnetic Field for Ge n-type semiconductor}
+    \label{fig:geN}
+\end{figure}
+
+
+\subsubsection{Si n-type}
+The Hall voltage against different values of coil currents is shown in Table \ref{tab:siN}. The Hall voltage as a function of the magnetic field obtained through the calibration curve plot is shown in Fig. \ref{fig:siN}. For this setup,
+
+\begin{itemize}
+    \item Probe current = 3.92 mA
+    \item Resistivity $\sigma = (24 \pm 1)\,\Omega$ cm 
+    \item Sample thickness $t= 0.5$ mm\\
+\end{itemize}
+
+\noindent Using the same methods used for Ge n-type semiconductor, the Hall coefficient of Ge n-type comes out to be $-1.791\times 10^3$ cm$^3$/C.
+
+Using Eq. \ref{eq:6}, the charge carrier density comes out to be $3.49 \times 10^{14}$ cm$^{-3}$. Similarly using Eq. \ref{eq:7}, the carrier mobility $(\mu_e)$ comes out to be,
+$ \mu_e = R_H / 24 = 0.75\text{ cm}^2/\text{Vs}$
+
+% \begin{align*}
+% \end{align*}
+\input{tables/sin.tex}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/si-n.eps}
+    \caption{Hall voltage vs. Magnetic Field for Si n-type semiconductor}
+    \label{fig:siN}
+\end{figure}
+
+\subsection{Temperature variation of Hall Coefficient}
+Using a Ge p-type semiconductor fixed with an oven, we were able to vary the temperature on the semiconductor by varying the EMF supplied to the oven. Temperature is measured with Cromel-Alumel thermocouple with its junction at a distance
+of 1 mm from the crystal. After waiting for about 10 minutes after each change in thermal EMF, we measured the Hall voltage and corresponding Hall coefficient (Table \ref{tab:tem}) to obtain a relationship as shown in Fig. \ref{fig:tem}.
+
+\input{tables/tem.tex}
+As we can see, the Hall coefficient is
+observed to decrease with increasing temperature,
+and a significant drop is seen at higher temperatures roughly after 50$^\circ$C to 70$^\circ$C. After that, it more or less stabilises.
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/temp.eps}
+    \caption{Hall voltage and coefficient measured at different temperatures for Ge p-type semiconductor}
+    \label{fig:tem}
+\end{figure}
+
+
+This behaviour can be explained by examining the semiconductor properties at the low temperature region. Here, the conduction is primarily due to
+holes (majority carriers in p-type semiconductors).
+As the temperature rises, thermal energy of the particles increase,
+which causes the excitation of electrons from the valence band to the conduction band. This increases the minority carrier concentration (electrons). Since Hall coefficient is inversely proportional to the difference in carrier concentrations,
+
+\begin{align}
+    R_H = \frac{1}{q(p-n)}
+\end{align}
+
+where $p$ and $n$ are the  hole and electron concentrations respectively, the overall value of $R_H$ decreases. Hence, the semiconductor transitions from an extrinsic to intrinsic conduction regime.
+
+At even higher temperatures around 80$^\circ$C, the in
+trinsic carrier concentration ($n_i$) becomes comparable to the dopant-induced carrier concentration ($p_0$). When $n_i$ dominates,
+conduction is influenced by both electrons (minor-
+ity carriers) and holes (majority carriers). Electrons,
+having higher mobility than holes, significantly reduce the effective Hall coefficient. In the intrinsic conduction region, the equation for $R_H$ is,
+
+\begin{align}
+    R_H = \frac{1}{q(p+n)}\left(\frac{p-n}{p+n}\right)
+\end{align}
+
+As $p\approx n \approx n_i$, the value of $R_H$ sharply decreases. Moreover, after the significant drop, $R_H$ value more or less stabilises at a temperature corresponding to approximately 110$^\circ$C. This is expected as all the electrons from the valence band have been excited to the conduction band, so no further decrease of the Hall coefficient can occur.
