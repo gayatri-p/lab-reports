@@ -1,0 +1,114 @@
+\section{Observation and Calculations}
+
+\subsection{Magnetoresistance}
+
+\subsubsection*{Spatial Distribution of the Magnetic Field}
+
+In the first part of the experiment, we set the pole piece distance of the electromagnet to approximately 19 mm, ensuring sufficient space for the magnetoresistance probe. We verified that the electromagnet produced a magnetic field by supplying current
+and measuring it using a Hall sensor. Due to the geometry of the setup, the magnetic field might not be constant across all points between the coils, and the measurement between the Hall probe and the actual magnetic field experienced by the Bi sample might vary. So by taking two sets of magnetic field data by varying the position of the Hall probe we obtained a contour map with a radial distribution of the magnetic field across the geometry of diameter 7 cm (Fig. \ref{g1}, \ref{g2}).
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/contour0.5.eps}
+    \caption{Contour Plot of the Magnetic Field Distribution across the circular surface at Coil current $= 0.5$ A}
+    \label{g1}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/contour1.eps}
+    \caption{Contour Plot of the Magnetic Field Distribution across the circular surface at Coil current $= 1$ A}
+    \label{g2}
+\end{figure}
+
+We can see that the variation in the inner region is within 10 Gauss, which is the least count of the Gaussmeter. So any variation would be undetectable with our current measuring setups. Hence we have neglected this deviation in the following sections.
+
+\subsubsection*{Estimation of $R_m$}
+Now, after checking that the magnetoresistance setup, preloaded with bismuth, responded to the supplied current, we connect the  outer probe pair connected to the CCS-01 terminals and the inner
+pair to the DMV-001 terminals.
+We then positioned the magnetoresistance probe and Hall sensor vertically aligned. Using the constant current source, we recorded the magnetic field versus voltage, and determined the resistance ($R_m$) in the presence of the magnetic field for two different sets of probe current. We measured the voltage at zero magnetic field to calculate the resistance ($R$) of the sample. The data
+is shown in Tables \ref{trm1} \ref{trm1}.
+
+\input{tables/rm1.tex}
+
+First the probe resistance is calculated for
+a finite probe current and voltage in presence of zero
+magnetic field. Then this resistance is kept as the
+reference for calculating the fractional change in resistance due in applied magnetic field.
+Calculations
+for magnetoresistance is performed using Eq. \ref{eq8}. Log scale is used in both Fig. \ref{rm1} and Fig. \ref{rm2} to highlight the change in
+magnetoresistance across large variation of magnetic
+field.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/198rm.eps}
+    \caption{Plot depicting change of resistance w.r.t magnetic field (in log scale) for CCS of 198.0 mA}
+    \label{rm1}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/99rm.eps}
+    \caption{Plot depicting change of resistance w.r.t magnetic field (in log scale) for CCS of 99.5 mA}
+    \label{rm2}
+\end{figure}
+
+\subsection{Hall Coefficient}
+
+\subsubsection*{Calibration of Magnetic Field vs. Coil Current}
+First we calibrated the magnetic field values against the coil current using Table \ref{tab:cal}. 
+$H$ was calculated for each $I$ from using $H = (2344.45\cdot I - 396.14)$ Gauss (Fig. \ref{calf}).
+
+\input{tables/cal.tex}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/cal.eps}
+    \caption{Calibration plot of Magnetic field and Coil Current}
+    \label{calf}
+\end{figure}
+
+\subsubsection*{Estimation of $R_H$}
+The Hall voltage against different values of coil currents, for two different values of probe current is shown in Table \ref{tab:coeff}. The Hall voltage as a function of the magnetic field obtained through the calibration curve plot is shown in Figs. \ref{rh1} and \ref{rh2}.
+All units have been converted to SI for simplicity.
+
+\input{tables/rh.tex}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/119rh.eps}
+    \caption{Plot of Hall voltage against applied magnetic field for CCS 119.0 mA}
+    \label{rh1}
+\end{figure}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/198rh.eps}
+    \caption{Plot of Hall voltage against applied magnetic field for CCS 198.2 mA}
+    \label{rh2}
+\end{figure}
+
+We can rewrite Eq. \ref{eq7} as,
+
+\begin{align} \label{eq9}
+    R_H = \left(\frac{V}{H}\right)\frac{t}{I}
+\end{align}
+
+where the $V/H$ is the slope of the above plot, $I$ refers to the probe current and $t$ is the thickness of the sample which is 0.5mm. Plugging in the values, the Hall coefficient comes out to be:
+
+\begin{itemize}
+    \item For $I=119.0$ mA, $R_H = -564.64 $ cm$^3$/C
+    \item For $I=198.2$ mA, $R_H = -506.95 $ cm$^3$/C
+\end{itemize}
+
+\noindent Since $R_H=1/ne$, we can also derive the charge carrier density to be,
+
+\begin{itemize}
+    \item For $I=119.0$ mA, $n = 1.11 \times 10^{16} $ cm$^{-3}$
+    \item For $I=198.2$ mA, $n = 1.23 \times 10^{16} $ cm$^{-3}$
+\end{itemize}
+
+\noindent Similarly using the given resistivity of the sample $1/\sigma=1.3 \times 10^{-4}\,\Omega$ cm, we can find
+the mobility of charge carrier for different values of current using the formula, $\mu_e=\sigma R_H$.
+
+\begin{itemize}
+    \item For $I=119.0$ mA, $\mu_e = 7.34 \times 10^{-2} $ cm$^{2}$/Vs
+    \item For $I=198.2$ mA, $\mu_e = 6.59 \times 10^{-2} $ cm$^{2}$/Vs
+\end{itemize} \vspace{-1em}

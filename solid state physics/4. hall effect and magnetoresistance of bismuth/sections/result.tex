@@ -1,0 +1,52 @@
+\section{Results \& Discussion}
+
+Before starting the experiment, we measured the spatial distribution of the magnetic field across the electromagnetic coils, which we use later.
+By obtaining a contour plot of the distribution, we observed that the change in $H$ between the position of the Hall probe through which we measure the magnetic field, and the Bismuth sample (within 1cm of the center) is roughly of the order of a few Gauss. Since the least count of the Gaussmeter is higher than that ($10 $ Gauss), we have neglected this effect in future calculations. Despite that, this proved a valuable exercise in understanding the non-uniform magnetic field distribution produced by electromagnetic coils. \vspace{-1em}
+% Note that all thes measured values and relations are only applicable at temperature at which this experiment was performed at, which is the room temperature.
+
+\subsection*{Magnetoresistance}
+
+In the first part of the experiment, we measure the magnetoresistance of Bismuth against the applied magnetic field. Firstly, we see that the resistance of the Bismuth is very small to begin with ($\sim 10^{-4}\,\Omega$), which is not surprising given that Bismuth is a post-transition metal, which are generally  very good conductors. Then for applied magnetic field, we observed the resistance increased. The relation however, between the increase in resistance with increase in applied magnetic field is not linear. By plotting $\log(H)$ vs. $\Delta R/R$, where $\Delta R$ is the change in magnetic field from zero $H$, we observed a roughly exponential relation between the two. This indicates high variation in $R_m$ for larger values of magnetic field. But again the effect is very small for smaller values of $H$. 
+
+\subsection*{Hall Coefficient}
+In the second part of the experiment, we have measured the hall coefficient, carrier density and carrier mobility for two different values of constant probe current. The results are as follows
+
+\begin{itemize}
+    \item $I=119.0$ mA
+    \begin{align*}
+        R_H &= - (564.64 \pm 19.19) \text{ cm}^3/\text{C}\\
+        n &= (1.11 \pm 0.04) \times 10^{16} \text{ cm}^3\\
+        \mu_e &= (7.34 \pm 0.25) \times 10^{-2} \text{ cm}^2/\text{Vs}
+    \end{align*}
+    \item $I=198.2$ mA
+    \begin{align*}
+        R_H &= - (506.95 \pm 15.27) \text{ cm}^3/\text{C}\\
+        n &= (1.23 \pm 0.03) \times 10^{16} \text{ cm}^3\\
+        \mu_e &= (6.59 \pm 0.19) \times 10^{-2} \text{ cm}^2/\text{Vs}
+    \end{align*}
+\end{itemize}
+
+Negative sign in the hall coefficient suggest that the charge carries are negatively charged. The values we obtained lies within the standard value of Hall coefficient of Bismuth in literature, which is $R_H = -540 $ cm$^3$/C \cite{Kittel_2004,smat2017}. Thus, our measured values have a percentage error of roughly 4\% and 6\% respectively. 
+
+According to the Drude model the Hall coefficient should not
+change with the probe current. But in general, the
+Hall voltage is not a linear function of magnetic field applied, i.e.
+the Hall coefficient is not generally a constant, but a function of the applied magnetic field. The deviations in the results can also be due to the crude approximation of the linear region we took for our analysis.
+
+The carrier densities obtained are also around $10^2$ times the values we obtained for semiconductors, which is expected, as Bismuth is a good conductor and will have a large electron density.
+We also see that the mobility of charge carriers is higher for the
+lower current value which makes sense as the Hall voltage is higher for the higher current values, which slows down the carriers. \vspace{-1em}
+
+\section{Precautions and Sources of Error}
+
+    \begin{enumerate}
+        \item The current through the specimen should not be
+        large enough to cause heating.
+        \item Make sure that the hall probe and the bismuth strip
+        are one above the other when placed between the
+        poles of the Helmholtz coil for accurate measurements.
+        \item The Hall probe must be rotated in the field until
+        the position of maximum voltage is reached.
+        \item Make sure to be gentle with the Bismuth sample as
+        it might get damaged due to its brittleness.
+    \end{enumerate}

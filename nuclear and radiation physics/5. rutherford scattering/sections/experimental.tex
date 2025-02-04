@@ -1,0 +1,59 @@
+\section{Observation and Calculations}
+
+\subsection{Recording Scattering Rate as a function of $\theta$}
+
+The counts observed for different values of scattering angles are given in Table \ref{tab}. Using this, we have plotted $\theta$ vs. $N(\theta)$ and have fitted a best-fit plot of the form,
+
+\begin{align} \label{eq:gen}
+    f(\theta) = \frac{A}{\sin^4\left(\frac{\theta-B}{2}\right)}
+\end{align}
+
+Since the function blows up at $\theta=0$ angle, our analysis focuses on measurements taken in the range $|\theta| > 5^\circ$. The data is plotted along with the best-fit curve according to $f(\theta)$ in Fig. \ref{plot}. The best-fit values of $A$ and $B$ obtained are:
+
+\begin{align*}
+    A &= (0.014 \pm 0.006) \text{ s}^{-1}\\
+    B &= (-0.026 \pm 0.014)^\circ
+\end{align*}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/plt.eps}
+    \caption{$N(\theta)$ vs. scattering angle plot. The standard deviation in $N(\theta)$ is too small to be noticed.}
+    \label{plot}
+\end{figure}
+
+Hence, we can say that our experiment results validate Rutherford's scattering formula as they roughly obey a $\sin^{-4}(\theta/2)$ relation.
+
+\input{tables/tab.tex}
+
+\subsection{Determination of the atomic number of Aluminium}
+The count rates for Au and Al foils of slit width 1mm are given in Table \ref{tab:z}. The following parameters are known to us:
+
+\begin{itemize}
+    \item Thickness of the gold foil, $d_\text{Au} = 2\mu$m
+    \item Thickness of the aluminium foil, $d_\text{Al} = 8\mu$m
+    \item Atomic concentration approximation, $c_\text{Al} = c_\text{Au}$
+    \item Nuclear charge of gold, $Z_\text{Au} = 79$
+    \item Slit width (for both Au and Al) $ = 1$ mm.
+\end{itemize}
+
+\noindent Using Eq. \ref{eq:part2}, we can plug in the above values to get,
+
+\begin{align*}
+    \implies Z_\text{Al} = 79\sqrt{\frac{2\cdot 0.320}{8 \cdot 0.0325}} = 12.6
+\end{align*}
+
+\input{tables/z.tex}
+\section{Error analysis}
+
+From Eq. \ref{eq:part2}, we can get the uncertainity in $N_\text{Al}$ as, 
+
+\begin{align}
+    \frac{\Delta Z_\text{Al}}{Z_\text{Al}} = \sqrt{\left(\frac{\Delta N_\text{Au}}{2N_\text{Au}}\right)^2+\left(\frac{\Delta N_\text{Al}}{2N_\text{Al}}\right)^2+\left(\frac{\Delta d_\text{Au}}{2d_\text{Au}}\right)^2\left(\frac{\Delta d_\text{Al}}{2d_\text{Al}}\right)^2}
+\end{align}
+
+By assuming $\Delta d=0$ and taking the $\Delta N$ values as the standard deviation in count rates we have $\Delta N_\text{Al} = 7.37/1000s = 7.37 \times 10^{-3}$ s$^{-1}$ and $\Delta N_\text{Al}= 6.00/100s = 6.00 \times 10^{-2}$ s$^{-1}$,
+
+\begin{align*}
+    \Delta Z_\text{Al} = 1.8
+\end{align*}
