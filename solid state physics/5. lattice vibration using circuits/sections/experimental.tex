@@ -1,0 +1,77 @@
+\section{Observation and Calculations}
+\subsection{Monoatomic Lattice}
+The experimentally obtained data for the monotomic
+lattice is shown in Table \ref{tab:mono1}. The phase difference was observed using the oscilloscope in XY mode, with one input being from the signal generator and the other from the LC circuit output. Measurements were taken at every phase change of $\pi/2$ where the oscilloscope display switched between an ellipse (phase difference $\pm \pi/2$; Fig. \ref{tk1}) and a straight line (phase difference 0 or $\pi$; Fig. \ref{tk2}).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\columnwidth]{images/TEK0000.JPG}
+    \caption{Oscilloscope output in XY mode showing a phase difference $\pm \pi/2$}
+    \label{tk1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.8\columnwidth]{images/TEK0001.JPG}
+    \caption{Oscilloscope output in XY mode showing a phase difference 0 or $\pi$}
+    \label{tk2}
+\end{figure}
+
+The corresponding inductance and capacitance values used are given in Table \ref{tab:mono}. The graph of $\theta$ vs $f$ for the monoatomic lattice is shown in Fig. \ref{g1}.
+\input{tables/mono.tex}
+\input{tables/mono1.tex}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/mono.eps}
+    \caption{Plot showing $\theta$ vs. $f$ for the monoatomic lattice}
+    \label{g1}
+\end{figure}
+
+Now, using Eq. \ref{wf}, the theoretical value of $\omega_\text{max}$ can be calculated from the measured average values of $L$ and $C$ as,
+
+\begin{align*}
+    \omega_\text{max} &= \frac{2}{\sqrt{0.976 \times 10^{-3} \times 48.72 \times 10^{-9}}}\\ &= 290.00 \text{ krad/s}\\ \text{or, }f_\text{max} &= 46.16 \text{ kHz}
+\end{align*}
+
+From the experimental, the maximum frequency observed is 50.68 kHz or 318.43 krad/s.
+
+\subsection{Diatomic Lattice}
+The experimentally obtained data for the diatomic
+lattice is shown in Table \ref{tab:di1}. The corresponding inductance and capacitance values used are given in Table \ref{tab:di}. The graph of $\theta$ vs $f$ for the diatomic lattice is shown in Fig. \ref{g1}.
+\input{tables/di.tex}
+\input{tables/di1.tex}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/di.eps}
+    \caption{Plot showing $\theta$ vs. $f$ for the diatomic lattice}
+    \label{g2}
+\end{figure}
+
+Again, using Eq. \ref{wf2}, the calculated band gap value is,
+
+\begin{align*}
+    f_\text{gap} &= \frac{1}{2\pi}\sqrt{\frac{2}{LC_1}} - \frac{1}{2\pi}\sqrt{\frac{2}{LC_2}}\\
+    &= 32.79 - 18.52 \\&= 14.27 \text{ kHz}
+\end{align*}
+
+From Fig. \ref{g2}, we can see than the lowest frequency in the optical branch is 25.22 kHz and the highest frequency in the acoustic branch is 20.13 kHz. Hence, the experiment band gap is 5.09 kHz.
+
+\section{Error Analysis}
+
+Based on Eq. \ref{wf}, the error in $f_\text{max}$ for the monoatomic lattice can be calculated using
+
+\begin{align}
+    \Delta f_\text{max} = f_\text{max}\sqrt{\left(\frac{\Delta L}{2L}\right)^2 + \left(\frac{\Delta C}{2C}\right)^2}
+\end{align}
+
+Using the values of standard deviation in the above equation, the error comes out to be $\Delta f_\text{max} = 0.60$ kHz.
+
+Similarly using the above equation for the diatomic lattice, the individual errors in the maximum acoustic and minimum optical frequencies amount to the final error in $\Delta f_\text{max}$,
+
+\begin{align*}
+    \Delta f_\text{gap} &= |\Delta f_\text{acoustic, max}| + |\Delta f_\text{optical, min}|\\
+    &= 0.03 + 0.02 \\
+    &= 0.05 \text{ kHz}
+\end{align*}
