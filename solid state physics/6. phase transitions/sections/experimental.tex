@@ -1,0 +1,166 @@
+\section{Observations}
+	\subsection{Frequency dependence of Dielectric Constant}
+	We connect the probe setup for all these different samples used here. The probe leads (capacitor terminals) are fed to a main unit and an oscilloscope. For every frequency, the variable capacitance $C_4$ and the variable resistance $R_4$ are varies to achieve minimum (almost zero) signal on the oscilloscope, and they are recorded in the following tables. 
+	For all these cases,
+	\begin{itemize}
+		\item $R_3 = 1$ k$\ohm$
+		\item $C_2 = 1000$ pF
+	\end{itemize}
+
+	\subsubsection{BaTiO$_3$}
+
+		\begin{itemize}
+			\item Permittivity of Space $(\epsilon_0) = 8.85\times10^{-3}$ pF mm$^{-1}$
+			\item Thickness $(t) = 1.6$ mm
+			\item Diameter = $10.56$ mm
+			\item Area $(A) = 87.58$ mm$^2$
+			\item $C_0 =\frac{\epsilon A}{t} = 0.484$ pF
+		\end{itemize}
+
+		\input{tables/a.tex}
+
+		Note that for small values we approximate $\tan \delta = \delta$. The error in $\epsilon$ can be calculated from Eq. 4 as (assuming $\Delta C_0 = \Delta R_3 = \Delta C_2 = 0$),
+		\begin{align}
+			\frac{\Delta \epsilon}{\epsilon} = \frac{\Delta C_1}{ C_1} = \frac{\Delta R_4}{ R_4}
+		\end{align}
+
+		where $\Delta R_4$ is the least count in the measurement of $R_4$, which is $0.002$ k$\Omega$.
+
+		Similarly the error in $\delta$ can be calculated from Eq. 6 as
+		\begin{align}
+			\frac{\Delta \delta}{\delta} &= \sqrt{\left(\frac{\Delta C_1}{C_1}\right)^2 + \left(\frac{\Delta R_1}{R_1}\right)^2 + \left(\frac{\Delta f}{f}\right)^2}\\
+			&= \sqrt{\left(\frac{\Delta R_4}{R_4}\right)^2 + \left(\frac{\Delta C_4}{C_4}\right)^2 + \left(\frac{\Delta f}{f}\right)^2}
+		\end{align}
+
+		where $\Delta C_4 = 50$ pF and $\Delta f = 1$ kHz.
+
+		\begin{figure}[H]
+			% \ContinuedFloat
+			% \bigskip
+			\begin{subfigure}{\linewidth}
+			\includegraphics[width=1\textwidth]{images/batio3_e.eps}
+			\caption{Dielectric constant vs frequency}
+			\end{subfigure}
+			
+			% \bigskip
+			\begin{subfigure}{\linewidth}
+			\includegraphics[width=1\textwidth]{images/batio3_d.eps}
+			\caption{Dissipation factor vs frequency}
+			\label{g1b}
+			\end{subfigure}
+
+			\caption{Frequency dependent plots for BaTiO$_3$}
+			\label{g1}
+		\end{figure}
+
+	These observations show a
+	noticeable decline in the dielectric constant as the
+	frequency increases. This behavior is expected, as
+	at higher frequencies, the polarization response of
+	BaTiO$_3$ becomes insufficient to keep up with the
+	swiftly varying electric field, resulting in a reduced
+	effective dielectric constant.
+
+	The curve for dissipation/loss factor however demonstrates a
+	non-monotonic trend. This could be due to the multiple energy dissipation mechanisms, such dipolar relaxation and domain wall dynamics, contributing differently across the frequency spectrum. It is also to be noted that due to the low precision in the variation of $C_4$, the error bars associated with the dissipation factor are too large to make any proper remarks.
+
+	\subsubsection{Multi-layer Ceramic Capacitor (MLCC)}
+
+	\noindent Similarly, we now study the variation of dielectric constant with frequency for a standard MLCC. Here, the DC capacitance of the capacitor was measured to be, $C_0 = 473.1$ pF.
+
+	\input{tables/b.tex}
+	\begin{figure}[H]
+		\centering
+		\label{graph:3}
+		\includegraphics[width=1\columnwidth]{images/mlcc_e.eps}
+		\caption{Dielectric constant ($\epsilon$) vs frequency graph for MLCC}
+	\end{figure}
+	The above plot shows the general trend in the in the variation of $\epsilon$ with frequency, which is decreasing as expected. The plateaus might indicate a shift in the dominant polarization mechanism, leading
+	to a brief period of capacitance stability before it
+	begins to decline further.
+
+	We have not plotted the variation in the dissipation factor as the values obtained showed no general trend along with the associated error bars being of the order of the variations (see Fig. \ref{g1b}). 
+
+	\subsubsection{Disc Ceramic Capacitor (DCC)}
+	% \vspace{-1em}
+	\noindent We now study the variation of dielectric constant with frequency for a standard DCC. Here, the standard capacitance of the capacitor was measured to be, $C_0 = 423.3$ pF. 
+	% \vspace{-2em}
+	\input{tables/c.tex}
+	% \vspace{-5em}
+	\begin{figure}[H]
+		\centering
+		\label{graph:4}
+		\includegraphics[width=1\columnwidth]{images/disc_e.eps}
+		\caption{Dielectric constant ($\epsilon$) vs frequency graph for DCC}
+	\end{figure}
+	As expected, the above plot shows the general decreasing trend in the in the variation of $\epsilon$ with frequency, as explained in the previous part for MLCC.
+
+	Again, we have not plotted the variation in the dissipation factor as the values obtained showed no general trend along with the associated error bars being of the order of the variations (see Fig. \ref{g1b}). 
+
+\subsection{Temperature dependence of dielectric constant at different frequencies using BaTiO$_3$}
+
+In the second part of the experiment, we obtained
+data to study the variation of dielectric constant
+of BaTiO$_3$ with temperature for various frequencies.
+
+For this setup, the probe arrangement is
+mounted in suitable stand as before, which also hold the sample plate and RTD (Resistance Temperature Detector) sensor. The RTD is mounted in the sample plates such that it is just below the sample, separated by a very thin sheet of mica. This ensures the correct measurement of sample temperature. This stand also
+serves as a lid of the oven. The leads are provided for the connection to RTD and capacitance meter. 
+
+After setting the temperature in the oven, we wait around 10 minutes for the temperature to stabilise before taking any readings.
+
+	\input{tables/f1.tex}
+	\input{tables/f2.tex}
+	\input{tables/f3.tex}
+	\input{tables/f4.tex}
+	\begin{figure*}
+		\centering
+		\includegraphics[width=1.5\columnwidth]{images/temp.eps}
+		\caption{Variation of Dielectric constant with Temperature T ($^\circ$C) for four different frequencies}
+		\label{graph:5}
+	\end{figure*}
+
+	Fig. 7 shows the variation in the dielectric constant with temperature, at four different frequencies. The curves are nearly symmetrical, and the dielectric constant peaks at a specific temperature (the Curie temperature). While the magnitude of the dielectric constant increases as the frequency decreases (as explained in the previous sections), the difference is not quite noticable at this scale.
+	
+	The Curie temperature is found to be around 135 $^\circ$C from the graph. Since we took measurements only at every $^\circ$C, the standard deviation associated with the readings must be 5$^\circ$C.  
+	
+	\subsubsection*{Study of diffuseness parameter at a single frequency}
+	\vspace{-1em}
+
+	Diffuseness parameter can be calculated as the slope of $\log(\frac{1}{\epsilon}-\frac{1}{\epsilon_C})$ and $\log(T-T_C)$, for all values above the Curie Temperature. $\epsilon_c$ is the maximum dielectric constant, which is obtained at the Curie temperature. 
+	We have plotted the required quantities for all four values of frequencies below.
+
+	\vspace{-5em}
+
+	\begin{figure}[H]
+		% \ContinuedFloat
+		% \bigskip
+		\begin{subfigure}{\linewidth}
+		\includegraphics[width=1\textwidth]{images/TC10.eps}
+		\caption{10 kHz}
+		\end{subfigure}
+		
+		% \bigskip
+		\begin{subfigure}{\linewidth}
+		\includegraphics[width=1\textwidth]{images/TC25.eps}
+		\caption{25 kHz}
+		\end{subfigure}
+		
+		\begin{subfigure}{\linewidth}
+		\includegraphics[width=1\textwidth]{images/TC35.eps}
+		\caption{35 kHz}
+		\end{subfigure}
+	\end{figure}
+
+	\begin{figure}[H]
+		\ContinuedFloat
+		\begin{subfigure}{\linewidth}
+		\includegraphics[width=1\textwidth]{images/TC50.eps}
+		\caption{50 kHz}
+		\end{subfigure}
+
+		\caption{$\log(\frac{1}{\epsilon}-\frac{1}{\epsilon_C})$ vs. $\log(T-T_C)$ at different frequencies}
+		\label{final}
+	\end{figure}
+		
+	From the above plots, the average value of $\delta$ can be taken as the slops obtained using linear regression.
