@@ -1,0 +1,57 @@
+\section{Error Analysis}
+
+Error estimation is based on the least count of the measur-
+ing instruments. A digital multimeter was used to measure
+voltage and current. The least count for voltage was either 0.01 V or 0.001 V depending on the range. The least count of the current readings were similarly 0.01 or 0.001 mA depending on the range.
+
+The uncertainty in maximum power is determined using quadrature propagation,
+
+\begin{align}
+    \Delta P = P \sqrt{\left(\frac{\Delta V}{V}\right)^2 + \left(\frac{\Delta I}{I}\right)^2}
+\end{align}
+
+Similarly, the uncertainity in fill factor can be calculated using,
+
+\begin{align}
+    \Delta FF = FF \sqrt{\left(\frac{\Delta P}{P_\text{max}}\right)^2 + \left(\frac{\Delta I_\text{sc}}{I_\text{sc}}\right)^2 + \left(\frac{\Delta V_\text{oc}}{V_\text{oc}}\right)^2}
+\end{align}
+
+\section{Discussion \& Conclusion}
+
+In this experiment we successfully analyzed the I-V characteristics of the solar cell under different illumination conditions, including an incandescent lamp and sunlight. The
+obtained I-V curves exhibited the expected nonlinear behavior, confirming the photovoltaic nature of the solar
+cell. We were able to fit the diode equation on the observed I-V plots which confirms our theoretical predictions (Not for the data outdoors as there was a large amount of variability and noise in the data).
+
+A significant difference was observed in the power output
+between these two conditions the maximum power generated under room lighting was considerably lower than
+that achieved under sunlight for the same filter.
+This discrepancy can be attributed to the difference in
+incident radiation intensity. The Sun delivers a significantly higher amount of energy per unit area per
+unit time compared to artificial room lighting.
+
+The highest power output was recorded in the
+absence of any filter in both cases, as expected. 
+However, the highest power ouput was seen with magenta and yellow filters indoors, and yellow and blue filters outdoors. This might indicate that the respective light sources are rich in those particular frequencies more than the others. The P-V plot using the yellow filter outdoors was almost similar to the no filter case, indicating that yellow filter allows through a significant part of sun's spectrum. 
+
+The fill factor, which measures the efficiency of the solar cell, at room temperature ranges between
+0.4 and 0.5 for different filters. However, under direct
+sunlight, the feel factor increases significantly, falling
+within the range of approximately 0.5 to 0.7. This indicates that solar panels exhibit enhanced efficiency in natural sunlight compared to artificial lighting. The highest fill factor outdoors for recorder for the green filter, which is expected as the peak of sun's blackbody curve lies near 500 nm, i.e. green light. However yellow filter was close behind. 
+
+While taking measurements under sunlight, there was significant cloud cover which was varying with time due to the bad weather conditions. This could be the reason why the readings for the I-V and P-V characteristics under sunlight is not as smooth as that under an incandescent lamp.
+
+\section{Precautions and Sources of Error}
+
+    \begin{enumerate}
+        \item Stable Light Source: Ensure that the light
+        source (room light or sunlight) remains consistent
+        throughout the experiment to obtain accurate measurements. Variations in light intensity can affect
+        the readings.
+        \item Proper Electrical Connections: Verify that all
+        electrical connections, including the load and measuring instruments, are secure to minimize resistance errors and fluctuations in readings.
+        \item Avoid Shadows and Reflections: Make sure no
+        unwanted objects or reflections interfere with the
+        light falling on the solar cell, as they can alter the
+        output and lead to incorrect results.
+        
+    \end{enumerate}
