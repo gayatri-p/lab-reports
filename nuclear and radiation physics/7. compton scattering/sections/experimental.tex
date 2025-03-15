@@ -1,0 +1,105 @@
+\section{Observation and Calculations}
+
+\subsection{Energy calibration of scintillation detector}
+At first, the scintillation detector is calibrated using a mixed source of Americum and Cesium. The resulting spectra is shown in Fig. \ref{calib}. The two peaks are calibrated to 59.54 keV (due to Am-241) and 661.66 keV (due to Cs-137). 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/al_calib.pdf}
+    \caption{Energy Callibration Curve}
+    \label{calib}
+\end{figure}
+
+\subsection{Change in wavelength of the scattered $\gamma$ radiation as a function the $\theta$}
+
+The scattering spectra observed for different scattering angles are shown in Fig. \ref{plot1}. A gaussian is fitted for each peak and the best-fit $\mu$ value corresponds to $E_\theta$. Tables I and II summarise the corresponding $\Delta E$ and $\Delta \lambda$ values for both the scattering bodies.
+
+\begin{figure*}
+    \begin{subfigure}{\linewidth}
+        \centering
+        \includegraphics[width=0.9\columnwidth]{images/al_counts.pdf}
+        \caption{Aluminium scattering body}
+    \end{subfigure}
+    \begin{subfigure}{\linewidth}
+        \centering
+        \includegraphics[width=0.9\columnwidth]{images/cu_counts.pdf}
+        \caption{Copper scattering body}
+    \end{subfigure}
+    \caption{Scattering Spectra due to Compton scattering for different scattering angles}
+    \label{plot1}
+\end{figure*}
+
+\input{tables/al.tex}
+\input{tables/cu.tex}
+
+Fig. \ref{plot3} shows the variation in experimental and theoretical $\Delta \lambda$ values as a function of $\theta$.
+
+\begin{figure}[H]
+    \begin{subfigure}{\linewidth}
+        \centering
+        \includegraphics[width=1\columnwidth]{images/al.eps}
+        \caption{Aluminium scattering body}
+    \end{subfigure}
+\end{figure}
+\begin{figure}[H]
+    \ContinuedFloat
+    \begin{subfigure}{\linewidth}
+        \centering
+        \includegraphics[width=1\columnwidth]{images/al.eps}
+        \caption{Copper scattering body}
+    \end{subfigure}
+    \caption{Comparison of Wavelength shift due to Compton scattering for copper theoretically and experimentally}
+    \label{plot3}
+\end{figure}
+
+\vspace{2em}
+
+Fig. \ref{plot2} shows the variation in $E$ as a function of $\theta$. The data points have been fitted to the function based on Eq. 4,
+
+\begin{align*}
+    E = \frac{662}{1+\frac{662}{511}(1-\cos \theta)}
+\end{align*}
+
+where $E_0$ is 662 keV and $m_ec^2$ is 511 keV. We can see that our data agrees with the theoretical predictions with a pretty good $r$-value.
+
+\begin{figure}[H]
+    \begin{subfigure}{\linewidth}
+        \centering
+        \includegraphics[width=1\columnwidth]{images/al_fit.pdf}
+        \caption{Aluminium scattering body, $r$-value = 0.9990}
+    \end{subfigure}
+\end{figure}
+\begin{figure}[H]
+    \ContinuedFloat
+    \begin{subfigure}{\linewidth}
+        \centering
+        \includegraphics[width=1\columnwidth]{images/cu_fit.pdf}
+        \caption{Copper scattering body, $r$-value = 0.9994}
+    \end{subfigure}
+    \caption{Energy vs Scattering angle due to Compton scattering for different scattering angles}
+    \label{plot2}
+\end{figure}
+
+
+\subsection{Calculation of Differential cross-section and the Calibration Factor}
+
+Talble III shows the intensity distribution across different scattering angles measured from the area under the peaks from Fig. \ref{plot1}. The differential cross section has been calculated from Eq. 5.\\
+
+\input{tables/count.tex}
+
+Now, using Eq. 6, the Calibration Factor ($C$) can be calculated. This comes out as,
+
+\begin{itemize}
+    \item Al: $2.11\times 10^{31}$ m$^{-2}$
+    \item Cu: $1.57 \times 10^{31}$ m$^{-2}$
+\end{itemize}
+
+\section{Error Analysis}
+
+The error in the calibration factor can be calculated using
+
+\begin{align}
+    \frac{\Delta C}{C} = \sqrt{\sum_{i=0}^n \frac{\Delta \frac{d\sigma}{d\Omega}}{\frac{d\sigma}{d\Omega}}}
+\end{align}
+
+Plugging in the values the error comes out ot be $0.017 \times 10^{31}$ m$^{-2}$.
