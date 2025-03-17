@@ -1,0 +1,47 @@
+\section{Discussion \& Conclusion}
+
+We have successfully done the C-V characterization of the solar cell under testing in reverse bias. The first part of the circuit consists of a summing amplifier which sums up a variable DC voltage and a small AC signal. The second part othis circuit uses a transimpedance amplifier, which convertings the small AC currents produced by the solar cell into measurable voltage signals. 
+The transimpedance amplifier uses an op-amp and a feedback resistor to generate an output voltage that is proportional to an input current.
+Like a resistor, a transimpedance amplifier converts current to voltage, but unlike a resistor, it has low input impedance and low output impedance even with very high gain.
+Hence, it basically generates a voltage output that is proportional to the capacitance of the solar cell and the output of the summing amplifier.
+
+Based on the collected data, it can be concluded that the capacitance of solar cells is inversely proportional to the light intensity. This implies that the capacitance of a solar cell will be lower in the presence of higher light intensities such as during sunny days. The reason for this behavior can be attributed to the dependence of capacitance on the doping density of the p-n junction. Hence, it is possible to increase capacitance by doping the p-n junction more. Another way to enhance capacitance is by using a material with a high dielectric constant. As a result, it can be predicted that larger solar cells will have higher capacitance values since capacitance is dependent on the area.
+
+We were also able to estimate the doping density and the built-in potential of the solar cell for two different lighting conditions.
+
+\begin{itemize}
+    \item Dark conditions,
+    \begin{align*}
+        N_d &= (2.984 \pm 0.111)  \times 10^{16} \text{ m}^{-3}\\
+        V_{bi} &= (1.022 \pm 0.076) \text{ V}
+    \end{align*}
+    \item Ambient conditions,
+    \begin{align*}
+        N_d &= (4.588 \pm 0.185)  \times 10^{16} \text{ m}^{-3}\\
+        V_{bi} &= (0.963 \pm 0.080) \text{ V}
+    \end{align*}
+\end{itemize}
+
+Hence, the mean value of doping density and built-in potential of the solar cell is,
+\begin{align*}
+    N_d &= (3.782 \pm 0.153)  \times 10^{16} \text{ m}^{-3}\\
+    V_{bi} &= (0.993 \pm 0.078) \text{ V}
+\end{align*}
+
+\section{Precautions and Sources of Error}
+
+    \begin{enumerate}
+        \item The noise scales as $1/f$.
+        To reduce this noise
+        in the operational amplifiers, the experiment
+        should be performed at higher frequencies.
+        \item While testing under dark condition, the solar
+        cell must be properly covered
+        \item All components of the circuit should be checked
+        and it should be ensured that excess voltage is
+        not applied across the solar cell as it may damage the solar cell.
+        \item While performing the experiment in ambient
+        light, the intensity if the light should not be
+        too high as it may cause the output to saturate
+        and the linear region would not be properly observed.
+    \end{enumerate}

@@ -1,0 +1,115 @@
+\section{Observation and Calculations}
+
+The resistance values are measured to be 9.81k$\Omega$, 9.94k$\Omega$, 0.999 k$\Omega$ and 0.999 k$\Omega$. Hence the average value of $R_1 = 9.875$ k$\Omega$ and $R_2 = 0.999$ k$\Omega$.
+
+The capacitances used are 10.87nF and 10.91nF. The power supplied to the IC 741 opamp are roughly $\pm$15 V.
+The amplitude of the AC wave is 1.000V (pp) and the frequency is 5.000 kHz. Dielectric Constant of the solar cell $\epsilon_s$ is 11.7. The area of the solar cell was measured to be $5.2 \times 3.6$ cm$^2$.
+
+\subsection{Dark Environment}
+The observed values of $V_{DC}$,$V_{DUT}$ and $V_{OUT}$ are shown in Table I.
+Using the parameters above and Eq. 5, $C_{DUT}$ was calculated and was plotted as shown.
+
+\input{tables/dark.tex}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/dark0.eps}
+    \caption{Plot of $C_{DUT}$ vs $V_{DC}$ for dark condition}
+\end{figure}
+
+The curve in the above figure is clearly non linear The region of interest is the region in which
+the $1/C^2_{DUT}$ vs $V_{DC}$ behaves almost linearly.
+
+Now, consider Eq. 3, which can be rewritten as,
+
+\begin{align}
+    \frac{1}{C^2} &= \left(\frac{2}{q\epsilon_0\epsilon_sA^2}\right)\frac{V_{DC}}{N_d} + \left(\frac{2}{q\epsilon_0\epsilon_sA^2}\right)\frac{V_{bi}}{N_d} \nonumber\\
+    \frac{1}{C^2} &= \alpha\frac{V_{DC}}{N_d} + \alpha\frac{V_{bi}}{N_d}
+\end{align}
+
+Here, $\alpha = \frac{2}{q\epsilon_0\epsilon_sA^2}$ is constant for all values of $C_{DUT}$ and $V_{DC}$. The above equation is of the form of a straight line. Hence plotting $1/C^2_{DUT}$ vs $V_{DC}$ and using linear regression to fit a straight line through the linerar region, we can calculate $N_d$ and $V_{bi}$. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/dark.eps}
+    \caption{Plot of $1/C_{DUT}^2$ vs $V_{DC}$ for dark condition}
+\end{figure}
+
+Plugging in the values,
+\begin{align*}
+    \text{slope} &= \left(\frac{2}{q\epsilon_0\epsilon_sA^2}\right)\frac{1}{N_d}\\
+    \implies N_d &= 2.984 \times 10^{16} \text{ m}^{-3}
+\end{align*}
+
+And, from the y-intercept (ignoring the negative sign),
+\begin{align*}
+    \text{intercept} &= \left(\frac{2}{q\epsilon_0\epsilon_sA^2}\right)\frac{V_{bi}}{N_d}\\
+    \implies V_{bi} &= 1.022 \text{ V}
+\end{align*}
+
+Note that $V_{bi}$ is also the value of the x-intercept of the above plot.
+
+\subsection{In Ambient Light}
+The observed values of $V_{DC}$,$V_{DUT}$ and $V_{OUT}$ are shown in Table II.
+Using the parameters above and Eq. 5, $C_{DUT}$ was calculated and was plotted as shown.
+
+\input{tables/light.tex}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/light0.eps}
+    \caption{Plot of $C_{DUT}$ vs $V_{DC}$ for light condition}
+\end{figure}
+
+Similarly to the dark condition, a linear fit was performed on the linear region of the $1/C_{DUT}^2$ vs $V_{DC}$ plot.
+
+Plugging in the values,
+\begin{align*}
+    \text{slope} &= \left(\frac{2}{q\epsilon_0\epsilon_sA^2}\right)\frac{1}{N_d}\\
+    \implies N_d &= 4.588 \times 10^{16} \text{ m}^{-3}
+\end{align*}
+
+And, from the y-intercept,
+\begin{align*}
+    \text{intercept} &= \left(\frac{2}{q\epsilon_0\epsilon_sA^2}\right)\frac{V_{bi}}{N_d}\\
+    \implies V_{bi} &= 0.963 \text{ V}
+\end{align*}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/light.eps}
+    \caption{Plot of $1/C_{DUT}^2$ vs $V_{DC}$ for light condition}
+\end{figure}
+
+\section{Error Analysis}
+
+From Eq. 6, the error in $\alpha$ can be calculated Using
+
+\begin{align}
+    \Delta \alpha = \alpha \left(\frac{2 \Delta A}{A}\right)
+\end{align}
+
+since $A$ is the only measured parameter. Using $\Delta A = 0.01$ cm$^2$ and $\alpha = 3.445 \times 10^{34}$ C$^{-1}$ F$^{-1}$ m$^{-3}$, we get $\Delta \alpha = 3.680 \times 10^{31}$ C$^{-1}$ F$^{-1}$ m$^{-3}$.
+
+The error in $N_d$ and $V_{bi}$ can be calculated using,
+
+\begin{align}
+    \Delta N_d &= N_d \sqrt{\left(\frac{\Delta \text{slope}}{\text{slope}}\right)^2 + \left(\frac{\Delta \alpha}{\alpha}\right)^2}\\
+    \Delta V_{bi} &= V_{bi} \sqrt{\left(\frac{\Delta \text{intercept}}{\text{intercept}}\right)^2 + \left(\frac{\Delta \alpha}{\alpha}\right)^2 + \left(\frac{\Delta N_d}{N_d}\right)^2}
+\end{align}
+
+These come out to be,
+
+\begin{itemize}
+    \item Dark conditions,
+    \begin{align*}
+        \Delta N_d &= 0.111 \times 10^{16} \text{ m}^{-3}\\
+        \Delta V_{bi} &= 0.076 \text{ V}
+    \end{align*}
+    \item Ambient conditions,
+    \begin{align*}
+        \Delta N_d &= 0.185 \times 10^{16} \text{ m}^{-3}\\
+        \Delta V_{bi} &= 0.080 \text{ V}
+    \end{align*}
+\end{itemize}
+
