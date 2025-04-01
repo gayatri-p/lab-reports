@@ -1,0 +1,41 @@
+\section{Discussion \& Conclusion}
+
+We have successfully characterised the GM counter in this experiment and studied the statistics of decay counting.
+
+We observed a plateau in the GM characteristic curve obtained by varying operating voltage and measuring the counts. When using $\gamma$-source, we observed that the threshold voltages are 390V and 600V. The operating voltage is 510 V and the percentage slope of the plateau is $(2.92\pm 0.43)\%$.
+For the $\beta$-source, the threshold voltages are 390 V and 600 V. The operating voltage is 485 V and the percentage slope of the plateau is $(3.66\pm 0.54)\%$. The GM counter must operated in this plateau so that little fluctuations in the EHT voltage do not impact the number of counts.
+
+In the second part of the experiment, we varied the distance between the source and the detector and measured the count rates. We verified the inverse square relation between the count rate and the distance from the source and the detector. By plotting count rate and distance in the log scale, we found out that the experimentally observed relation was of the form count rate $\propto d^{-(1.62 \pm 0.05)}$. The significant source of error could mainly be due to the error in the distance measured by eye.
+
+We then measured the efficiency of the GM counter, which, for the $\gamma$-source came out to be $(14.84 \pm 0.22)$\%. The efficiency the measurement process is governed by the distance between the source and the detector as well as the detector window size. The current activity of the source also affects the efficiency of the detector. 
+
+Furthermore, we also studied the statistics of the GM counter. We observed that the relative spread in background count decreases as the measurement time increases. By taking a large amount (50) background count readings (with a measurement time of 100s), we determined the mean and standard deviation of the background count rate to be $(0.89\pm 0.09)$ counts/sec.
+
+Next, we studied the statistics of $\beta$ decay count values by collection 50 different data points. The observed counts followed a Gaussian distribution around a mean value, underscoring the need for statistical analysis in interpreting experimental data.
+
+\section{Precautions and Sources of Error}
+
+\begin{enumerate}
+    \item Unintended variations in source orientation:
+    The use of disk-shaped radioactive sources without knowing the proper side could introduce inconsistencies in the data. The two flat surfaces of the disk may have different emission characteristics.
+    \item  The use of a small sample size of 50 data points for the counting statistics part of the experiment may not fully represent the underlying distribution of counts. Ideally 1000 or more measurements are required to properly approach a Gaussian distribution, as dictated by the \textit{law of large numbers}.
+    \item The distances measured on the grove could have human error such as parallax asoociated with them, along with incorrect assumption of where exactly the detector/source is placed on the scale.
+\end{enumerate}
+\vspace{-2em}
+% \newpage
+\appendix
+
+\section{Observational Data}
+
+\subsection{GM Characteristics}
+\input{tables/calib2.tex}
+\input{tables/calib1.tex}
+\subsection{Inverse Square Law Relation}
+\input{tables/inv.tex}
+\input{tables/inv-bg.tex}
+\subsection{Efficiency of Detection}
+\input{tables/eff.tex}
+\subsection{Nuclear Statistics}
+\input{tables/stats1.tex}
+\input{tables/stats2.tex}
+\input{tables/stats3.tex}

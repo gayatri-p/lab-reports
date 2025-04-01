@@ -1,0 +1,23 @@
+\section{Discussion \& Conclusion}
+From observing the gain response of the PMT for a particular filter, our analysis yielded a value of 
+
+\begin{align*}
+    \alpha n = 4.231 \pm 0.275
+\end{align*}
+
+Since photomultiplier tubes generally have 9 to 12 dynode stages, the value of $\alpha n$ should be typically in the range 6-10. Our values are slightly lower which could be due to measurement errors. The relatively large uncertainty indicates the presence of significant sources of error. The primary contributor to this uncertainty is likely the instability of the light  ource. Despite maintaining a constant supply voltage and current, we observed minor variations in light intensity. These fluctuations were amplified within the PMT module, leading to increased measurement variability. Employing a more stable power source could mitigate these variations and enhance the precision of our measurements. 
+
+When analyzing the full spectral response from ultraviolet to infrared, the visible range appears generally smooth, following an overall trend. However, upon closer examination of the visible spectrum, subtle fluctuations become apparent, such as the notable dip at 570 nm. Unlike an idealized smooth curve, the actual spectral response of a PMT is influenced by several physical factors, including photocathode efficiency and optical interference, which can cause unexpected deviations.  Since absolute sensitivity values are derived from empirical measurements, there is no definitive theoretical model to predict the exact trend within the visible range. The dip at 570 nm may be attributed to specific material properties, but its exact cause remains unclear.
+
+Another significant source of error in our sensitivity measurements is the resolution of the multimeter. The smallest detectable current increment is 0.1 nA, which impacts the accuracy of our data, particularly for low-intensity signals. Additionally, while the PMT module’s dark current aligned with the expected theoretical trend, the noise level increased substantially as the control voltage was elevated. This underscores the necessity of implementing noise reduction techniques to improve measurement accuracy, especially at higher voltages.
+
+In conclusion, our study highlights the challenges associated with achieving precise measurements in PMT-based systems due to various sources of error, including light source instability and multimeter resolution limitations. The observed fluctuations in the spectral response, particularly the dip at 570 nm, suggest that material properties and experimental conditions play a crucial  ole in the performance of PMTs. To enhance the accuracy and reliability of future measurements, it is essential to employ more stable power sources, improve noise reduction techniques, and consider the impact of external factors such as temperature.
+
+\section{Precautions and Sources of Error}
+
+    \begin{enumerate}
+        \item Ensure that the control voltage is never set above 1V, as this may lead to malfunction or damage to the PMT module.
+        \item Always use a stabilized power supply for the PMT. Avoid fluctuations or sudden voltage spikes, as they can affect the measurement ccuracy and potentially damage the PMT.
+        \item The PMT is a highly photosensitive device. Intense light can damage the photocathode and compromise the performance of the PMT. Always ensure that the PMT window is covered when not in use.
+        \item High ambient temperatures can affect the performance of the PMT and the associated electronics. Ensure that the PMT is perated in a cool, controlled environment.
+    \end{enumerate}

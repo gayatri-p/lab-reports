@@ -1,0 +1,31 @@
+\section{Discussion \& Conclusion}
+In this experiment, we fixed the reverse bias potential of a Ge diode to 4.0V and recorded reverse current $I_r$ using SeelLab, at different temperatures ranging from 35$^\circ$C to 61$^\circ$C. 
+
+The reverse was found to vary slowly for the Ge diode, there was a relatively large increase for temperatures over 50$^\circ$C. This could be due to the $T^2$ dependence of the band-gap energy.
+
+Then, using the $\ln(I_r)$ vs. $T^{-1}$ plot, we estimated the band-gap of Ge to be around,
+\begin{align*}
+    \boxed{E_0 = (0.669 \pm 0.053) \text{ eV}}
+\end{align*}
+
+While this is close to the literature value of 0.741 eV, there is still a relatively large error of around $-$9.7\%. 
+This could mainly be due to the improper measurement of temperature. Note that we measure the temperature by placing the thermocouple as close as possible to the diode, the actual temperature of the pn junction might be different from the temperature just outside the diode. There was also a significant amount of fluctuation present in the temperature readings.
+However, on calibration with a mercury thermometer, the temperature recorded by the thermocouple was found to match perfectly.
+
+Also note that in determining the band gap, we neglected the temperature dependent term from Eq. \ref{temp}. Over the temperature range of the experiment, we can estimate the theoretical change in $E_g$ using
+
+\begin{align}
+    \Delta E_g = \alpha \left(\frac{T_L^2}{T_L + \beta} - \frac{T_H^2}{T_H + \beta}\right)
+\end{align}
+
+Using $T_L = 35^\circ$C and $T_H = 61^\circ$C, along with $\alpha=7.917\times 10^{-4}$ eV K$^{-1}$ and $\beta=2220$ K \cite{varshni-1967}, we get $\Delta E_g = 0.005$ eV. Thus the variation of $E_g$ is significantly lower than the error estimated in our measurement of $E_0$ and hence is unlikely to be detected by the current setup. Thus, for the purposes of this experiment, we can estimate $E_g = E_0$.
+
+This experiment was also performed using a Silicon diode to comparitively study it with the Germanium one. However, we found it difficult to measure the temperature of the diode to the closed architecture of the Si diode as compared to the Ge one. Hence, we have not included that in our analysis.
+
+\section{Precautions and Sources of Error}
+
+    \begin{enumerate}
+        \item Avoid heating the diode to higher temperatures to avoid possible damage to the diode.
+        \item Ideally, many data points need to be collected to statistically reduce the error in the measurement of band-gap.
+        \item Make sure that the soldering iron does to heat too much to avoid possible damage to any nearby items. Use proper protection while using it.
+    \end{enumerate}

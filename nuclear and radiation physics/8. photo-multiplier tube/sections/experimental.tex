@@ -1,0 +1,56 @@
+\section{Observation and Calculations}
+
+\subsection{Gain Variations at a fixed wavelength}
+Here, Table I shows the output vs. supplt voltage of the PMT. Using the relation between gain and two voltages, we can rewrite the equation to find the value of $\alpha n$.
+\begin{align*}
+    \log G = \alpha n \log V + \log K'
+\end{align*}
+
+\input{tables/gain.tex}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/gain.eps}
+    \caption{Plot for gain Response for 600 nm}
+    \label{g1}
+\end{figure}
+
+By applying least square fitting, we can approximate a linear fit for $\log G$ vs. $\log V$ (Fig. 3) and estimate the value of $\alpha n = 4.231$.
+\vspace{-2em}
+\subsection{Spectral Response}
+
+Tables II and III show the wavelength dependednt characteristics of the LED and the PMT. Using these, the sensitivity of the PMT at different wavelengths were calculated and plotted (Fig. 4). We can see that the highest sensitivity is for blue light (460 nm) and there is a significant dip for yellow light (570 nm) after which it increases.
+Also note the high measurement uncertainty in the sensitivity values, which are primarily because of the high variation in the observed parameters and the high least counts of the instruments.
+
+\input{tables/spec1.tex}
+\input{tables/spec2.tex}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\columnwidth]{images/spec.eps}
+    \caption{Plot for anode sensitivity vs. wavelength}
+    \label{g2}
+\end{figure}
+
+\subsection{Dark Current}
+The anode dark current was measured at various
+control voltages while ensuring that the PMT was
+completely isolated from external light sources (Table IV and Fig. 5).
+
+\input{tables/dark.tex}
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/dark.eps}
+    \caption{Dark current vs supply voltage in PMT}
+    \label{g3}
+\end{figure}
+
+\section{Error Analysis}
+Since $\alpha n$ is obtained from a linear fit, its uncertainty
+$\Delta (\alpha n)$ can be determined from the standard error propagation formula for the slope in linear regression.
+
+\begin{align*}
+    \frac{\Delta (\alpha n)}{ (\alpha n)} = \frac{\Delta \text{slope}}{\text{slope}}
+\end{align*}
+
+which comes out to be the same as $\Delta \text{slope} = \Delta (\alpha n) = 0.275$.

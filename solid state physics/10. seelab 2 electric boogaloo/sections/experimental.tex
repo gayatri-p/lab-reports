@@ -1,0 +1,57 @@
+\section{Observation and Calculations}
+
+For this particular setup, we have measured $R_1 = 990$ $\Omega$ and $R_g = 195.9\,\Omega$. The diode resistance under reverse bias was measured to be $R_\text{diode} \approx 63$ M$\Omega$.
+
+Hence $G$ comes out to be $3.216 \times 10^4$. The observed values of $V_1$ along with the corresponding temperature is given in Table \ref{tab}.
+
+\input{tables/tab.tex}
+
+Fig. \ref{g} shows the plot between $\log(I_r)$ and $T^{-1}$. Using linear regression, we have obtained a best-fit straight line with slope and intercept as shown in the figure.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1\columnwidth]{images/plot.eps}
+    \caption{$\log(I_r)$ vs. $T^{-1}$ plot}
+    \label{g}
+\end{figure}
+
+We can now use Eq. \ref{slope} to equate the slope and intercept to the corresponding physical parameters.
+
+\begin{align*}
+    m &= -7.763 \times 10^3 = -\frac{E_0}{\eta k_B}\\
+    \implies E_0 &= -7.763 \times 10^3 \times \eta k_B\\
+    &= 0.669 \text{ eV}
+\end{align*}
+
+\noindent using $k_B = 8.6173 \times 10^{-5}$ eV K$^{-1}$.
+Similarly, we can also obtain
+\begin{align*}
+    c = 4.082 &= \ln(A)\\
+    \implies A &= 59.27 \text{ Amp}
+\end{align*}
+
+For the purposes of this experiment, we do not discuss the value of $A$, which represents the \textit{reverse saturation current}.
+\vspace{-1em}
+\section{Error Analysis}
+
+The error in $G$ can be derived from the error propagation formula using
+
+\begin{align*}
+    \Delta G &= \frac{R_\text{diode}\Delta R_g}{R_g^2} = 0.156 \nonumber
+\end{align*}
+
+\noindent using $\Delta R_g = 0.1\,\Omega$ and $\Delta R_\text{diode} \approx 0\,\Omega$. The uncertainity in $I_r$ will be,
+
+\begin{align}
+    \frac{\Delta I_r}{I_r} = \sqrt{\left(\frac{\Delta V_1}{V_1}\right)^2 + \left(\frac{\Delta R_1}{R_1}\right)^2 + \left(\frac{\Delta G}{G}\right)^2}
+\end{align}
+
+\noindent $\Delta R_1 = 0.1\,\Omega$ and $\Delta V_1 = 10^{-8}$ A. Hence the uncertainity in $\ln(I_r)$ would be $\Delta I_r/I_r \sim 10^{-4}$ which is too small to be noticable in Fig. \ref{g}. The uncertainity in $T^{-1}$ is $\Delta T/T^2 \sim 10^{-5}$ where $\Delta T = 1^\circ$C.
+
+Now, for the uncertainity in the band-gap, we get
+
+\begin{align}
+    \frac{\Delta E_0}{E_0} &= \sqrt{\left(\frac{\Delta \text{slope}}{\text{slope}}\right)^2}\\
+    \implies \Delta E_0 &= 0.669 \times \frac{0.621}{7.763}\nonumber\\
+    &= 0.053 \text{ eV}\nonumber
+\end{align}
