@@ -1,0 +1,113 @@
+\section{Observation and Calculations}
+\noindent Probe distance of the setup, $S=(0.20 \pm 2\%)$ cm (fixed)
+\subsection{Measurement of Resistivity}
+Table I contains the observed V-I data, using the four-probe setup, for all the three samples.
+\input{tables/t1.tex}
+\subsubsection{Aluminium}
+Using a screw gauge, the thickness of the given Aluminium sample was measured to be $W = 0.017$ cm.
+\begin{figure}[H]   
+    \centering
+    \includegraphics[width=1\columnwidth]{images/al.eps}
+    \caption{V-I plot for the Aluminium sample at room temperature}
+    \label{1}
+\end{figure} 
+Plugging the slope in Eq. 8, the resistivity at room temperature of Aluminium comes out to be $\rho = 3.131 \times 10^{-5}\,\,\Omega$ cm.
+\vspace{-2em}
+\subsubsection{n-Silicon}
+The thickness of the provided sample was $W=(0.05 \pm 2\%)$ cm.
+\begin{figure}[H]   
+    \centering
+    \includegraphics[width=1\columnwidth]{images/si.eps}
+    \caption{V-I plot for n-Silicon at room temperature}
+    \label{2}
+\end{figure}
+Plugging the slope in Eq. 8, the resistivity at room temperature of n-Si comes out to be $\rho = 21.549\,\,\Omega$ cm.
+\vspace{-3em}
+\subsubsection{n-Germanium}
+\vspace{-2em}
+\begin{figure}[H]   
+    \centering
+    \includegraphics[width=1\columnwidth]{images/ge.eps}
+    \caption{V-I plot for n-Germanium at room temperature}
+    \label{3}
+\end{figure}
+Plugging the slope in Eq. 8, and using $W=(0.05 \pm 2\%)$ cm, the resistivity at room temperature of n-Ge comes out to be $\rho = 19.322\,\,\Omega$ cm.
+
+\subsection{Estimation of Band-gap}
+\subsubsection{n-Germanium}
+\input{tables/t3.tex}
+Table 2 shows the observed $T$-$V$ data. The error-bars are calculated with standard error propagation formulae (Section IV).
+\begin{figure}[H]   
+    \centering
+    \includegraphics[width=1\columnwidth]{images/rho-ge.eps}
+    \caption{$\rho$ vs. $T$ plot for n-Germanium for temperatures from 80$^\circ$C to 180$^\circ$C}
+    \label{4.1}
+\end{figure}
+\begin{figure}[H]   
+    \centering
+    \includegraphics[width=1\columnwidth]{images/temp-ge.eps}
+    \caption{$\log(\rho)$ vs. $T^{-1}$ plot for n-Germanium for temperatures from 80$^\circ$C to 180$^\circ$C}
+    \label{4}
+\end{figure}
+
+From Fig. \ref{4}, we get the slope of $\log(\rho)$ vs. $T^{-1}$ which we can substitute into Eq. 9 to get the band-gap of the given Ge sample as,
+
+\begin{align*}
+    E_g = 2k_B\frac{\log(\rho)}{1/T} = 0.626 \text{ eV}
+\end{align*}
+
+\noindent where $k_B$ is the Boltzmann’s constant $= 8.6\times 10^{-5}$ eV/K.
+\subsubsection{Aluminium}
+Table 3 shows the observed $T$-$V$ data.
+\input{tables/t2.tex}
+\begin{figure}[H]   
+    \centering
+    \includegraphics[width=1\columnwidth]{images/temp-al.eps}
+    \caption{$\rho$ vs. $T$ plot for the Aluminium sample for temperatures from 32$^\circ$C to 90$^\circ$C}
+    \label{5}
+\end{figure}
+For the temperature range used in this experiment (around 30$^\circ$C to 90$^\circ$C), we can theory predicts that the rise in $\rho$ with temperature is is roughly of linear order. Using, the linear relation,
+
+\begin{align}
+    \rho &= \rho_{T_0}[1+\alpha (T-T_0)]\\
+    \text{or, }\rho &= \rho_{T_0} \alpha T + \rho_{T_0}(1-\alpha T_0) \nonumber 
+\end{align}
+
+\noindent and the linear fit in Fig. \ref{5}, we can approximate the temperature coefficient, $\alpha$ to be,
+
+\begin{align*}
+    \alpha = \frac{\text{slope}}{\rho_{T_0}} = 8.475 \times 10^{-3} \text{ K}^{-1}
+\end{align*}
+
+\noindent where $T_0=32^\circ$C$=304.15$ K.
+
+\section{Error Analysis}
+The error in the resistivity comes from the error of the slope of the fitted curve and the uncertainities in the thickness of the sample.
+
+\begin{align}
+    \frac{\Delta \rho}{\rho} = \sqrt{\left(\frac{\Delta W}{W}\right)^2 + \left(\frac{\Delta \text{slope}}{\text{slope}}\right)^2}
+\end{align}
+
+For the Al sample, $\Delta W = 0.001$ cm and for n-Si and n-Ge, $\Delta W/W = 2\%$. Plugging in $\Delta \text{slope}$ from Figs. \ref{1} to \ref{3}, we get
+
+\begin{itemize}
+    \item $(\Delta \rho)_\text{Al} = (0.184 \times 10^{-5})\,\,\Omega$ cm 
+    \item $(\Delta \rho)_\text{n-Ge} = 0.387\,\,\Omega$ cm 
+    \item $(\Delta \rho)_\text{n-Si} = 0.431\,\,\Omega$ cm 
+\end{itemize}
+
+\noindent For the uncertainity in $E_g$, we can similarly write,
+\begin{align}
+    \Delta E_g = E_g\left(\frac{\Delta \text{slope}}{\text{slope}}\right)
+\end{align}
+
+\noindent where the slope is the slope in the linear fit of the $\log(\rho)$ vs. $T^{-1}$ plot. Plugging in the values, we get for the n-Ge sample, $\Delta E_g=0.002$ eV.
+
+The error in the temperature coefficient, $\alpha$ can similarly be derived using,
+
+\begin{align}
+    \frac{\Delta \alpha}{\alpha} = \sqrt{\left(\frac{\Delta \rho_{T_0}}{\rho_{T_0}}\right)^2 + \left(\frac{\Delta \text{slope}}{\text{slope}}\right)^2}
+\end{align}
+
+\noindent Using Table 3 and putting $\Delta \rho_{T_0}=0.290\,\Omega$ cm, we get $\Delta \alpha = 0.442$ K$^{-1}$.
+

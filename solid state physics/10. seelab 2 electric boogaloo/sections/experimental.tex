@@ -1,6 +1,6 @@
 \section{Observation and Calculations}
 
-For this particular setup, we have measured $R_1 = 990$ $\Omega$ and $R_g = 195.9\,\Omega$. The diode resistance under reverse bias was measured to be $R_\text{diode} \approx 63$ M$\Omega$.
+For this particular setup, we have measured $R_1 = 990$ $\Omega$ and $R_s = 195.9\,\Omega$. The diode resistance under reverse bias was measured to be $R_\text{diode} \approx 63$ M$\Omega$.
 
 Hence $G$ comes out to be $3.216 \times 10^4$. The observed values of $V_1$ along with the corresponding temperature is given in Table \ref{tab}.
 
@@ -19,7 +19,7 @@ We can now use Eq. \ref{slope} to equate the slope and intercept to the correspo
 
 \begin{align*}
     m &= -7.763 \times 10^3 = -\frac{E_0}{\eta k_B}\\
-    \implies E_0 &= -7.763 \times 10^3 \times \eta k_B\\
+    \implies E_0 &= 7.763 \times 10^3 \times \eta k_B\\
     &= 0.669 \text{ eV}
 \end{align*}
 
@@ -37,10 +37,10 @@ For the purposes of this experiment, we do not discuss the value of $A$, which r
 The error in $G$ can be derived from the error propagation formula using
 
 \begin{align*}
-    \Delta G &= \frac{R_\text{diode}\Delta R_g}{R_g^2} = 0.156 \nonumber
+    \Delta G &= \frac{R_\text{diode}\Delta R_s}{R_s^2} = 0.156 \nonumber
 \end{align*}
 
-\noindent using $\Delta R_g = 0.1\,\Omega$ and $\Delta R_\text{diode} \approx 0\,\Omega$. The uncertainity in $I_r$ will be,
+\noindent using $\Delta R_s = 0.1\,\Omega$ and $\Delta R_\text{diode}/R_\text{diode} \approx 0$. The uncertainity in $I_r$ will be,
 
 \begin{align}
     \frac{\Delta I_r}{I_r} = \sqrt{\left(\frac{\Delta V_1}{V_1}\right)^2 + \left(\frac{\Delta R_1}{R_1}\right)^2 + \left(\frac{\Delta G}{G}\right)^2}

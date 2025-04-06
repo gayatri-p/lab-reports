@@ -40,11 +40,11 @@ It is to be noted that $E_g$ itself is a function of temperature (\citeauthor{va
 \noindent i.e., $E_g$ decreases with increase in temperature where $E_0$ denotes the band gap at absolute zero temperature and $\alpha$ and $\beta$ are two constants. The major reason for this is the shift in the relative position of the conduction and valence bands due to a temperature-dependant electron lattice interaction. Experimentally we have determined, $\alpha \sim 10^{-4}$ and $\beta \sim 10^3$. Due to this, fractional term is quite small compared to $E_0$ for the temperature range used in this experiment, we can assume $E_g \approx E_0$.
 
 Thus, Eq. 2 simplifies to 
-\begin{align}
+\begin{align}\label{eq4}
     \ln{(I_r)} \approx \ln(A) - \frac{E_0}{\eta k_B T}
 \end{align}
 
-Now, if we measure the value of $I_r$ at different temperatures, we can find determine $E_0$ from the slope of the straight-line fit of a $\ln(I_r)$ vs $\ln(T)$ plot. That is, Eq. 4 is of the form,
+Now, if we measure the value of $I_r$ at different temperatures, we can find determine $E_0$ from the slope of the straight-line fit of a $\ln(I_r)$ vs $T^{-1}$ plot. That is, Eq. \ref{eq4} is of the form,
 
 \begin{align}
     y = mx + c
@@ -88,8 +88,8 @@ where $y=\ln(I_r)$, $x=1/T$ and
 The circuit diagram of the setup is shown in Fig. \ref{c1}. $R_s$ is the shunt resistance connected across $R_1$ to measure the voltage across the diode. If $V_1$ is the measured voltage across $R_1$ by terminal \verb|A3|, then the reverse current through the diode is given by,
 
 \begin{align} \label{ir}
-    I_r R_1 &= \frac{V_1 R_g}{R_g + R_\text{diode}} \nonumber\\
-    \implies I_r &= \frac{V_1}{GR_1}\\\text{ where, } G &= 1+ \frac{R_\text{diode}}{R_g} \nonumber
+    I_r R_1 &= \frac{V_1 R_s}{R_s + R_\text{diode}} \nonumber\\
+    \implies I_r &= \frac{V_1}{GR_1}\\\text{ where, } G &= 1+ \frac{R_\text{diode}}{R_s} \nonumber
 \end{align}
 
 \subsection{Procedure}
