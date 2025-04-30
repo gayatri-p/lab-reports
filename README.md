@@ -50,7 +50,7 @@
 5. [Michelson Interferometer](optics/5.%20michaelson%20interferometer/5.%20michelsons.pdf)
 6. [Fabry-Perot Interferometer](optics/6.%20fabrey-perot%20interferometer/6.%20fabry-perot.pdf)
 
-## Nuclear and Radiation Physics
+## Nuclear Physics and Instrumentation
 1. [Basics of GM Counter-Characteristics and Counting Statistics](nuclear%20and%20radiation%20physics/1.%20gm%20counter/main.pdf)
 2. [Applications of a Geiger-Muller Counter: Study of Range of Beta Particles, Attenuation of Bremsstrahlung and Back Scattering](nuclear%20and%20radiation%20physics/2.%202%20gm%202%20counter/main.pdf)
 3. [Study of Gamma Ray Spectroscopy using Single Channel and Multiple Channel Analysers](nuclear%20and%20radiation%20physics/3.%20gamma%20ray%20spectroscopy/main.pdf)
@@ -67,7 +67,7 @@
 4. [Studying Magnetoresistance and Hall Effect of Bismuth](solid%20state%20physics/4.%20hall%20effect%20and%20magnetoresistance%20of%20bismuth/main.pdf)
 5. [Study of Lattice Vibration using Analogous Electronic Circuits](solid%20state%20physics/5.%20lattice%20vibration%20using%20circuits/main.pdf)
 6. [Study of Frequency and Temperature Dependence of Dielectric Constant and the Ferroelectric to Paraelectric Phase Transition of BaTiO3](solid%20state%20physics/6.%20phase%20transition%20of%20BaTiO3/main.pdf)
-7. [Study of I-V Characterstics of a Solar Cell](solid%20state%20physics/7.%20IV%20characterstics%20of%20a%20solar%20cell/main.pdf)
-8. [Study of C-V Characterstics of a Solar Cell](solid%20state%20physics/8.%20CV%20characterstics%20of%20a%20solar%20cell/main.pdf)
+7. [Study of I-V Characteristics of a Solar Cell](solid%20state%20physics/7.%20IV%20characterstics%20of%20a%20solar%20cell/main.pdf)
+8. [Study of C-V Characteristics of a Solar Cell](solid%20state%20physics/8.%20CV%20characterstics%20of%20a%20solar%20cell/main.pdf)
 9. [Introduction to SEELab (ExpEYES 17)](solid%20state%20physics/9.%20seelab%20begins/main.pdf)
 10.  [Experiments with SEELab Part II: Determination of the Band Gap of Germanium using the Temperature Variation of Reverse Current](solid%20state%20physics/10.%20seelab%202%20electric%20boogaloo/main.pdf)
