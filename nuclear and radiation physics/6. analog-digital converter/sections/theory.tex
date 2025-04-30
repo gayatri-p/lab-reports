@@ -71,7 +71,7 @@ The DAC circuit consists of a 3-bit R/2R ladder DAC using 741 op amp by choosing
 \begin{align}\label{eq1} V_{out} = \frac{-R_F}{R}\left( \frac{d_1}{2^1} + \frac{d_2}{2^2} + \frac{d_3}{2^3} \right)\end{align}
 
 where $d_1$ is M.S.B and $d_3$ is L.S.B. In the above circuit, feedback resistance $R_f=2R$. The output impedance of the $R-2R$ network is always R for any number of bits in the network. This Another advantage of the circuit is that it simplifies the design of circuits that use DAC, such as filtering, amplification, etc. For a 4-bit DAC, the equation becomes
-\begin{align}\label{eq2} V_{out} = \frac{-R_F}{R}\left( \frac{d_1}{2^1} + \frac{d_2}{2^2} + \frac{d_3}{2^3} \frac{d_4}{2^4} \right)\end{align}
+\begin{align}\label{eq2} V_{out} = \frac{-R_F}{R}\left( \frac{d_1}{2^1} + \frac{d_2}{2^2} + \frac{d_3}{2^3} + \frac{d_4}{2^4} \right)\end{align}
 
 \subsection{ADC circuit to convert a 2-bit digital input to analog output}
 \hyperref[obj:2]{Figure 3} depicts the conversion's circuit diagram. This circuit employs an \verb|LM339| comparator and \verb|74147| priority encoders. The \verb|LM339| comparator chip compares the analogue input from the DC power source with a reference voltage before passing it to the \verb|74147| priority encoder circuit. The binary output from the \verb|74147| chip may then be translated to BCD (Binary coded decimal) format and shown as a decimal digit on a common cathode 7-segment BCD display using the \verb|7447| device. Use three of the four available comparators in \verb|LM339|.

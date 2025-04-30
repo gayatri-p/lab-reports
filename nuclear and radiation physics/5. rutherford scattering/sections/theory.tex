@@ -29,10 +29,8 @@ where $Z_1$ and $Z_2$ are the atomic numbers of the two interacting particles, $
 where $c_F$ is the atomic concentration in the foil and $d_F$
 the thickness of the foil.
 
-Due to the dependence of the scattering rate on the inverse 4th power of $sin(\theta/2)$, the value of $N(\theta)$ rapidly declines after the singularity at $\theta=0$. 
-Higher scattering angles result in very tiny counting
-rates, hence in order to achieve an acceptable level of
-precision, the gate times $t(\theta)$ for calculating the counting rate $N (\theta)$ must be raised with rising angle $\theta$. As a result, in the initial portion of the experiment, we begin at 5$^\circ$ and gradually increase the gate duration as we climb higher until 30$^\circ$.
+Due to the dependence of the scattering rate on the inverse 4th power of $\sin(\theta/2)$, the value of $N(\theta)$ rapidly declines after the singularity at $\theta=0$. 
+Higher scattering angles result in very tiny counting rates, hence in order to achieve an acceptable level of precision, the gate times $t(\theta)$ for calculating the counting rate $N (\theta)$ must be raised with rising angle $\theta$. As a result, in the initial portion of the experiment, we begin at 5$^\circ$ and gradually increase the gate duration as we climb higher until 30$^\circ$.
 
 \subsubsection*{Space correction for Scattering Rate}
 The scattering rates $N_d(\theta)$ are determined by recording the pulse counts $n(\theta)$ for a given angle $\theta$ over a gate time $t$.
@@ -72,7 +70,7 @@ By keeping all quantities unchanged and by swapping the goild foil with a foil o
 where $d$ is the thickness of the foil and $Z$ is its atomic number. Hence for two materials of different thickness and atomic number (say Au and Al),
 
 \begin{align} \label{eq:part2}
-    \frac{Z_\text{Al}}{N_\text{Au}} &= \frac{d_\text{Al}Z^2_\text{Al}}{d_\text{Au}Z^2_\text{Au}} \nonumber\\
+    \frac{N_\text{Al}}{N_\text{Au}} &= \frac{d_\text{Al}Z^2_\text{Al}}{d_\text{Au}Z^2_\text{Au}} \nonumber\\
     \implies N_\text{Al} &= Z_\text{Au}\sqrt{\frac{d_\text{Au}N_\text{Al}}{d_\text{Al}N_\text{Au}}}
 \end{align}
 
